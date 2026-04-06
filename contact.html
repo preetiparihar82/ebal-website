@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/course.css" rel="stylesheet">
+<style>
+    /* =========================================
+   EBAL CONTACT US PAGE (Safely Scoped)
+   ========================================= */
+
+.ebal-contact-page {
+    background-color: #f8faff; /* Very soft background to contrast white cards */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+   
+}
+.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Color Overrides */
+.ebal-contact-page .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.ebal-contact-page .text-primary-blue { color: var(--primary-blue, #3676a3) !important; }
+.ebal-contact-page .text-dark-blue { color: #121c33 !important; }
+
+/* Double Line Heading */
+.ebal-contact-page .ebal-double-line-heading { display: flex; align-items: center; }
+.ebal-contact-page .ebal-double-line-heading .line { position: relative; width: 40px; height: 10px; }
+.ebal-contact-page .ebal-double-line-heading .left-line, 
+.ebal-contact-page .ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+.ebal-contact-page .ebal-double-line-heading .left-line::before, 
+.ebal-contact-page .ebal-double-line-heading .right-line::before {
+    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #f8faff;
+}
+.ebal-contact-page .ebal-double-line-heading .left-line::before { left: 0; }
+.ebal-contact-page .ebal-double-line-heading .right-line::before { right: 0; }
+
+/* --- LEFT SIDE: CONTACT INFO CARDS --- */
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(54, 118, 163, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(54, 118, 163, 0.08);
+}
+
+.contact-info-card .ci-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(6, 187, 204, 0.1);
+    color: var(--primary-cyan, #06BBCC);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Map Wrapper */
+.contact-map-wrapper {
+    border-radius: 16px;
+    overflow: hidden; /* Ensures the iframe respects the rounded corners */
+    border: 4px solid #ffffff;
+    background-color: #ffffff;
+}
+
+/* --- RIGHT SIDE: CONTACT FORM --- */
+.contact-form-wrapper {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 24px;
+    height: 100%;
+}
+
+/* Form Input Styling */
+.ebal-form-floating > .form-control {
+    background-color: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    color: #121c33;
+    transition: all 0.3s ease;
+}
+
+.ebal-form-floating > .form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-cyan, #06BBCC);
+    box-shadow: 0 0 0 4px rgba(6, 187, 204, 0.15); /* Glowing cyan ring */
+}
+
+/* Label adjustments for floating inputs */
+.ebal-form-floating > label {
+    color: #6b7280;
+    padding-left: 15px;
+}
+.ebal-form-floating > .form-control:focus ~ label,
+.ebal-form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--primary-blue, #3676a3);
+    font-weight: 600;
+}
+
+/* Submit Button */
+.btn-contact-submit {
+    background-color: var(--primary-blue, #3676a3);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(54, 118, 163, 0.2);
+}
+
+.btn-contact-submit:hover {
+    background-color: var(--primary-cyan, #06BBCC);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(6, 187, 204, 0.3);
+}
+/* --- FIX FOR OVERSIZED CONTACT TYPOGRAPHY --- */
+
+/* Left Side: Contact Info Card Headings */
+.contact-info-card .ci-text h5 {
+    font-size: 1.2rem !important; /* Scales down the massive headings */
+    letter-spacing: 0;
+    margin-bottom: 6px !important;
+}
+
+/* Left Side: Contact Info Paragraphs */
+.contact-info-card .ci-text p {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+}
+
+/* Right Side: Form Main Heading */
+.contact-form-wrapper h3 {
+    font-size: 2rem !important; /* Prevents the heading from being too gigantic */
+    letter-spacing: -0.5px;
+}
+
+/* Right Side: Form Subtitle */
+.contact-form-wrapper p.text-muted {
+    font-size: 1rem !important;
+    line-height: 1.6;
+}
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .contact-form-wrapper { padding: 40px 30px; }
+}
+
+@media (max-width: 991.98px) {
+    .ebal-contact-page .display-6 { font-size: 2.5rem; }
+    .contact-form-wrapper { margin-top: 20px; }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-contact-page .display-6 { font-size: 2rem; }
+    .contact-form-wrapper { padding: 30px 20px; border-radius: 16px; }
+    .contact-info-card { flex-direction: column; text-align: center; align-items: center; }
+    .contact-info-card .ci-icon { margin-right: 0; margin-bottom: 15px; }
+}
+.mt-5 {
+    margin-top: 0rem !important;
+}
+</style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg ebal-navbar fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="img/EBAL INNOTECH FINAL_LOGO.png" alt="EBAL Logo" style="height: 50px;">
+        </a>
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="solution.html" class="nav-link">Solution</a>
+                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solution</a> -->
+                    <!-- <div class="dropdown-menu fade-down m-0">
+                        <a href="training.html" class="dropdown-item">Industrial Training</a>
+                        <a href="tech.html" class="dropdown-item">Advanced Tech</a>
+                        <a href="mentorship.html" class="dropdown-item">Mentorship</a>
+                    </div> -->
+                </div>
+                <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
+            </div>
+            
+            <div class="d-none d-lg-block">
+                <a href="quote.html" class="btn btn-nav-action rounded-pill">Get a Quote <i class="fa fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="ebal-inner-header">
+    <div class="tech-orb orb-primary"></div>
+    <div class="tech-orb orb-cyan"></div>
+    <div class="tech-orb orb-accent"></div>
+    
+    <div class="grid-overlay"></div>
+
+    <div class="container position-relative z-index-2">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="mb-4" style="margin-top: 40px;">
+                    <span class="ebal-badge-clean">
+                        <i class="bi bi-info-circle-fill"></i> We’re here to help
+                    </span>
+                </div>
+                
+                <h1 class="display-3 fw-bold text-dark-blue animated slideInDown mb-3">Contact Us</h1>
+                
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp">
+                        <li class="breadcrumb-item">
+                            <a class="text-primary-blue text-decoration-none fw-bold" href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item text-black fw-bold" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Header End -->
+
+<section class="ebal-contact-page py-5">
+    <div class="container py-5">
+        
+        <div class="row justify-content-center text-center mb-5 pb-3">
+            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="ebal-double-line-heading justify-content-center mb-3">
+                    <span class="line left-line"></span>
+                    <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">Reach Out</h6>
+                    <span class="line right-line"></span>
+                </div>
+                <h2 class="display-6 fw-bold text-dark-blue mb-0">Get in Touch with EBAL Innotech</h2>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.3s">
+                
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="bi bi-person-badge-fill"></i>
+                    </div>
+                    <div class="ci-text">
+                        <h5 class="fw-bold text-dark-blue mb-1">Primary Contact</h5>
+                        <p class="mb-0 text-muted fw-medium">Mr. Manoj Rajendra Ukhande</p>
+                        <p class="mb-0 small text-primary-blue fw-bold">Director, EBAL Innotech Pvt. Ltd.</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <div class="ci-text">
+                        <h5 class="fw-bold text-dark-blue mb-1">Direct Communication</h5>
+                        <p class="mb-1 text-muted"><i class="bi bi-telephone-fill text-primary-cyan me-2"></i> +91-8605003249</p>
+                        <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-primary-cyan me-2"></i> manojukhande555@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="ci-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="ci-text">
+                        <h5 class="fw-bold text-dark-blue mb-1">Office Location</h5>
+                        <p class="mb-0 text-muted">Flat No B 306, Gat No 1420<br>Splendour County, Wagholi<br>Pune, Maharashtra 412207</p>
+                    </div>
+                </div>
+
+                <div class="contact-map-wrapper shadow-sm mt-4">
+                    <iframe src="https://maps.google.com/maps?q=Splendour%20County,%20Wagholi,%20Pune&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.5s">
+                <div class="contact-form-wrapper shadow-lg">
+                    <h3 class="fw-bold text-dark-blue mb-2">Send a Message</h3>
+                    <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we will get back to you shortly.</p>
+                    
+                    <form>
+                        <div class="row g-3">
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating ebal-form-floating">
+                                    <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                                    <label for="contactName">Your Name</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating ebal-form-floating">
+                                    <input type="tel" class="form-control" id="contactPhone" placeholder="Phone Number" required>
+                                    <label for="contactPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating ebal-form-floating">
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="Email Address" required>
+                                    <label for="contactEmail">Email Address</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating ebal-form-floating">
+                                    <input type="text" class="form-control" id="contactSubject" placeholder="Subject" required>
+                                    <label for="contactSubject">Subject</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating ebal-form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="contactMessage" style="height: 150px" required></textarea>
+                                    <label for="contactMessage">Your Message</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <button class="btn-contact-submit w-100 py-3" type="submit">
+                                    Send Message <i class="bi bi-send-fill ms-2"></i>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Quick Link</h4>
+                <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Privacy Policy</a>
+                <a class="btn btn-link" href="">Terms & Condition</a>
+                <a class="btn btn-link" href="">FAQs & Help</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Services</h4>
+                <a class="btn btn-link" href="">Industrial Automation</a>
+                <a class="btn btn-link" href="">Robotics & AI</a>
+                <a class="btn btn-link" href="">Core Engineering</a>
+                <a class="btn btn-link" href="">Corporate Training</a>
+                <a class="btn btn-link" href="">Career Counseling</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Popular Courses</h4>
+                <a class="btn btn-link" href="">EV Technology</a>
+                <a class="btn btn-link" href="">PLC & SCADA</a>
+                <a class="btn btn-link" href="">Embedded Systems</a>
+                <a class="btn btn-link" href="">Additive Manufacturing</a>
+                <a class="btn btn-link" href="">Full Stack Development</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Contact</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3 text-primary-cyan"></i>123 Street, New York, USA</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3 text-primary-cyan"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3 text-primary-cyan"></i>info@example.com</p>
+                
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a  href="#">EBAL INNOTECH</a>, All Right Reserved.
+                    Designed By <a class="border-bottom" href="https://www.startupsahay.com/">Startup Sahay</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Home</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1447 @@
+/* =========================================
+   INNER PAGE HEADER (Sweeping Fluid Aurora)
+   ========================================= */
+.ebal-inner-header {
+    position: relative;
+    background-color: #f8faff; 
+    padding: 60px 0 60px 0; 
+    overflow: hidden;
+    border-bottom: 1px solid rgba(43, 89, 189, 0.08); 
+    z-index: 1; /* Establishes stacking context */
+}
+
+/* 1. Slowly Panning Tech Dot Grid */
+.grid-overlay {
+    position: absolute;
+    top: -50px; left: -50px; right: -50px; bottom: -50px;
+    background-image: radial-gradient(rgba(33, 76, 170, 0.12) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    z-index: 1;
+    animation: panGrid 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes panGrid {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 30px); }
+}
+.pt-5 {
+    padding-top: 5rem !important;
+}
+/* 2. The Sweeping, Morphing Orbs */
+.tech-orb {
+    position: absolute;
+    filter: blur(100px); 
+    z-index: 0;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.orb-primary {
+    width: 60vw;
+    max-width: 600px;
+    height: 500px;
+    background-color: rgba(43, 89, 189, 0.45); 
+    top: -100px; 
+    left: -20%;
+    animation: sweepRight 18s infinite alternate ease-in-out;
+}
+
+/* CYAN ORB - Starts Right, Sweeps Left */
+.orb-cyan {
+    width: 50vw; 
+    max-width: 500px;
+    height: 500px;
+    background-color: rgba(6, 187, 204, 0.4); 
+    bottom: -150px; 
+    right: -10%;
+    animation: sweepLeft 22s infinite alternate ease-in-out;
+}
+
+/* ACCENT ORB - Sweeps Diagonally to blend the colors */
+.orb-accent {
+    width: 40vw; 
+    max-width: 400px;
+    height: 400px;
+    background-color: rgba(18, 28, 51, 0.25); 
+    top: 20%; 
+    left: 20%;
+    animation: sweepDiagonal 20s infinite alternate ease-in-out;
+}
+
+/* --- THE MOVEMENT ANIMATIONS --- */
+
+
+@keyframes sweepRight {
+    0% { 
+        transform: translateX(0) scale(1) rotate(0deg); 
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    }
+    50% { 
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+    }
+    100% { 
+        transform: translateX(50vw) scale(1.2) rotate(180deg); 
+        border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; 
+    }
+}
+
+/* Sweeps across the screen to the left while rotating and morphing */
+@keyframes sweepLeft {
+    0% { 
+        transform: translateX(0) scale(1) rotate(0deg); 
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; 
+    }
+    50% { 
+        border-radius: 60% 40% 30% 70% / 50% 40% 70% 50%; 
+    }
+    100% { 
+        transform: translateX(-40vw) scale(1.1) rotate(-180deg); 
+        border-radius: 30% 70% 50% 50% / 60% 30% 70% 40%; 
+    }
+}
+
+/* Sweeps up and down diagonally */
+@keyframes sweepDiagonal {
+    0% { 
+        transform: translate(0, 0) scale(0.9) rotate(0deg); 
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; 
+    }
+    100% { 
+        transform: translate(30vw, -150px) scale(1.3) rotate(90deg); 
+        border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%; 
+    }
+}
+
+/* 3. Content Styling */
+.ebal-inner-header .z-index-2 { z-index: 2; }
+.ebal-inner-header .text-dark-blue { color: #121c33; letter-spacing: -1.5px; }
+.ebal-inner-header .text-primary-blue { color: var(--primary-blue, #2b59bd); }
+
+.ebal-inner-header .breadcrumb-item + .breadcrumb-item::before {
+    color: #1e1f22;
+    content: "\f105"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 0 10px;
+}
+
+.ebal-inner-header .breadcrumb-item a { transition: color 0.3s ease; }
+.ebal-inner-header .breadcrumb-item a:hover { color: var(--primary-cyan, #1c5b63) !important; }
+.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+}
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 991.98px) {
+    .ebal-inner-header { padding: 140px 0 60px 0; }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-inner-header { padding: 120px 0 50px 0; }
+    .ebal-inner-header .display-3 { font-size: 2.5rem; }
+    
+    /* Limit the size of the blur objects on mobile so it doesn't cause lag */
+    .tech-orb { filter: blur(60px); }
+    .orb-primary { height: 350px; }
+    .orb-cyan { height: 350px; }
+    .orb-accent { height: 250px; }
+}
+
+/* =========================================
+   STATIC BENTO GRID (Always Visible Text)
+   ========================================= */
+
+.ebal-story-section {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Narrative Text Styles */
+.ebal-story-section .lead-text {
+    font-size: 1.15rem;
+    color: var(--text-dark, #121c33);
+    line-height: 1.7;
+}
+
+.ebal-story-section .sub-text {
+    font-size: 1.05rem;
+    color: var(--text-grey, #667085);
+    line-height: 1.6;
+}
+
+/* --- THE INTERLOCKING GRID LAYOUT --- */
+.bento-grid-static {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+
+/* Precise Placement in the Grid */
+.card-tall { grid-column: 1; grid-row: 1 / 3; } 
+.card-sq1  { grid-column: 2; grid-row: 1; }    
+.card-sq2  { grid-column: 2; grid-row: 2; }   
+.card-wide { grid-column: 1 / 3; grid-row: 3; } 
+
+/* Base Card Styling */
+.bento-card-solid {
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Gentle Lift on Hover (No text hiding) */
+.bento-card-solid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(43, 89, 189, 0.12);
+}
+
+/* Card Color Themes */
+.dark-plum-gradient { background: linear-gradient(135deg, #2a4482 0%, var(--primary-blue) 100%); color: #fff; }
+.cyan-bg { background-color: var(--primary-cyan); color: #fff; }
+.white-bg { background-color: #fff; color: var(--text-dark); }
+.border-card { border: 1px solid rgba(43, 89, 189, 0.15); }
+.light-blue-bg { background-color: #EDF1FA; color: var(--text-dark); }
+
+/* Typography & Icons */
+.card-icon-top {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.card-icon-large {
+    font-size: 3.5rem;
+    opacity: 0.8;
+}
+
+.card-solid-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.card-solid-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* =========================================
+   RESPONSIVE MOBILE STYLES
+   ========================================= */
+
+@media (max-width: 991.98px) {
+    .ebal-story-section { text-align: center; }
+    .ebal-story-section .btn-primary-custom { margin-bottom: 40px; }
+    
+    .bento-grid-static { 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+    }
+    
+    .card-tall, .card-sq1, .card-sq2, .card-wide { 
+        grid-column: 1; 
+        grid-row: auto; 
+    }
+    
+    .bento-card-solid {
+        padding: 30px 25px;
+        text-align: left; 
+    }
+}
+
+/* =========================================
+   EBAL MISSION & VISION (Refined Sizing)
+   ========================================= */
+
+.ebal-mvv-section {
+    background-color: #fcfdfe;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+
+}
+
+/* Typography Reductions */
+.ebal-section-title { font-size: 2.2rem; letter-spacing: -0.5px; }
+.small-p { font-size: 0.95rem; line-height: 1.6; }
+
+/* Horizontal Cards (Mission/Vision) */
+.mv-card-horizontal {
+    background: #ffffff;
+    border: 1px solid rgba(43, 89, 189, 0.08);
+    border-radius: 16px;
+    padding: 20px 25px; /* Reduced padding */
+    display: flex;
+    align-items: flex-start; /* Aligns icon to top of text */
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card-horizontal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(43, 89, 189, 0.08);
+}
+
+.mv-card-horizontal h4 {
+    font-size: 1.8rem; 
+}
+
+/* FIX: Icon Square Scaling & Alignment */
+.mv-icon-square {
+    width: 55px;
+    height: 55px;
+    min-width: 55px; /* Forces width */
+    flex-shrink: 0;  /* Prevents flexbox from squishing it */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Color Utilities */
+.text-primary-blue { color: var(--primary-blue, #2b59bd) !important; }
+.text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.bg-light-cyan { background-color: rgba(6, 187, 204, 0.1); }
+.bg-light-blue { background-color: rgba(43, 89, 189, 0.1); }
+.bg-white-solid { background-color: #ffffff; }
+
+/* =========================================
+   OVERLAPPING IMAGES & ROTATING BADGE
+   ========================================= */
+
+.image-composition { position: relative; height: 500px; width: 100%; } /* Reduced height */
+
+.img-top-left {
+    position: absolute; top: 0; left: 0; width: 68%; height: 350px;
+    object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); z-index: 1;
+}
+
+.img-bottom-right {
+    position: absolute; bottom: 0; right: 0; width: 72%; height: 350px;
+    object-fit: cover; border-radius: 20px; border: 8px solid #fcfdfe;
+    box-shadow: -8px 10px 30px rgba(0, 0, 0, 0.06); z-index: 2;
+}
+
+.rotating-badge {
+    position: absolute; top: 76%; left: 12%; transform: translateY(-50%);
+    width: 110px; height: 110px; /* Reduced badge size */
+    background-color: #ffffff; border-radius: 50%; display: flex;
+    justify-content: center; align-items: center; box-shadow: 0 8px 20px rgba(43, 89, 189, 0.12); z-index: 5;
+}
+
+.rotating-text { width: 100%; height: 100%; animation: spinText 12s linear infinite; }
+.center-arrow { position: absolute; font-size: 1.6rem; color: var(--primary-cyan, #06BBCC); }
+
+@keyframes spinText { 100% { transform: rotate(360deg); } }
+
+/* =========================================
+   CORE VALUES FRAMEWORK (Alignment Fixes)
+   ========================================= */
+
+.border-card { border-top: 4px solid var(--primary-blue, #2b59bd); }
+
+.framework-header {
+    display: flex; align-items: center; padding: 25px 30px; /* Reduced padding */
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.framework-header h4 { font-size: 1.5rem; }
+
+.mvv-icon-small {
+    width: 45px; height: 45px; min-width: 45px; flex-shrink: 0; /* Alignment fix */
+    background-color: rgba(43, 89, 189, 0.1); color: var(--primary-blue); 
+    border-radius: 10px; display: flex; justify-content: center; align-items: center; 
+    font-size: 1.3rem; margin-right: 15px;
+}
+
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+.value-item {
+    padding: 30px 20px; /* Reduced padding */
+    text-align: center; 
+    border-right: 1px solid rgba(0,0,0,0.04);
+    transition: background-color 0.3s ease;
+}
+.value-item:last-child { border-right: none; }
+.value-item:hover { background-color: #f8faff; }
+
+/* FIX: Icon Circle Scaling & Alignment */
+.value-icon-circle {
+    width: 55px; 
+    height: 55px; 
+    min-width: 55px; 
+    flex-shrink: 0; /* Prevents squishing */
+    border-radius: 50%; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5rem; 
+    margin: 0 auto 15px auto; /* Guarantees center alignment */
+}
+
+.value-item h5 { font-size: 1.2rem; letter-spacing: -0.3px; margin-bottom: 10px; }
+.value-item p { font-size: 0.95rem; } /* Slightly smaller text for fit */
+
+/* Double Line Heading Flexbox Logic */
+.ebal-double-line-heading { display: flex; align-items: center; }
+.ebal-double-line-heading .line { position: relative; width: 50px; height: 10px; }
+.ebal-double-line-heading .left-line, .ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+.ebal-double-line-heading .left-line::before, .ebal-double-line-heading .right-line::before {
+    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #fcfdfe;
+}
+.ebal-double-line-heading .left-line::before { left: 0; }
+.ebal-double-line-heading .right-line::before { right: 0; }
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .image-composition { height: 400px; }
+    .img-top-left, .img-bottom-right { height: 280px; }
+    .value-item { padding: 25px 15px; }
+}
+
+@media (max-width: 991.98px) {
+    .ebal-double-line-heading { justify-content: center !important; }
+    .ebal-mvv-section .col-lg-6 { text-align: center; }
+    .ebal-section-title { font-size: 1.5rem; }
+    
+    .mv-card-horizontal { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+    .image-composition { margin-top: 40px; }
+    
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .value-item:nth-child(2) { border-right: none; }
+    .value-item:nth-child(1), .value-item:nth-child(2) { border-bottom: 1px solid rgba(0,0,0,0.04); }
+}
+
+@media (max-width: 767.98px) {
+    .image-composition { height: 320px; }
+    .img-top-left, .img-bottom-right { height: 200px; width: 85%; }
+    .rotating-badge { top: 50%; left: 0; width: 90px; height: 90px; }
+    
+    .values-grid { grid-template-columns: 1fr; }
+    .value-item { border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.04); padding: 25px 15px; }
+    .value-item:last-child { border-bottom: none; }
+    .framework-header { flex-direction: column; text-align: center; }
+    .mvv-icon-small { margin-right: 0; margin-bottom: 15px; }
+}
+/* =========================================
+   EBAL MISSION, VISION & VALUES STYLES
+   ========================================= */
+
+.ebal-mvv-section {
+    background-color: #fcfdfe;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    max-width: 1250px;
+    margin: 0 auto
+}
+
+/* Base Card Styling */
+.mvv-card {
+    border-radius: 24px;
+    padding: 30px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mvv-card:not(.framework-card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(43, 89, 189, 0.15);
+}
+
+/* Gradients and Colors */
+.bg-cyan-gradient { background: linear-gradient(135deg, var(--primary-cyan) 0%, #74cdeb 100%); color: #ffffff; }
+.bg-blue-gradient { background: linear-gradient(135deg, var(--primary-blue) 0%, #6991e8 100%); color: #ffffff; }
+.bg-white-solid { background-color: #ffffff; }
+.text-primary-blue { color: var(--primary-blue, #2b59bd) !important; }
+.text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.bg-light-cyan { background-color: rgba(6, 187, 204, 0.1); }
+.bg-light-blue { background-color: rgba(43, 89, 189, 0.1); }
+
+.border-card {
+    border: 1px solid rgba(43, 89, 189, 0.1);
+    border-top: 5px solid var(--primary-blue);
+}
+
+/* Icons & Typography for Mission/Vision */
+.mvv-icon-wrap {
+    width: 70px; height: 70px; background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; color: #ffffff; margin-bottom: 25px; backdrop-filter: blur(5px);
+}
+
+.mvv-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
+.mvv-text { font-size: 1.1rem; line-height: 1.7; margin: 0; opacity: 0.95; }
+
+/* Integrated Skill-Growth visualization */
+.viz-track { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 12px; }
+.viz-label { font-size: 0.8rem; font-weight: 600; min-width: 90px; text-align: right; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; }
+.viz-progress { position: relative; flex-grow: 1; height: 8px; border-radius: 4px; overflow: hidden; }
+.viz-progress-fill { position: absolute; top: 0; left: 0; height: 100%; border-radius: 4px; }
+.viz-blue-track { background-color: rgba(255, 255, 255, 0.15); }
+.viz-cyan-fill { background-color: var(--primary-cyan); }
+.viz-blue-fill { background-color: var(--primary-blue); }
+
+/* =========================================
+   CORE VALUES FRAMEWORK FIX (CSS Grid)
+   ========================================= */
+.framework-header {
+    display: flex;
+    align-items: center;
+    padding: 40px 40px 20px 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.mvv-icon-small {
+    width: 50px; height: 50px; background-color: rgba(43, 89, 189, 0.1);
+    color: var(--primary-blue); border-radius: 12px; display: flex;
+    justify-content: center; align-items: center; font-size: 1.5rem; margin-right: 15px;
+}
+
+/* This grid perfectly prevents the 4th item from cutting off */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.value-item {
+    padding: 40px 30px;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+.value-item:last-child {
+    border-right: none;
+}
+
+.value-item:hover {
+    background-color: #dfe6f6;
+}
+
+.value-icon-circle {
+    width: 70px; height: 70px; border-radius: 50%;
+    display: inline-flex; justify-content: center; align-items: center;
+    font-size: 1.8rem; margin-bottom: 20px;
+}
+
+.value-item h4 { font-size: 1.8rem; letter-spacing: -0.5px; margin-bottom: 15px; }
+
+/* Section Title Fix for Template compatibility */
+.section-title::before, .section-title::after {
+    background: var(--primary-blue, #2b59bd) !important;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT (MacBook, iPad, Mobile)
+   ========================================= */
+@media (max-width: 1199px) {
+    .value-item { padding: 30px 20px; }
+    .value-item h4 { font-size: 1.1rem; }
+}
+
+@media (max-width: 991.98px) {
+    .mvv-card { padding: 40px 30px; }
+    .mvv-title { font-size: 1.5rem; }
+    
+    /* Changes to 2x2 grid on tablets so they aren't squeezed */
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .value-item:nth-child(2) { border-right: none; }
+    .value-item:nth-child(1), .value-item:nth-child(2) { border-bottom: 1px solid rgba(0,0,0,0.05); }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-mvv-section { padding: 60px 15px; }
+    .mvv-card { padding: 30px 20px; }
+    
+    .framework-header { padding: 30px 20px; flex-direction: column; text-align: center; }
+    .mvv-icon-small { margin-right: 0; margin-bottom: 15px; }
+    
+    /* Changes to 1 column stacked on mobile phones */
+    .values-grid { grid-template-columns: 1fr; }
+    .value-item { border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 30px 15px; }
+    .value-item:last-child { border-bottom: none; }
+}
+
+/* =========================================
+   CUSTOM DOUBLE-LINE HEADING (Flexbox Fix)
+   ========================================= */
+
+.text-primary-cyan {
+    color: var(--primary-cyan, #06BBCC) !important;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+/* The Flex Container */
+.ebal-double-line-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* The Base Line Styles */
+.ebal-double-line-heading .line {
+    position: relative;
+    width: 60px; 
+    height: 10px; 
+}
+
+
+.ebal-double-line-heading .left-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC);
+    border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+
+.ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC);
+    border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+
+
+.ebal-double-line-heading .left-line::before {
+    content: "";
+    position: absolute;
+    top: -2px; 
+    left: 0;
+    width: 20px; 
+    height: 4px;
+    background-color: #fcfdfe; 
+}
+
+/* Right side: covers the top-right to make the top line shorter */
+.ebal-double-line-heading .right-line::before {
+    content: "";
+    position: absolute;
+    top: -2px; 
+    right: 0;
+    width: 20px; 
+    height: 4px;
+    background-color: #fcfdfe; 
+}
+
+/* =========================================
+   EBAL WHO WE ARE (Text-Rich Bento Grid)
+   ========================================= */
+
+.ebal-who-bento {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Color Utilities */
+.ebal-who-bento .text-primary-blue { color: var(--primary-blue, #2b59bd) !important; }
+.ebal-who-bento .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.ebal-who-bento .text-dark-blue { color: #121c33 !important; }
+
+/* --- RIGHT COLUMN: TYPOGRAPHY --- */
+.ebal-who-bento .bento-main-title {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.ebal-who-bento .bento-lead-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Text Feature Blocks (Icons + Text) */
+.ebal-who-bento .text-feature-block {
+    padding-right: 15px;
+}
+
+.ebal-who-bento .text-feature-block .feature-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #f8faff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid rgba(43, 89, 189, 0.1);
+}
+
+.ebal-who-bento .text-feature-block h5 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.ebal-who-bento .text-feature-block p {
+    line-height: 1.6;
+}
+
+/* Double Line Heading Logic */
+.ebal-who-bento .ebal-double-line-heading { display: flex; align-items: center; }
+.ebal-who-bento .ebal-double-line-heading .line { position: relative; width: 40px; height: 10px; }
+.ebal-who-bento .ebal-double-line-heading .left-line, 
+.ebal-who-bento .ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+.ebal-who-bento .ebal-double-line-heading .left-line::before, 
+.ebal-who-bento .ebal-double-line-heading .right-line::before {
+    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #ffffff;
+}
+.ebal-who-bento .ebal-double-line-heading .left-line::before { left: 0; }
+.ebal-who-bento .ebal-double-line-heading .right-line::before { right: 0; }
+
+/* --- LEFT COLUMN: BENTO VISUAL GRID --- */
+.ebal-who-bento .bento-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+}
+
+.ebal-who-bento .bento-card {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* Top Left: Stat Card */
+.ebal-who-bento .bento-stat {
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ebal-who-bento .stat-icon-wrapper {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.ebal-who-bento .bento-stat h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Top Right: Video Card */
+.ebal-who-bento .bento-video {
+    position: relative;
+    height: 250px;
+}
+
+.ebal-who-bento .bento-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ebal-who-bento .play-btn-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(18, 28, 51, 0.3); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ebal-who-bento .play-btn {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-cyan, #06BBCC);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding-left: 4px; /* Centers the play triangle visually */
+    text-decoration: none;
+    box-shadow: 0 0 0 0 rgba(6, 187, 204, 0.6);
+    animation: pulsePlay 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    transition: transform 0.3s ease;
+}
+
+.ebal-who-bento .play-btn:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+@keyframes pulsePlay {
+    to { box-shadow: 0 0 0 20px rgba(6, 187, 204, 0); }
+}
+
+/* Bottom: Wide Image */
+.ebal-who-bento .bento-wide {
+    grid-column: span 2; /* Spans across both columns */
+    height: 300px;
+}
+
+.ebal-who-bento .bento-wide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT (All Screens)
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .ebal-who-bento .bento-main-title { font-size: 2rem; }
+    .ebal-who-bento .bento-video { height: 220px; }
+    .ebal-who-bento .bento-wide { height: 250px; }
+}
+
+@media (max-width: 991.98px) {
+    /* Stacks the grid and text on tablets */
+    .ebal-who-bento .bento-visual-grid { margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;}
+    .ebal-who-bento .ebal-double-line-heading { justify-content: center !important; }
+    .ebal-who-bento .col-lg-6:last-child { text-align: center; }
+    
+    .ebal-who-bento .text-feature-block { padding-right: 0; text-align: center; display: flex; flex-direction: column; align-items: center;}
+}
+
+@media (max-width: 767.98px) {
+    /* Mobile Phones */
+    .ebal-who-bento .bento-main-title { font-size: 1.8rem; }
+    
+    /* Changes Grid to 1 Column on very small screens so boxes aren't squished */
+    .ebal-who-bento .bento-visual-grid { 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    
+    .ebal-who-bento .bento-wide { grid-column: span 1; height: 200px; }
+    .ebal-who-bento .bento-video { height: 200px; }
+    .ebal-who-bento .bento-stat { padding: 25px 20px; align-items: center; text-align: center; }
+    
+    .ebal-who-bento .text-feature-block h5 { font-size: 1.1rem; }
+}
+
+/* =========================================
+   EBAL STATS & CALL TO ACTION (Boxed Layout)
+   ========================================= */
+
+/* The outer section now has a light, attractive background */
+.ebal-stats-section {
+    background: linear-gradient(135deg, #f0f4fd 0%, #ffffff 100%);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    margin-top: 30px;
+}
+
+/* THE PREMIUM DARK BOX */
+.ebal-stats-box-wrapper {
+    background-color: #121c33; /* Deep eBal Dark Blue */
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(18, 28, 51, 0.2); /* Deep realistic shadow */
+    position: relative;
+}
+
+/* Color Overrides */
+.ebal-stats-section .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.ebal-stats-section .text-white-50 { color: rgba(255, 255, 255, 0.6) !important; }
+
+/* Subtle horizontal line dividing the top and bottom */
+.ebal-bottom-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- OVERLAPPING ROTATING BADGE --- */
+.cta-rotating-badge {
+    position: absolute;
+    bottom: -30px;
+    left: 10px; 
+    width: 140px;
+    height: 140px;
+    background-color: var(--primary-cyan, #06BBCC); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    border: 6px solid #121c33; /* Matches the dark box border perfectly */
+}
+
+.cta-rotating-text {
+    width: 100%;
+    height: 100%;
+    animation: spinText 15s linear infinite;
+}
+
+.cta-center-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #121c33; 
+    font-weight: bold;
+}
+
+@keyframes spinText {
+    100% { transform: rotate(360deg); }
+}
+
+/* --- STATS BOXES (Compact & Static) --- */
+.ebal-stat-box { padding: 0; }
+.ebal-stat-box i { font-size: 2rem; }
+.ebal-stat-box h3 { letter-spacing: -0.5px; }
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .ebal-stats-box-wrapper { padding: 50px 40px; }
+}
+
+@media (max-width: 991.98px) {
+    .ebal-stats-section .display-5 { font-size: 2.5rem; }
+    .cta-rotating-badge { width: 120px; height: 120px; bottom: -20px; left: 0px; }
+    .cta-center-icon { font-size: 1.5rem; }
+    .ebal-stat-box { text-align: center; } 
+}
+
+@media (max-width: 767.98px) {
+    .ebal-stats-box-wrapper { padding: 40px 20px; border-radius: 20px; }
+    .ebal-stats-section .display-5 { font-size: 2rem; }
+    .ebal-stats-section img { height: 300px !important; }
+    
+    .cta-rotating-badge { 
+        bottom: -20px; 
+        left: -10px; 
+        width: 100px; 
+        height: 100px; 
+        border-width: 4px;
+    }
+    .cta-rotating-text text { font-size: 14px; letter-spacing: 2px;}
+    
+    .ebal-bottom-divider { padding-bottom: 2rem !important; margin-bottom: 2rem !important; }
+    .ebal-stat-box { margin-bottom: 10px; } 
+}
+
+/* =========================================
+   EBAL PARTNERSHIPS CAROUSEL (Infinite Scroll)
+   ========================================= */
+
+.ebal-partners-section {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Typography Overrides */
+.ebal-partners-section .text-dark-blue { color: #121c33 !important; }
+.ebal-partners-section .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+
+/* Double Line Heading (Centered Version) */
+.ebal-partners-section .ebal-double-line-heading { display: flex; align-items: center; }
+.ebal-partners-section .ebal-double-line-heading .line { position: relative; width: 40px; height: 10px; }
+.ebal-partners-section .ebal-double-line-heading .left-line, 
+.ebal-partners-section .ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+.ebal-partners-section .ebal-double-line-heading .left-line::before, 
+.ebal-partners-section .ebal-double-line-heading .right-line::before {
+    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #ffffff;
+}
+.ebal-partners-section .ebal-double-line-heading .left-line::before { left: 0; }
+.ebal-partners-section .ebal-double-line-heading .right-line::before { right: 0; }
+
+
+/* --- CAROUSEL WRAPPER & FADE EDGES --- */
+.ebal-partners-section .partners-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+/* Edge Masking (Fades out the logos on the far left and right) */
+.ebal-partners-section .partners-carousel-wrapper::before,
+.ebal-partners-section .partners-carousel-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Allows clicking through the fade */
+}
+
+.ebal-partners-section .partners-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 100%);
+}
+
+.ebal-partners-section .partners-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0) 100%);
+}
+
+
+/* --- THE MOVING TRACK --- */
+.ebal-partners-section .partners-track {
+    display: inline-flex;
+    align-items: center;
+    /* 35s controls the speed. Lower = faster */
+    animation: marqueeScroll 35s linear infinite; 
+}
+
+/* Pause the animation when the user hovers over the logos */
+.ebal-partners-section .partners-carousel-wrapper:hover .partners-track {
+    animation-play-state: paused;
+}
+
+
+/* --- INDIVIDUAL LOGOS --- */
+.ebal-partners-section .partner-logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;       /* Width of each logo slot */
+    margin: 0 40px;     /* Space between logos */
+    flex-shrink: 0;
+}
+
+.ebal-partners-section .partner-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.5); /* Muted by default */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Brings the logo to full color and slightly enlarges on hover */
+.ebal-partners-section .partner-logo img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.08);
+}
+
+
+/* --- THE ANIMATION KEYFRAMES --- */
+/* Shifts exactly half the track width (because we duplicated the images) */
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 991.98px) {
+    .ebal-partners-section .partner-logo { width: 180px; margin: 0 30px; }
+    .ebal-partners-section .partner-logo img { max-height: 70px; }
+    .ebal-partners-section .partners-carousel-wrapper::before,
+    .ebal-partners-section .partners-carousel-wrapper::after { width: 100px; }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-partners-section { padding-top: 50px; padding-bottom: 50px; }
+    .ebal-partners-section h2 { font-size: 1.8rem; }
+    .ebal-partners-section .partner-logo { width: 140px; margin: 0 20px; }
+    .ebal-partners-section .partner-logo img { max-height: 50px; }
+    
+    /* Shrink the edge fades on mobile so they don't cover the whole screen */
+    .ebal-partners-section .partners-carousel-wrapper::before,
+    .ebal-partners-section .partners-carousel-wrapper::after { width: 50px; }
+}
+
+/* =========================================
+   EBAL WHY CHOOSE US (Strictly Scoped)
+   ========================================= */
+
+.ebal-wcu-section {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow: visible; /* Required for the slide-up effect to pop out */
+}
+
+/* --- TOP SECTION STYLING --- */
+.ebal-wcu-img-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.ebal-wcu-main-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.ebal-wcu-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4b5563;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+}
+
+.ebal-wcu-subtitle i {
+    font-size: 0.5rem;
+    color: var(--primary-cyan, #06BBCC);
+    margin-right: 10px;
+}
+
+.ebal-wcu-heading {
+    font-size: 2.6rem !important;
+    font-weight: 800 !important;
+    color: #121c33 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+}
+
+.ebal-wcu-highlight {
+    color: var(--primary-blue, #2b59bd) !important;
+}
+
+.ebal-wcu-paragraph {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Checklist */
+.ebal-wcu-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ebal-wcu-checklist li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #121c33;
+}
+
+.ebal-wcu-checklist i {
+    font-size: 1.3rem;
+    color: var(--primary-cyan, #06BBCC);
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+/* Button */
+.ebal-wcu-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-blue, #2b59bd);
+    color: #ffffff !important;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(43, 89, 189, 0.2);
+}
+
+.ebal-wcu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(43, 89, 189, 0.3);
+    color: #ffffff;
+}
+
+/* =========================================
+   BOTTOM INTERACTIVE BAR (Flush Pill Layout)
+   ========================================= */
+
+.ebal-wcu-bottom-bar {
+    background-color: #f4f7fc; /* Light grey/blue base like your image */
+    border-radius: 30px; /* Gives the whole bar rounded ends */
+    overflow: hidden; /* Crucial: Keeps the hover color inside the rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    padding: 0; /* Ensures boxes are flush */
+}
+
+.ebal-wcu-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+/* --- THE SLIDE-UP COLOR ANIMATION --- */
+/* Creates a hidden blue background at the bottom */
+.ebal-wcu-box::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; /* Starts at 0 height */
+    background-color: var(--primary-blue, #2b59bd);
+    transition: height 0.4s ease-out; /* Smooth slide up effect */
+    z-index: -1;
+}
+
+/* Triggers the background to slide up to 100% on Hover/Active */
+.ebal-wcu-box.active::before,
+.ebal-wcu-box:hover::before {
+    height: 100%;
+}
+
+/* --- TEXT & ICON STYLES (Strictly Scoped) --- */
+.ebal-wcu-box .wcu-icon-wrap {
+    font-size: 2rem;
+    color: var(--primary-cyan, #06BBCC);
+    transition: color 0.3s ease;
+}
+
+.ebal-wcu-box .wcu-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #121c33 !important;
+    margin-bottom: 8px !important;
+    transition: color 0.3s ease;
+}
+
+.ebal-wcu-box .wcu-desc {
+    font-size: 0.95rem !important;
+    color: #6b7280 !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+    transition: color 0.3s ease;
+}
+
+/* --- COLOR SWAP ON HOVER/ACTIVE --- */
+.ebal-wcu-box.active .wcu-icon-wrap,
+.ebal-wcu-box:hover .wcu-icon-wrap { color: #ffffff; }
+
+.ebal-wcu-box.active .wcu-title,
+.ebal-wcu-box:hover .wcu-title { color: #ffffff !important; }
+
+.ebal-wcu-box.active .wcu-desc,
+.ebal-wcu-box:hover .wcu-desc { color: rgba(255, 255, 255, 0.85) !important; }
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .ebal-wcu-box { padding: 30px 20px; gap: 15px; }
+    .ebal-wcu-box .wcu-icon-wrap { font-size: 1.8rem; }
+}
+
+@media (max-width: 991.98px) {
+    .ebal-wcu-heading { font-size: 2.2rem !important; }
+    .ebal-wcu-main-img { height: 400px; }
+    
+    /* Modify pill for tablet/mobile stacking */
+    .ebal-wcu-bottom-bar { border-radius: 20px; }
+    .ebal-wcu-box { 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+    }
+    .col-lg-4:last-child .ebal-wcu-box {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-wcu-heading { font-size: 1.8rem !important; }
+    .ebal-wcu-main-img { height: 300px; }
+}
+
+
+/* =========================================
+   EBAL FOUNDERS SECTION (Updated & Scoped)
+   ========================================= */
+
+.ebal-founders-section {
+    background-color: #fcfdfe; /* Soft, modern background */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Color Utilities */
+.ebal-founders-section .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.ebal-founders-section .text-primary-blue { color: var(--primary-blue, #2b59bd) !important; }
+.ebal-founders-section .text-dark-blue { color: #121c33 !important; }
+
+/* Double Line Heading Logic */
+.ebal-founders-section .ebal-double-line-heading { display: flex; align-items: center; }
+.ebal-founders-section .ebal-double-line-heading .line { position: relative; width: 40px; height: 10px; }
+.ebal-founders-section .ebal-double-line-heading .left-line, 
+.ebal-founders-section .ebal-double-line-heading .right-line {
+    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
+}
+.ebal-founders-section .ebal-double-line-heading .left-line::before, 
+.ebal-founders-section .ebal-double-line-heading .right-line::before {
+    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #fcfdfe;
+}
+.ebal-founders-section .ebal-double-line-heading .left-line::before { left: 0; }
+.ebal-founders-section .ebal-double-line-heading .right-line::before { right: 0; }
+
+/* --- THE MODERN INTERACTION CARD --- */
+.ebal-founders-section .ebal-founders-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(18, 28, 51, 0.04);
+    overflow: hidden;
+    border: 1px solid rgba(43, 89, 189, 0.03);
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.ebal-founders-section .ebal-founders-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(18, 28, 51, 0.08);
+    z-index: 2;
+}
+
+/* --- LEFT SIDE: THE PHOTO CONTAINER --- */
+.ebal-founders-section .founder-profile-side {
+    background-color: #f8faff; /* Subtly tinted background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 30px 10px 30px 30px; /* Reduced right padding for content flush */
+}
+
+.ebal-founders-section .founder-img-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 6px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(43, 89, 189, 0.15);
+}
+
+/* Premium gradient overlay behind the image */
+.ebal-founders-section .founder-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--primary-blue, #2b59bd), var(--primary-cyan, #06BBCC));
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.ebal-founders-section .founder-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- RIGHT SIDE: THE CONTENT & INFO LIST --- */
+.ebal-founders-section .founder-details-side {
+    padding: 40px 30px;
+}
+
+.ebal-founders-section .founder-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #121c33;
+    margin-bottom: 5px;
+}
+
+.ebal-founders-section .founder-role {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.ebal-founders-section .founder-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ebal-founders-section .founder-info-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.ebal-founders-section .founder-info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ebal-founders-section .founder-info-list i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+.ebal-founders-section .founder-info-list strong {
+    color: #121c33;
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .ebal-founders-section .founder-details-side { padding: 30px 20px; }
+    .ebal-founders-section .founder-info-list li { font-size: 0.9rem; line-height: 1.5; }
+    .ebal-founders-section .founder-name { font-size: 1.35rem; }
+}
+
+@media (max-width: 991.98px) {
+    /* Modify cards for tablet/mobile stacking */
+    .ebal-founders-section .founder-profile-side { 
+        padding: 30px; 
+        background-color: transparent; 
+        border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+    .ebal-founders-section .founder-details-side { text-align: center; }
+    .ebal-founders-section .founder-info-list li { justify-content: center; text-align: center; flex-direction: column; align-items: center; margin-bottom: 18px; }
+    .ebal-founders-section .founder-info-list i { margin-right: 0; margin-bottom: 8px; font-size: 1.3rem; }
+    
+    .ebal-founders-section .ebal-double-line-heading { justify-content: center !important; }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-founders-section .ebal-founders-card { border-radius: 16px; }
+    .ebal-founders-section .display-6 { font-size: 1.8rem; }
+}

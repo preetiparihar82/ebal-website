@@ -1,0 +1,162 @@
+/* =========================================
+   EBAL HOW IT WORKS ROADMAP (Safely Scoped)
+   ========================================= */
+
+.ebal-process-section {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Color Utilities */
+.ebal-process-section .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
+.ebal-process-section .text-dark-blue { color: #121c33 !important; }
+
+/* --- NEW HEADING SIZE --- */
+.ebal-process-heading {
+    font-size: 3.5rem; 
+    letter-spacing: -1px;
+}
+
+/* --- 5-COLUMN CSS GRID --- */
+.ebal-process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Forces exactly 5 equal columns */
+    gap: 20px;
+    position: relative;
+    margin-top: 60px; /* Space for the overlapping icons */
+    padding-bottom: 25px; /* Space for the bottom overlapping numbers */
+}
+
+/* The Connecting Roadmap Line (Desktop Only) */
+.ebal-process-grid::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Aligns exactly with the center of the icons */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    border-top: 2px dashed rgba(54, 118, 163, 0.4); /* Dashed line matched to #3676a3 */
+    z-index: 0;
+}
+
+/* --- THE STEP CARDS --- */
+.ebal-process-section .process-step-card {
+    background-color: #f4f7fc; /* Light grey/blue base */
+    border-radius: 16px;
+    padding: 60px 15px 40px 15px; /* Heavy top padding for overlapping icon */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(43, 89, 189, 0.03);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect on the card body */
+.ebal-process-section .process-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(43, 89, 189, 0.1);
+}
+
+/* Text styling inside the card */
+.ebal-process-section .step-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- THE TOP CIRCLE ICONS --- */
+.ebal-process-section .step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #3676a3; /* Required Blue Base */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: absolute;
+    top: -40px; /* Pulls it up halfway out of the card */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid #ffffff; /* Gives it the cutout look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* --- THE BOTTOM NUMBERS --- */
+.ebal-process-section .step-number {
+    background-color: #3676a3; /* Required Blue Base */
+    color: #ffffff;
+    padding: 8px 30px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -20px; /* Pulls it halfway out the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border: 4px solid #ffffff; /* Cutout look */
+    transition: all 0.3s ease;
+}
+
+/* --- HOVER EFFECTS (Turns Cyan) --- */
+.ebal-process-section .process-step-card:hover .step-icon,
+.ebal-process-section .process-step-card:hover .step-number {
+    background-color: var(--primary-cyan, #06BBCC); /* Changes to Cyan */
+    box-shadow: 0 8px 20px rgba(6, 187, 204, 0.3);
+}
+
+.ebal-process-section .process-step-card:hover .step-icon {
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* --- ACTIVE STATE --- */
+.ebal-process-section .process-step-card.active .step-icon,
+.ebal-process-section .process-step-card.active .step-number {
+    background-color: #3676a3; /* Keeps the active step firmly blue */
+    box-shadow: 0 8px 20px rgba(54, 118, 163, 0.4);
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 1199px) {
+    .ebal-process-grid { gap: 15px; }
+    .ebal-process-section .step-icon { width: 70px; height: 70px; font-size: 1.6rem; top: -35px; border-width: 4px; }
+    .ebal-process-section .step-content p { font-size: 0.85rem; }
+}
+
+@media (max-width: 991.98px) {
+    .ebal-process-heading { font-size: 2.8rem; }
+    
+    /* Changes to a 3-column grid on tablets, then wraps */
+    .ebal-process-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 60px 20px; /* Adds heavy vertical gap because of the overlapping icons */
+        margin-top: 50px;
+    }
+    
+    /* Hides the dashed line when the grid wraps into multiple rows */
+    .ebal-process-grid::before { display: none; }
+}
+
+@media (max-width: 767.98px) {
+    .ebal-process-heading { font-size: 2.2rem; }
+    
+    /* Changes to a 1-column vertical stack on mobile */
+    .ebal-process-grid { 
+        grid-template-columns: 1fr; 
+        max-width: 400px;
+        margin: 50px auto 0 auto;
+    }
+    .ebal-process-section .step-content p { font-size: 1rem; }
+}
