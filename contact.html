@@ -31,182 +31,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/course.css" rel="stylesheet">
-<style>
-    /* =========================================
-   EBAL CONTACT US PAGE (Safely Scoped)
-   ========================================= */
 
-.ebal-contact-page {
-    background-color: #f8faff; /* Very soft background to contrast white cards */
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    overflow-x: hidden;
-   
-}
-.py-5 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-
-/* Color Overrides */
-.ebal-contact-page .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
-.ebal-contact-page .text-primary-blue { color: var(--primary-blue, #3676a3) !important; }
-.ebal-contact-page .text-dark-blue { color: #121c33 !important; }
-
-/* Double Line Heading */
-.ebal-contact-page .ebal-double-line-heading { display: flex; align-items: center; }
-.ebal-contact-page .ebal-double-line-heading .line { position: relative; width: 40px; height: 10px; }
-.ebal-contact-page .ebal-double-line-heading .left-line, 
-.ebal-contact-page .ebal-double-line-heading .right-line {
-    border-top: 2px solid var(--primary-cyan, #06BBCC); border-bottom: 2px solid var(--primary-cyan, #06BBCC);
-}
-.ebal-contact-page .ebal-double-line-heading .left-line::before, 
-.ebal-contact-page .ebal-double-line-heading .right-line::before {
-    content: ""; position: absolute; top: -2px; width: 15px; height: 4px; background-color: #f8faff;
-}
-.ebal-contact-page .ebal-double-line-heading .left-line::before { left: 0; }
-.ebal-contact-page .ebal-double-line-heading .right-line::before { right: 0; }
-
-/* --- LEFT SIDE: CONTACT INFO CARDS --- */
-.contact-info-card {
-    display: flex;
-    align-items: flex-start;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-    border: 1px solid rgba(54, 118, 163, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-info-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 10px 25px rgba(54, 118, 163, 0.08);
-}
-
-.contact-info-card .ci-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(6, 187, 204, 0.1);
-    color: var(--primary-cyan, #06BBCC);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
-
-/* Map Wrapper */
-.contact-map-wrapper {
-    border-radius: 16px;
-    overflow: hidden; /* Ensures the iframe respects the rounded corners */
-    border: 4px solid #ffffff;
-    background-color: #ffffff;
-}
-
-/* --- RIGHT SIDE: CONTACT FORM --- */
-.contact-form-wrapper {
-    background-color: #ffffff;
-    padding: 50px;
-    border-radius: 24px;
-    height: 100%;
-}
-
-/* Form Input Styling */
-.ebal-form-floating > .form-control {
-    background-color: #f8faff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    color: #121c33;
-    transition: all 0.3s ease;
-}
-
-.ebal-form-floating > .form-control:focus {
-    background-color: #ffffff;
-    border-color: var(--primary-cyan, #06BBCC);
-    box-shadow: 0 0 0 4px rgba(6, 187, 204, 0.15); /* Glowing cyan ring */
-}
-
-/* Label adjustments for floating inputs */
-.ebal-form-floating > label {
-    color: #6b7280;
-    padding-left: 15px;
-}
-.ebal-form-floating > .form-control:focus ~ label,
-.ebal-form-floating > .form-control:not(:placeholder-shown) ~ label {
-    color: var(--primary-blue, #3676a3);
-    font-weight: 600;
-}
-
-/* Submit Button */
-.btn-contact-submit {
-    background-color: var(--primary-blue, #3676a3);
-    color: #ffffff;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(54, 118, 163, 0.2);
-}
-
-.btn-contact-submit:hover {
-    background-color: var(--primary-cyan, #06BBCC);
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(6, 187, 204, 0.3);
-}
-/* --- FIX FOR OVERSIZED CONTACT TYPOGRAPHY --- */
-
-/* Left Side: Contact Info Card Headings */
-.contact-info-card .ci-text h5 {
-    font-size: 1.2rem !important; /* Scales down the massive headings */
-    letter-spacing: 0;
-    margin-bottom: 6px !important;
-}
-
-/* Left Side: Contact Info Paragraphs */
-.contact-info-card .ci-text p {
-    font-size: 0.95rem !important;
-    line-height: 1.5;
-}
-
-/* Right Side: Form Main Heading */
-.contact-form-wrapper h3 {
-    font-size: 2rem !important; /* Prevents the heading from being too gigantic */
-    letter-spacing: -0.5px;
-}
-
-/* Right Side: Form Subtitle */
-.contact-form-wrapper p.text-muted {
-    font-size: 1rem !important;
-    line-height: 1.6;
-}
-/* =========================================
-   RESPONSIVE ADJUSTMENTS
-   ========================================= */
-
-@media (max-width: 1199px) {
-    .contact-form-wrapper { padding: 40px 30px; }
-}
-
-@media (max-width: 991.98px) {
-    .ebal-contact-page .display-6 { font-size: 2.5rem; }
-    .contact-form-wrapper { margin-top: 20px; }
-}
-
-@media (max-width: 767.98px) {
-    .ebal-contact-page .display-6 { font-size: 2rem; }
-    .contact-form-wrapper { padding: 30px 20px; border-radius: 16px; }
-    .contact-info-card { flex-direction: column; text-align: center; align-items: center; }
-    .contact-info-card .ci-icon { margin-right: 0; margin-bottom: 15px; }
-}
-.mt-5 {
-    margin-top: 0rem !important;
-}
-</style>
 </head>
 
 <body>
@@ -234,7 +59,7 @@
             <div class="navbar-nav ms-auto">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="courses.html" class="nav-item nav-link  active">Courses</a>
                 <div class="nav-item dropdown">
                     <a href="solution.html" class="nav-link ">Solutions</a>
                     <!-- <div class="dropdown-menu fade-down m-0">
@@ -243,7 +68,7 @@
                         <a href="mentorship.html" class="dropdown-item">Mentorship</a>
                     </div> -->
                 </div>
-                <a href="contact.html" class="nav-item nav-link  active">Contact Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
 
             <!-- <div class="mt-4 mt-lg-0 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end">
@@ -270,18 +95,18 @@
             <div class="col-lg-10 text-center">
                 <div class="mb-4" style="margin-top: 40px;">
                     <span class="ebal-badge-clean">
-                        <i class="bi bi-info-circle-fill"></i> We’re here to help
+                        <i class="bi bi-info-circle-fill"></i> Future-Ready Courses
                     </span>
                 </div>
                 
-                <h1 class="display-3 fw-bold text-dark-blue animated slideInDown mb-3">Contact Us</h1>
+                <h1 class="display-3 fw-bold text-dark-blue animated slideInDown mb-3">Courses</h1>
                 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp">
                         <li class="breadcrumb-item">
                             <a class="text-primary-blue text-decoration-none fw-bold" href="index.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item text-black fw-bold" aria-current="page">Contact Us</li>
+                        <li class="breadcrumb-item text-black fw-bold" aria-current="page">Courses</li>
                     </ol>
                 </nav>
             </div>
@@ -290,123 +115,260 @@
 </div>
     <!-- Header End -->
 
-<section class="ebal-contact-page py-5">
+<section class="ebal-hero-v2 py-5">
+    
+    <div class="hero-v2-bg-pattern"></div>
+
+    <div class="container position-relative z-index-1 pt-4 pb-5">
+        <div class="row align-items-center g-5 pb-5">
+            
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                
+                <div class="hero-mini-badge mb-3">
+                    <i class="bi bi-shield-fill-check text-primary-cyan me-2"></i>
+                    INDIA'S MOST TRUSTED JOB-LEADING PLATFORM
+                </div>
+                
+                <h1 class="display-5 fw-bold text-dark-blue mb-3">
+                    Get Job-Ready in <span class="text-primary-cyan">3-8 Months</span> with Industry Certified Programs
+                </h1>
+                
+                <p class="text-muted fs-6 mb-4">
+                    For B.Tech & Diploma Freshers | ME, IT , NON -IT & Embedded Domains
+                </p>
+                
+                <div class="ebal-v2-placement-badge mb-4">
+    <i class="bi bi-patch-check-fill badge-icon"></i>
+    <span class="badge-main-text">100% Placement Support</span> 
+    <!-- <span class="badge-sub-text">(Guarantee + Assistance)</span> -->
+</div>
+
+                <div class="certified-strip mb-4">
+                    <span class="fw-bold text-dark-blue me-3">Certified by:</span>
+                    <div class="certified-logos">
+                        <span class="badge bg-light text-dark border">IIT Partner</span>
+                        <span class="badge bg-light text-dark border">Skill India</span>
+                        <span class="badge bg-light text-dark border">ASDC</span>
+                    </div>
+                </div>
+
+                <ul class="hero-feature-list mb-4">
+                    <li><i class="bi bi-broadcast text-primary-blue"></i> Live Classes + 2 years access & Recorded Classes</li>
+                    <li><i class="bi bi-gear-wide-connected text-primary-blue"></i> Real Industry Projects</li>
+                    <li><i class="bi bi-file-earmark-text text-primary-blue"></i> Internship + LOR Included</li>
+                </ul>
+
+                <div class="d-flex flex-column align-items-start">
+                    <a href="quote.html" class="btn-hero-cta">
+                        <i class="bi bi-headset me-2"></i> Get Free Career Counseling
+                    </a>
+                    <small class="text-muted mt-2 ms-2"><i class="bi bi-lightning-charge-fill text-warning"></i> Talk to an expert within 5 minutes</small>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="hero-visual-wrapper text-center">
+                    
+                    <div class="video-frame shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Student Learning" class="img-fluid video-thumbnail">
+                        
+                     
+                    </div>
+
+                    <div class="floating-ui-card ui-card-1 shadow">
+                        <i class="bi bi-laptop text-primary-cyan me-2"></i> Hands-on Training
+                    </div>
+
+                    <div class="floating-ui-card ui-card-2 shadow">
+                        <div class="d-flex align-items-center">
+                            <h3 class="mb-0 text-primary-blue fw-bold me-2">90%</h3>
+                            <span class="text-start lh-sm text-dark" style="font-size: 0.7rem;">Placement<br>Success</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-ui-card ui-card-3 shadow">
+                        <i class="bi bi-award-fill text-warning me-2"></i> Industry Ready
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- <hr class="mt-0 mb-5 border-light-subtle">
+
+        <div class="row g-4 text-center hero-stats-bar wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-6 col-md-3 stat-item">
+                <h3 class="fw-bold text-dark-blue mb-1">1200+</h3>
+                <p class="text-muted small text-uppercase fw-bold mb-0">Students Placed</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3 class="fw-bold text-dark-blue mb-1">₹10 LPA</h3>
+                <p class="text-muted small text-uppercase fw-bold mb-0">Max Packages</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <h3 class="fw-bold text-dark-blue mb-1">200+</h3>
+                <p class="text-muted small text-uppercase fw-bold mb-0">Hiring Partners</p>
+            </div>
+            <div class="col-6 col-md-3 stat-item border-end-0">
+                <h3 class="fw-bold text-dark-blue mb-1">50+</h3>
+                <p class="text-muted small text-uppercase fw-bold mb-0">Instructors</p>
+            </div>
+        </div> -->
+
+    </div>
+</section>
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+                <h1 class="mb-5"> Our Courses</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Industry Foundation </h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Mind Training</h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Industry Experts Mentoring </h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <h5 class="m-0">Industry competent modules</h5>
+                            <!-- <small class="text-primary">49 Courses</small> -->
+                        </div>
+                    </a>
+                </div>
+                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <h5 class="m-0">AI Technology</h5>
+                            <!-- <small class="text-primary">49 Courses</small> -->
+                        </div>
+                    </a>
+                </div>
+   <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">AR/VR Technology</h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Entrepreneurship Development</h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Industry Consulting Projects</h5>
+                                    <!-- <small class="text-primary">49 Courses</small> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Start -->
+
+<section class="ebal-value-props py-5">
     <div class="container py-5">
         
-        <div class="row justify-content-center text-center mb-5 pb-3">
+        <div class="row justify-content-center text-center mb-5 pb-2">
             <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="ebal-double-line-heading justify-content-center mb-3">
                     <span class="line left-line"></span>
-                    <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">Reach Out</h6>
+                    <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">Our Advantage</h6>
                     <span class="line right-line"></span>
                 </div>
-                <h2 class="display-6 fw-bold text-dark-blue mb-0">Get in Touch with EBAL Innotech</h2>
+                <h3 class="display-6 fw-bold text-dark-blue mb-0">Why Professionals Choose Us</h3>
             </div>
         </div>
 
-        <div class="row g-5">
+        <div class="row g-4">
             
-            <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.3s">
-                
-                <div class="contact-info-card">
-                    <div class="ci-icon">
-                        <i class="bi bi-person-badge-fill"></i>
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="ebal-vp-card">
+                    <div class="vp-watermark">01</div>
+                    <div class="vp-icon-box">
+                        <i class="bi bi-laptop"></i>
                     </div>
-                    <div class="ci-text">
-                        <h5 class="fw-bold text-dark-blue mb-1">Primary Contact</h5>
-                        <p class="mb-0 text-muted fw-medium">Mr. Manoj Rajendra Ukhande</p>
-                        <p class="mb-0 small text-primary-blue fw-bold">Director, EBAL Innotech Pvt. Ltd.</p>
-                    </div>
+                    <h4 class="vp-title">100% Live Classes by Industry Experts</h4>
+                    <p class="vp-desc">Experience 100% live sessions with instant doubt clearing. Plus, get lifetime access to recorded classes after your sessions.</p>
                 </div>
-
-                <div class="contact-info-card">
-                    <div class="ci-icon">
-                        <i class="bi bi-headset"></i>
-                    </div>
-                    <div class="ci-text">
-                        <h5 class="fw-bold text-dark-blue mb-1">Direct Communication</h5>
-                       
-                        <p class="mb-1 text-muted"><i class="bi bi-telephone-fill text-primary-cyan me-2"></i> +91 8600152494</p>
-                        <p class="mb-1 text-muted"><i class="bi bi-telephone-fill text-primary-cyan me-2"></i> +91 20 69010545</p>
-                        <p class="mb-0 text-muted"><i class="bi bi-envelope-fill text-primary-cyan me-2"></i> info@ebalinnotech.com</p>
-                    </div>
-                </div>
-
-                <div class="contact-info-card">
-                    <div class="ci-icon">
-                        <i class="bi bi-geo-alt-fill"></i>
-                    </div>
-                    <div class="ci-text">
-                        <h5 class="fw-bold text-dark-blue mb-1">Office Location</h5>
-                        <p class="mb-0 text-muted">Office 2526, T-9, Bramhacorp Business Park,
-New Kalyani Nagar, Wadgaon Sheri,
-Pune - 411014</p>
-                    </div>
-                </div>
-
-               <iframe 
-    src="https://maps.google.com/maps?q=Bramhacorp%20Business%20Park,%20Wadgaon%20Sheri,%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-    width="100%" 
-    height="280" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
             </div>
 
-            <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.5s">
-                <div class="contact-form-wrapper shadow-lg">
-                    <h3 class="fw-bold text-dark-blue mb-2">Send a Message</h3>
-                    <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we will get back to you shortly.</p>
-                    
-                    <form>
-                        <div class="row g-3">
-                            
-                            <div class="col-md-6">
-                                <div class="form-floating ebal-form-floating">
-                                    <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
-                                    <label for="contactName">Your Name</label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-floating ebal-form-floating">
-                                    <input type="tel" class="form-control" id="contactPhone" placeholder="Phone Number" required>
-                                    <label for="contactPhone">Phone Number</label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-floating ebal-form-floating">
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="Email Address" required>
-                                    <label for="contactEmail">Email Address</label>
-                                </div>
-                            </div>
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="ebal-vp-card">
+            <div class="vp-watermark">02</div>
+            <div class="vp-icon-box">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <h4 class="vp-title">1-on-1 Personal Mentorship</h4>
+            <p class="vp-desc">Receive direct guidance from dedicated industry mentors to build your personalized career roadmap and resume.</p>
+        </div>
+    </div>
 
-                            <div class="col-12">
-                                <div class="form-floating ebal-form-floating">
-                                    <input type="text" class="form-control" id="contactSubject" placeholder="Subject" required>
-                                    <label for="contactSubject">Subject</label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-floating ebal-form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="contactMessage" style="height: 150px" required></textarea>
-                                    <label for="contactMessage">Your Message</label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12 mt-4">
-                                <button class="btn-contact-submit w-100 py-3" type="submit">
-                                    Send Message <i class="bi bi-send-fill ms-2"></i>
-                                </button>
-                            </div>
-                            
-                        </div>
-                    </form>
+    <!-- Modified Card 3: Project-Based Learning -->
+    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="ebal-vp-card">
+            <div class="vp-watermark">03</div>
+            <div class="vp-icon-box">
+                <i class="bi bi-briefcase"></i>
+            </div>
+            <h4 class="vp-title">Real-World Project Portfolio</h4>
+            <p class="vp-desc">Apply your skills to capstone projects designed to simulate industry challenges and build a strong professional portfolio.</p>
+        </div>
+    </div>
+
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="ebal-vp-card">
+                    <div class="vp-watermark">04</div>
+                    <div class="vp-icon-box">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                    <h4 class="vp-title">Globally Accepted Certificate</h4>
+                    <p class="vp-desc">Earn certifications that are globally recognized, empowering you for higher studies or career placements anywhere in the world.</p>
                 </div>
             </div>
 
@@ -414,8 +376,259 @@ Pune - 411014</p>
     </div>
 </section>
 
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 30px;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Popular Courses</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-1.jpg" alt="">
+                            <!-- <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div> -->
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <!-- <h3 class="mb-0">$149.00</h3> -->
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Mechatronics</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-2.jpg" alt="">
+                            <!-- <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div> -->
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <!-- <h3 class="mb-0">$149.00</h3> -->
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">AI Technology</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-3.jpg" alt="">
+                            <!-- <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div> -->
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <!-- <h3 class="mb-0">$149.00</h3> -->
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Industry Consulting Projects</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+<section class="ebal-placement-faq py-5">
+    <div class="container py-5">
+        
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.1s">
+                
+                <div class="ebal-double-line-heading justify-content-start mb-3">
+                    <span class="line left-line"></span>
+                    <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">Career Success</h6>
+                    <span class="line right-line"></span>
+                </div>
+                
+                <h2 class="display-6 fw-bold text-dark-blue mb-4 pb-2">
+                    What Placement <span class="text-primary-cyan">Support</span> will you Receive?
+                </h2>
+
+                <div class="accordion ebal-custom-accordion" id="placementFaqAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="bi bi-patch-check text-primary-blue me-3 fs-5"></i> Interview Guarantee
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#placementFaqAccordion">
+                            <div class="accordion-body">
+                                We are committed to your success. With our interview guarantee program, you'll receive a minimum of <strong>5 interview opportunities</strong> tailored to your specific industrial skills and career preferences.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="bi bi-file-earmark-person text-primary-blue me-3 fs-5"></i> Placement Prep Training
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#placementFaqAccordion">
+                            <div class="accordion-body">
+                                Our comprehensive training program covers all aspects of job hunting. This includes rigorous resume building, LinkedIn profile optimization, mock interview techniques, and technical aptitude prep, ensuring you're fully prepared to pursue your dream job.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="bi bi-award text-primary-blue me-3 fs-5"></i> Gain prominence with Internship & LOR
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#placementFaqAccordion">
+                            <div class="accordion-body">
+                                Stand out to employers by showcasing your hands-on internship experiences. Upon completion, you will receive personalized <strong>Letters of Recommendation (LOR)</strong> to heavily enhance your credibility and visibility in the competitive job market.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="bi bi-building text-primary-blue me-3 fs-5"></i> Direct Access to Top Hiring Partners
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#placementFaqAccordion">
+                            <div class="accordion-body">
+                                We bypass the standard application process. Our dedicated placement cell has active tie-ups with over <strong>50+ top-tier industrial and engineering companies</strong> who exclusively hire practically trained graduates directly from our talent pool.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="bi bi-graph-up text-primary-blue me-3 fs-5"></i> Post-Placement Career Mentorship
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#placementFaqAccordion">
+                            <div class="accordion-body">
+                                Our support doesn’t end on your first day of work. We provide ongoing, lifetime career guidance and advanced technical mentorship to help you secure fast-track promotions and navigate complex industrial challenges in your new role.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="faq-img-wrapper text-center">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Placement Support" class="img-fluid rounded-4 shadow-lg floating-img-slow" style="height: 400px;">
+                    
+                    <div class="floating-success-badge shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 bg-light-cyan text-primary-cyan rounded-circle p-2 me-3">
+                                <i class="bi bi-briefcase-fill fs-4"></i>
+                            </div>
+                            <div class="text-start">
+                                <h6 class="fw-bold text-dark-blue mb-0">100%</h6>
+                                <small class="text-muted">Placement Assistance</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Students Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <p>Profession</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+        
+
     <!-- Footer Start -->
-      <div class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn" data-wow-delay="0.1s">
+     <div class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-4">
         <div class="row g-4 justify-content-between">
 
