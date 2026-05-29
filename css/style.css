@@ -1,76 +1,65 @@
 /********** Template CSS **********/
 html, body {
-    overflow-x: clip !important; /* 'clip' stops horizontal bleeding but allows sticky to work! */
+    overflow-x: clip !important; 
 }
 
-/* 2. Force the Bootstrap column to act as a full-height track */
 .ebal-services-light .col-lg-4 {
     height: 100%; 
 }
 
-/* 3. The Sticky Container Rules */
+
 .sticky-image-container {
     position: -webkit-sticky !important; 
     position: sticky !important;
-    top: 120px !important; /* Pushes it down so it doesn't hide under your navbar */
-    height: max-content; /* Critical: tells it not to stretch */
+    top: 120px !important;
+    height: max-content; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     z-index: 10;
-    
-    /* Forces the browser to ignore animation transforms that break stickiness */
     transform: none !important; 
 }
 .btn, 
 .btn-primary-custom, 
 .btn-outline-custom, 
 .btn-nav-action {
-    white-space: nowrap !important; /* Prevents text from wrapping and making buttons tall/huge */
-    width: auto !important; /* Stops buttons from stretching to 100% width automatically */
+    white-space: nowrap !important; 
+    width: auto !important; 
     max-width: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-/* =========================================
-   2. FIX CAROUSEL GETTING CUT OFF 
-   ========================================= */
+
 @media (max-width: 767.98px) {
-    /* Removes the clipping that was slicing the carousel */
     .container, .container-fluid {
         overflow: visible !important; 
     }
 }
 
-/* =========================================
-   3. REAL-TIME DYNAMIC HERO CAROUSEL
-   ========================================= */
-/* Dynamic Height Wrapper */
 .header-carousel .owl-carousel-item,
 .carousel-item {
-    height: 70vh !important; /* Takes up exactly 70% of whatever screen it is viewed on */
-    min-height: 400px; /* Safety net for very small phones */
+    height: 70vh !important; 
+    min-height: 400px; 
     width: 100%;
     position: relative;
 }
 
-/* The Magic Image Scaler */
+
 .header-carousel .owl-carousel-item img,
 .carousel-item img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Scales image perfectly without squishing or awkward cutting */
-    object-position: center top !important; /* Keeps the focus on the upper middle of the image */
+    object-fit: cover !important; 
+    object-position: center top !important;
 }
 
-/* Mobile & Tablet Adjustments for Carousel */
 @media (max-width: 991.98px) {
     .header-carousel .owl-carousel-item,
     .carousel-item {
-        height: 55vh !important; /* Slightly shorter on tablets and phones to leave room for content below */
+        height: 55vh !important; 
     }
 }
 
@@ -161,9 +150,9 @@ html, body {
    PREMIUM SMART NAVBAR
    ========================================= */
 :root {
-    --nav-text: #20919b;     /* Dark text for light hero background */
-    --nav-hover: #20608e;    /* EBAL Blue */
-    --nav-btn-bg: #06BBCC;   /* EBAL Cyan */
+    --nav-text: #20919b;     
+    --nav-hover: #20608e;    
+    --nav-btn-bg: #06BBCC;   
     --primary-blue: #2a6c9c;
     --primary-cyan: #06BBCC;
     --text-dark: #1991a9;
@@ -183,11 +172,11 @@ html, body {
     justify-content: center;
     width: 50px !important;
     height: 50px !important;
-    border-radius: 50% !important; /* Forces a perfect circle instead of a square */
-    background-color: var(--primary-blue) !important; /* EBAL Blue */
+    border-radius: 50% !important; 
+    background-color: var(--primary-blue) !important; 
     color: #ffffff !important;
     border: none;
-    box-shadow: 0 5px 15px rgba(43, 89, 189, 0.3); /* Subtle blue shadow */
+    box-shadow: 0 5px 15px rgba(43, 89, 189, 0.3);
     transition: all 0.3s ease;
     text-decoration: none;
     padding: 0 !important;
@@ -195,13 +184,13 @@ html, body {
 
 /* Hover Animation (Desktop) */
 .back-to-top:hover {
-    background-color: var(--primary-cyan) !important; /* Shifts to EBAL cyan */
+    background-color: var(--primary-cyan) !important; 
     color: #ffffff !important;
-    transform: translateY(-5px); /* Bounces up slightly when hovered */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 25px rgba(6, 187, 204, 0.4);
 }
 
-/* Centers and sizes the Bootstrap Icon */
+
 .back-to-top i {
     font-size: 1.4rem;
     line-height: 0;
@@ -225,7 +214,7 @@ html, body {
 /* =========================================
    NAVBAR STYLES
    ========================================= */
-/* Base Navbar - Transparent State */
+
 .ebal-navbar {
     background: transparent;
     padding: 10px 0;
@@ -233,7 +222,6 @@ html, body {
     z-index: 1030;
 }
 
-/* Scrolled Navbar - Frosted Glass State */
 .ebal-navbar.navbar-scrolled {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
@@ -266,7 +254,7 @@ html, body {
     transition: transform 0.3s ease;
 }
 
-/* Animated Underline Effect on Hover */
+
 .ebal-navbar .navbar-nav .nav-link::before {
     content: "";
     position: absolute;
@@ -305,7 +293,7 @@ html, body {
 
     .ebal-navbar .dropdown-menu.fade-down {
         top: 120%;
-        transform: rotateX(-30deg); /* Softer 3D rotation */
+        transform: rotateX(-30deg); 
         transform-origin: top center;
     }
 
@@ -331,10 +319,10 @@ html, body {
 .dropdown-item:hover {
     background-color: rgba(46, 154, 184, 0.05);
     color: var(--nav-hover);
-    padding-left: 30px; /* Slight indent on hover */
+    padding-left: 30px; 
 }
 
-/* Premium Action Button (Get Started) */
+
 .btn-nav-action {
     background-color: var(--nav-btn-bg);
     color: #ffffff !important;
@@ -346,7 +334,7 @@ html, body {
 }
 
 .btn-nav-action:hover {
-    background-color: #049ba8; /* Slightly darker cyan */
+    background-color: #049ba8; 
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(168, 226, 231, 0.915);
 }
@@ -355,13 +343,13 @@ html, body {
    HAMBURGER MENU TOGGLE FIX
    ========================================= */
 
-/* Sets the default border to your cyan color */
+
 .navbar-toggler {
     border-color: var(--primary-cyan, #06BBCC) !important;
     transition: all 0.3s ease;
 }
 
-/* Removes the ugly black box on click and adds a premium cyan glow */
+
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none !important;
@@ -369,31 +357,59 @@ html, body {
     border-color: var(--primary-cyan, #06BBCC) !important;
 }
 
-/* Keeps the inner hamburger lines blue */
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232b59bd' stroke-width='2.25' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
+
 /* Mobile Adjustments */
 @media (max-width: 991.98px) {
     .ebal-navbar {
-        background: rgba(255, 255, 255, 0.98); /* Solid white on mobile always */
+        background: rgba(255, 255, 255, 0.98);
         padding: 15px 0;
     }
     .ebal-navbar .navbar-nav {
         border-top: 1px solid #EEEEEE;
         padding-top: 15px;
         margin-top: 15px;
+        text-align: center;
     }
     .ebal-navbar .navbar-nav .nav-link {
         margin: 0;
         padding: 12px 0;
     }
     .ebal-navbar .navbar-nav .nav-link::before {
-        display: none; /* Remove underline animation on mobile */
+        display: none; 
     }
-}
 
+
+    .ebal-navbar .dropdown-menu {
+        text-align: center;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    .ebal-navbar .dropdown-item {
+        padding: 10px 0;
+    }
+
+
+    .ebal-navbar .dropdown-item:hover {
+        padding-left: 0; 
+        background-color: transparent;
+    }
+
+ 
+    .ebal-navbar .btn-nav-action {
+        display: table;
+        margin: 15px auto 10px auto; 
+    }
+    .mt-4 {
+    margin-top: 0rem !important;
+}
+}
 
 /* =========================================
    CAROUSEL RESPONSIVE HEIGHTS & ARROWS
@@ -449,7 +465,6 @@ html, body {
    ========================================= */
 .ebal-hero-modern, .ebal-hero-clean {
     position: relative; overflow: hidden; display: flex; align-items: center;
-    /* FIX: Reduced desktop height from 80vh to 65vh for better laptop scaling */
     min-height: 65vh; 
     padding-top: 70px; 
     padding-bottom: 20px;
@@ -473,10 +488,10 @@ html, body {
    ========================================= */
 .text-dark-blue { color: var(--text-dark); line-height: 1.25; font-size: 2.2rem; }
 
-/* FIX: Added the missing Cyan class */
+
 .text-primary-cyan { color: var(--primary-cyan, #06BBCC) !important; }
 
-/* FIX: Corrected the Blue class to point to the blue variable */
+
 .text-primary-blue { color: var(--primary-blue, #3174a3) !important; }
 
 .text-muted { color: var(--text-grey) !important; line-height: 1.7; }
@@ -551,7 +566,7 @@ html, body {
 @keyframes floatCardAdvanced { 0% { transform: translateY(0px) scale(1); } 100% { transform: translateY(-12px) scale(1.02); } }
 
 /* =========================================
-   6. RESPONSIVE COMPATIBILITY (MacBook, iPad, Mobile)
+   6. RESPONSIVE COMPATIBILITY 
    ========================================= */
 
 /* Desktop Specifics */
@@ -562,7 +577,7 @@ html, body {
 
 /* Smaller PC / 13-inch MacBooks (1025px - 1440px) */
 @media (max-width: 1440px) and (min-width: 1025px) {
-    .ebal-hero-clean, .ebal-hero-modern { min-height: 60vh; padding-top: 70px; } /* Greatly reduces laptop hero height */
+    .ebal-hero-clean, .ebal-hero-modern { min-height: 60vh; padding-top: 70px; } 
     .text-dark-blue { font-size: 1rem; }
     .hero-text-col, .hero-visual-premium, .hero-visual-clean { min-height: 420px; }
     .clean-floating-img, .premium-hero-img { max-width: 450px; }
@@ -587,7 +602,7 @@ html, body {
         min-height: auto;
     }
     
-    /* FIX: Massively increased mobile column height to stop cutting off text */
+   
     .hero-text-col { min-height: 580px; margin-top: 20px; } 
     
     .hero-wave-bg { width: 100%; opacity: 0.3; } 
@@ -607,7 +622,7 @@ html, body {
         height: auto;
         min-height: auto;
     }
-    /* 1. Force the image to strictly center */
+ 
     .premium-hero-img {
         display: block;
         max-width: 280px;
@@ -615,131 +630,21 @@ html, body {
         margin: 0 auto !important;
     }
     
-    /* 2. Center the entire visual container */
+  
     .hero-visual-premium {
         margin: 0 auto;
         max-width: 100%;
-        padding: 0 15px; /* Gives a little breathing room on the sides */
+        padding: 0 15px;
     }
 
-    /* 3. Pull the floating icons INWARD so they don't get cut off */
+  
     .tech-orb-1 { left: 5%; }
     .tech-orb-2 { right: 5%; }
-    .tech-orb-3 { left: 5%; bottom: 10%;} /* Changed from -8% to positive 5% to stop cut-off */
+    .tech-orb-3 { left: 5%; bottom: 10%;} 
     .tech-card-4 { right: 5%; }
 }
 /* =========================================
    MODERN SOFT-UI FEATURES SECTION
-   ========================================= */
-.ebal-features-section {
-    background-color: #ffffff; /* Clean white background for the section */
-}
-
-.ebal-modern-card {
-    background-color: #f8f9fc; /* Soft, modern off-white/grey background */
-    border-radius: 24px; /* Deep rounded corners like the reference */
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden; /* Crucial: Hides the part of the icon that bleeds off the edge */
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-    border: 1px solid rgba(0, 0, 0, 0.03); /* Extremely subtle border */
-}
-
-/* Hover effect lifts the card slightly */
-.ebal-modern-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(43, 89, 189, 0.08);
-}
-
-/* --- Equal Height Text Area --- */
-.card-text-content {
-    flex-grow: 1; /* MAGIC TRICK: This forces the text area to expand, pushing arrows to the exact bottom */
-    z-index: 2;
-    position: relative;
-}
-
-.card-title {
-    font-weight: 800;
-    color: #121c33;
-    font-size: 1.35rem;
-    margin-bottom: 12px;
-    line-height: 1.3;
-}
-
-.card-desc {
-    color: #6b7280;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-/* --- Bottom Area (Arrow & Icon) --- */
-.card-bottom-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto; /* Pushes to absolute bottom */
-    z-index: 2;
-    position: relative;
-}
-
-/* The Circular Arrow Button */
-.arrow-btn {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 1px solid #d1d5db; /* Soft gray border */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #121c33;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    background: transparent;
-}
-
-.ebal-modern-card:hover .arrow-btn {
-    background-color: var(--primary-blue, #3676a3);
-    color: #ffffff;
-    border-color: var(--primary-blue, #3676a3);
-    transform: translateX(5px); /* Gentle nudge right on hover */
-}
-
-/* --- The Bleeding Edge Icon Effect --- */
-.bottom-right-icon {
-    position: absolute;
-    bottom: -15px; /* Pulls it off the bottom edge */
-    right: -15px;  /* Pulls it off the right edge */
-    font-size: 6.5rem; /* Massive size */
-    opacity: 0.12; /* Acts as a soft watermark */
-    transform: rotate(-15deg);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    z-index: 0;
-}
-
-/* Icon reacts slightly when user hovers the card */
-.ebal-modern-card:hover .bottom-right-icon {
-    transform: rotate(0deg) scale(1.1);
-    opacity: 0.2;
-}
-
-/* Colors for the watermark icons */
-.color-blue { color: var(--primary-blue, #2d6d9b); }
-.color-cyan { color: var(--primary-cyan, #06BBCC); }
-.color-orange { color: #f59e0b; }
-.color-dark { color: #121c33; }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .ebal-modern-card { padding: 25px 20px; }
-    .card-title { font-size: 1.25rem; }
-    .bottom-right-icon { font-size: 5rem; }
-}
-
-/* =========================================
-   BENTO BOX SOFT-UI SECTION
    ========================================= */
 .ebal-features-section {
     background-color: #ffffff; 
@@ -747,17 +652,17 @@ html, body {
 
 .ebal-modern-card {
     background-color: #f8f9fc; 
-    border-radius: 24px; /* Deep rounded corners */
+    border-radius: 24px; 
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden; /* Hides the part of the icon that bleeds off the edge */
+    overflow: hidden; 
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
     border: 1px solid rgba(0, 0, 0, 0.03); 
 }
 
-/* Hover effect lifts the card slightly */
+
 .ebal-modern-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(43, 89, 189, 0.08);
@@ -765,7 +670,7 @@ html, body {
 
 /* --- Equal Height Text Area --- */
 .card-text-content {
-    flex-grow: 1; /* Pushes arrows to the exact bottom regardless of height */
+    flex-grow: 1; 
     z-index: 2;
     position: relative;
 }
@@ -800,6 +705,115 @@ html, body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    border: 1px solid #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #121c33;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.ebal-modern-card:hover .arrow-btn {
+    background-color: var(--primary-blue, #3676a3);
+    color: #ffffff;
+    border-color: var(--primary-blue, #3676a3);
+    transform: translateX(5px); 
+}
+
+/* --- The Bleeding Edge Icon Effect --- */
+.bottom-right-icon {
+    position: absolute;
+    bottom: -15px; 
+    right: -15px;
+    font-size: 6.5rem;
+    opacity: 0.12;
+    transform: rotate(-15deg);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 0;
+}
+
+.ebal-modern-card:hover .bottom-right-icon {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 0.2;
+}
+
+/* Colors for the watermark icons */
+.color-blue { color: var(--primary-blue, #2d6d9b); }
+.color-cyan { color: var(--primary-cyan, #06BBCC); }
+.color-orange { color: #f59e0b; }
+.color-dark { color: #121c33; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ebal-modern-card { padding: 25px 20px; }
+    .card-title { font-size: 1.25rem; }
+    .bottom-right-icon { font-size: 5rem; }
+}
+
+/* =========================================
+   BENTO BOX SOFT-UI SECTION
+   ========================================= */
+.ebal-features-section {
+    background-color: #ffffff; 
+}
+
+.ebal-modern-card {
+    background-color: #f8f9fc; 
+    border-radius: 24px; 
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03); 
+}
+
+
+.ebal-modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(43, 89, 189, 0.08);
+}
+
+/* --- Equal Height Text Area --- */
+.card-text-content {
+    flex-grow: 1; 
+    z-index: 2;
+    position: relative;
+}
+
+.card-title {
+    font-weight: 800;
+    color: #121c33;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.card-desc {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- Bottom Area (Arrow & Icon) --- */
+.card-bottom-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto; 
+    z-index: 2;
+    position: relative;
+}
+
+
+.arrow-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     border: 1px solid #d1d5db; 
     display: flex;
     justify-content: center;
@@ -822,14 +836,13 @@ html, body {
     position: absolute;
     bottom: -15px; 
     right: -15px;  
-    font-size: 7rem; /* Massive size to act as a watermark */
-    opacity: 0.08; /* Very soft transparency */
+    font-size: 7rem; 
+    opacity: 0.08; 
     transform: rotate(-15deg);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 0;
 }
 
-/* Icon reacts slightly when user hovers the card */
 .ebal-modern-card:hover .bottom-right-icon {
     transform: rotate(0deg) scale(1.1);
     opacity: 0.15;
@@ -840,7 +853,7 @@ html, body {
 .color-cyan { color: var(--primary-cyan, #06BBCC); }
 .color-orange { color: var(--primary-orange, #0bcef5); }
 .color-dark { color: #121c33; }
-.color-purple { color: var(--primary-purple, #14c2dc); } /* New color for the 5th card */
+.color-purple { color: var(--primary-purple, #14c2dc); } 
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
@@ -856,19 +869,18 @@ html, body {
 
 /* Refined Heading Size */
 .ebal-features-section .display-6 {
-    font-size: 2.25rem; /* Smaller, more professional size */
+    font-size: 2.25rem;
     letter-spacing: -0.5px;
     line-height: 1.2;
 }
 
 /* Refined Subtext */
 .feature-subheading {
-    font-size: 1.05rem; /* Slightly smaller than fs-5 */
+    font-size: 1.05rem; 
     line-height: 1.6;
     opacity: 0.85;
 }
 
-/* Adjusting the Badge for the smaller heading */
 .ebal-badge-clean {
     padding: 6px 15px;
     font-size: 0.75rem;
@@ -1003,7 +1015,7 @@ html, body {
     color: var(--primary-blue);
     background-color: transparent;
     border: 2px solid var(--primary-blue);
-    border-radius: 50px; /* Pill shape to match your theme */
+    border-radius: 50px; 
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
@@ -1027,12 +1039,12 @@ html, body {
     transform: translateY(-2px);
 }
 
-/* Arrow animation on hover */
+
 .btn-view-more:hover i {
     transform: translateX(4px);
 }
 
-/* Active/Click State */
+
 .btn-view-more:active {
     transform: translateY(0);
 }
@@ -1040,13 +1052,13 @@ html, body {
 /* Responsive adjustment for small mobile screens */
 @media (max-width: 576px) {
     .btn-view-more {
-        width: 100%; /* Full width on very small screens */
+        width: 100%; 
         padding: 10px 20px;
         font-size: 0.95rem;
     }
 }
 
-/* classes Types */
+
 
 /* =========================================
    COACHING SOLUTIONS SECTION
@@ -1107,9 +1119,9 @@ html, body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Light Cards (First 3) */
+
 .light-card {
-    background-color: #EDF1FA; /* Soft periwinkle blue */
+    background-color: #EDF1FA; 
 }
 
 .light-card .card-subtitle {
@@ -1137,7 +1149,7 @@ html, body {
 
 /* Dark Card (Online Classes) */
 .dark-card {
-    background: linear-gradient(135deg, #064f68 0%, #226484a8 100%); /* Deep plum gradient */
+    background: linear-gradient(135deg, #064f68 0%, #226484a8 100%); 
 }
 
 .dark-card .card-subtitle {
@@ -1164,7 +1176,7 @@ html, body {
     opacity: 0.9;
 }
 
-/* Icon positioning and gentle float animation for the dark card */
+
 .highlight-icon {
     position: absolute;
     top: 40px;
@@ -1206,13 +1218,13 @@ html, body {
     }
 
     .solutions-grid {
-        grid-template-columns: 1fr; /* Collapses grid into a single column */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .solution-card {
         padding: 35px 25px;
-        min-height: auto; /* Lets height be dictated by content on phones */
+        min-height: auto; 
     }
 
     .light-card .card-title, 
@@ -1233,9 +1245,9 @@ html, body {
    ========================================= */
 .ebal-coaches-section {
     padding: 70px 15px;
-    background-color: #fcfdfe; /* Very subtle off-white to contrast with pure white cards */
+    background-color: #fcfdfe;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    overflow-x: hidden; /* Prevents horizontal scroll from floating elements */
+    overflow-x: hidden; 
 }
 
 .ebal-coaches-section .container {
@@ -1253,7 +1265,7 @@ html, body {
 /* --- VISUAL COLUMN --- */
 .coaches-visual {
     position: relative;
-    padding-right: 40px; /* Leaves room for the badges to hang off the edge */
+    padding-right: 40px; 
 }
 
 .image-wrapper {
@@ -1337,13 +1349,13 @@ html, body {
 .badge-top {
     top: 20%;
     right: -70px;
-    /* animation: floatVertical 5s ease-in-out infinite; */
+   
 }
 
 .badge-bottom {
     bottom: 42%;
     right: -12%;
-    /* animation: floatVertical 6s ease-in-out infinite alternate-reverse; */
+    
 }
 /* 
 @keyframes floatVertical {
@@ -1449,7 +1461,7 @@ html, body {
     .lead-text { font-size: 1.05rem; }
     .sub-text { font-size: 0.95rem; }
     
-    /* Adjust badges so they don't break the mobile screen bounds */
+
     .floating-badge {
         padding: 12px 18px;
         border-radius: 12px;
@@ -1474,7 +1486,7 @@ html, body {
     }
     
     .btn-meet-coaches {
-        width: 100%; /* Full width button on small phones */
+        width: 100%;
     }
 }
 /*** Team ***/
@@ -1561,26 +1573,21 @@ html, body {
 
 
 /*** Footer ***/
-/* =========================================
-   EBAL PREMIUM FOOTER CSS
-   ========================================= */
-/* =========================================
-   FOOTER LOGO SIZING
-   ========================================= */
+
 
 .ebal-footer .footer-brand-logo {
-    max-width: 220px; /* Keeps the logo at a clean, professional size */
-    height: auto;     /* Ensures it doesn't stretch or distort */
+    max-width: 220px; 
+    height: auto;     
     display: block;
     transition: opacity 0.3s ease;
 }
 
-/* Slight fade when hovered to show it's clickable */
+
 .ebal-footer .footer-brand-logo:hover {
     opacity: 0.85;
 }
 
-/* Make it slightly smaller on mobile phones */
+
 @media (max-width: 767.98px) {
     .ebal-footer .footer-brand-logo {
         max-width: 180px;
@@ -1655,7 +1662,7 @@ html, body {
 .ebal-footer .btn-social {
     width: 40px !important;
     height: 40px !important;
-    flex-shrink: 0; /* Prevents squishing on small screens */
+    flex-shrink: 0; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1664,7 +1671,7 @@ html, body {
     border-radius: 50%;
     margin-right: 10px;
     transition: all 0.3s ease;
-    padding: 0; /* Ensures inner icon sits exactly in the middle */
+    padding: 0; 
 }
 
 .ebal-footer .btn-social:hover {
@@ -2078,7 +2085,7 @@ html, body {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0,0,0,0.03);
-  min-width: 320px; /* Made wider to accommodate text properly */
+  min-width: 320px; 
   max-width: 420px;
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2098,7 +2105,7 @@ html, body {
   position: relative;
 }
 
-/* Author Block inside Card */
+
 .author-block {
   display: flex;
   align-items: center;
@@ -2162,17 +2169,15 @@ html, body {
 
 .cta-vector-section {
   background-color: var(--light); 
-  padding: 40px 30px; /* Increased left/right padding so text doesn't touch the edges */
+  padding: 40px 30px; 
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   overflow: hidden;
-  border-radius: 15px; /* Clean box shape */
+  border-radius: 15px;
   
-  /* --- Adds Space on Left and Right --- */
-  max-width: 1270px; /* Limits how wide the box can get */
-  width: 92%; /* Ensures there is always a little gap on mobile screens */
-  margin: 60px auto; /* 'auto' centers the box horizontally, '60px' adds top/bottom space */
-  
-  /* Optional: Adds a soft shadow to make the box pop off the background */
+ 
+  max-width: 1270px; 
+  width: 92%; 
+  margin: 60px auto; 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
 }
 
@@ -2265,7 +2270,6 @@ html, body {
   border-color:#049ba8;
 }
 
-/* --- Right Column: Vector Graphic --- */
 .cta-image-wrapper {
   flex: 1;
   display: flex;
@@ -2277,7 +2281,6 @@ html, body {
   width: 100%;
   max-width: 500px;
   height: auto;
-  /* Adds a smooth, continuous up-and-down floating effect */
   animation: floatImage 6s ease-in-out infinite;
 }
 
@@ -2329,13 +2332,12 @@ html, body {
     --card-bg: #ffffff;
 }
 
-/* Removed overflow: hidden so position: sticky can work! */
 .ebal-services-light {
     position: relative;
     padding-bottom: 60px;
 }
 
-/* --- Interactive Service Cards (2-Col Grid) --- */
+/* --- Interactive Service Cards  --- */
 .service-card-modern {
     background: var(--card-bg);
     border-radius: 15px;
@@ -2347,7 +2349,6 @@ html, body {
     z-index: 1;
 }
 
-/* Bottom Highlight border that expands */
 .service-card-modern::after {
     content: '';
     position: absolute;
@@ -2396,14 +2397,14 @@ html, body {
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Organic Squircle shape */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
 }
 
 .service-card-modern:hover .icon-box-modern {
     background: var(--primary);
     color: #ffffff;
-    border-radius: 50%; /* Morphs to circle on hover */
-    transform: rotateY(180deg); /* 3D Flip */
+    border-radius: 50%;
+    transform: rotateY(180deg); 
     box-shadow: 0 10px 20px rgba(6, 187, 204, 0.3);
 }
 
@@ -2411,33 +2412,29 @@ html, body {
     transform: rotateY(180deg);
 }
 
-/* =========================================
-   THE ULTIMATE STICKY FIX (Bypassing WOW.js Conflict)
-   ========================================= */
 
-/* 1. Stop the row from stretching columns to equal heights (Crucial for sticky to work) */
 .ebal-services-light .row.g-5 {
     align-items: flex-start !important;
 }
 
-/* 2. Make the BOOTSTRAP COLUMN sticky instead of the animated inner div */
+
 .ebal-services-light .col-lg-4 {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 120px !important; /* Spacing from the top of the screen */
-    height: max-content !important; /* Forces the column to shrink around the image so it can slide down */
+    top: 120px !important; 
+    height: max-content !important; 
     z-index: 10;
 }
 
-/* 3. Reset the inner container so it doesn't fight the column */
+
 .sticky-image-container {
     position: relative !important;
     top: 0 !important;
     height: auto !important;
-    transform: none; /* Safely resets after WOW.js finishes */
+    transform: none; 
 }
 
-/* Mobile Adjustment - Turns off sticky on small screens */
+
 @media (max-width: 991.98px) {
     .ebal-services-light .col-lg-4 {
         position: relative !important;
@@ -2498,7 +2495,7 @@ html, body {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 991px) {
-    /* Release sticky container on mobile since layout stacks */
+   
     .sticky-image-container {
         position: relative;
         top: 0;
@@ -2613,18 +2610,16 @@ html, body {
 .text-primary-blue { color: #3676a3; }
 
 /* =========================================
-   EDGE SECTION FIX (Mobile Image Arrangement)
+   EDGE SECTION FIX
    ========================================= */
 
 @media (max-width: 767.98px) {
-    /* 1. Force the side-by-side card and image to stack neatly on top of each other */
     .ebal-edge-section .col-lg-6 .row.g-3 .col-6 {
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
 
-    /* 2. Lock the top image to a perfect rectangle so it doesn't distort */
     .ebal-edge-section .edge-video-box img {
         height: 220px !important;
         width: 100% !important;
@@ -2632,7 +2627,6 @@ html, body {
         border-radius: 16px !important;
     }
 
-    /* 3. Lock the bottom main meeting image so it looks premium and proportional */
     .ebal-edge-section .edge-main-img img {
         height: 250px !important;
         width: 100% !important;
@@ -2640,7 +2634,6 @@ html, body {
         border-radius: 16px !important;
     }
     
-    /* 4. Center the contact info at the bottom for mobile */
     .ebal-edge-section .d-flex.align-items-center {
         justify-content: center;
         text-align: center;
