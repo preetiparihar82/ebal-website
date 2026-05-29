@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-/* Abstract Glowing Background Blobs */
+
 .service-glow-blob {
     position: absolute;
     width: 400px;
@@ -146,10 +146,48 @@
 /* =========================================
    RESPONSIVE LAYOUT
    ========================================= */
+
+@media (max-width: 768px) {
+   
+    .card-3d {
+        height: auto;
+        min-height: 300px;
+    }
+
+   
+    .carousel-3d-wrapper {
+        height: 400px; 
+    }
+
+    
+    .card-3d-inner {
+        padding: 15px 20px;
+    }
+
+    
+    .card-3d-icon {
+        width: 55px; 
+        height: 55px;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+   
+    .card-3d-title {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+    }
+
+    
+    .card-3d-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
 @media (max-width: 991.98px) {
     .carousel-3d-wrapper { margin-top: 50px; height: 400px; }
     .card-3d { width: 280px; height: 350px; }
-    /* Bring them closer together on tablets */
+   
     .pos-right { transform: translateX(35%) scale(0.85); }
     .pos-left { transform: translateX(-35%) scale(0.85); }
 }
@@ -203,12 +241,12 @@
     outline: none; 
     
     /* PERFORMANCE FIXES */
-    transform: translateZ(0); /* Forces GPU hardware acceleration */
+    transform: translateZ(0); 
     -webkit-transform: translateZ(0);
-    backface-visibility: hidden; /* Stops screen flickering on Safari/iOS */
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
-/* --- BASE LAYER (Image + Short Info) --- */
+/* --- BASE LAYER  --- */
 .ac-img-wrapper {
     position: relative;
     height: 180px;
@@ -258,7 +296,7 @@
     margin-bottom: 0;
 }
 
-/* --- OVERLAY LAYER (Detailed Info + Benefits) --- */
+/* --- OVERLAY LAYER --- */
 .ac-reveal-overlay {
     position: absolute;
     top: 0;
@@ -275,12 +313,12 @@
     justify-content: center;
     
     /* PERFORMANCE FIXES */
-    transform: translateY(101%) translateZ(0); /* Added translateZ for GPU */
+    transform: translateY(101%) translateZ(0); 
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform; /* Tells the browser to prep this layer for zero lag */
+    will-change: transform;
 }
 
-/* Trigger animation on Desktop Hover AND Mobile Tap (Focus) */
+
 .academistry-card:hover .ac-reveal-overlay,
 .academistry-card:focus .ac-reveal-overlay,
 .academistry-card:active .ac-reveal-overlay {
@@ -315,7 +353,7 @@
    ========================================= */
 
 @media (max-width: 1199px) {
-    .academistry-card { height: 400px; } /* Gives slightly more room for text wrapping */
+    .academistry-card { height: 400px; } 
 }
 
 @media (max-width: 991.98px) {
@@ -325,7 +363,6 @@
 @media (max-width: 767.98px) {
     .ebal-academistry-section .display-5 { font-size: 2rem; }
     
-    /* Adds a tiny hint on mobile that the card is interactive */
     .academistry-card::after {
         content: 'Tap to view details';
         position: absolute;
@@ -339,7 +376,7 @@
         opacity: 0.8;
     }
     
-    /* Hide the hint when the overlay is active */
+
     .academistry-card:focus::after,
     .academistry-card:active::after {
         opacity: 0;
@@ -356,13 +393,12 @@
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
-/* 1. Strict 1250px Max Width Constraint */
 .ebal-max-1250 {
     max-width: 1250px !important;
     margin: 0 auto;
 }
 
-/* 2. The Connecting Pathway Vector */
+
 .zigzag-pathway-line {
     position: absolute;
     top: 5%;
@@ -379,7 +415,7 @@
     height: 100%;
 }
 
-/* 3. Image Locks (Ensures images are proper, uniform height) */
+
 .feature-img-locked {
     height: 400px;
     object-fit: cover;
@@ -433,7 +469,7 @@
     100% { transform: translateY(-15px); }
 }
 
-/* 5. Clean, Borderless Accordion (EBAL Themed) */
+/* 5. Clean, Borderless Accordion  */
 .ebal-clean-accordion .accordion-item {
     border: none;
     border-bottom: 1px solid rgba(43,89,189,0.1);
@@ -484,17 +520,17 @@
 }
 
 /* =========================================
-   UNIQUE HEADING DESIGN (Text Gradient & Accent Dot)
+   UNIQUE HEADING DESIGN 
    ========================================= */
 
-/* Makes the heading bold, tight, and larger than standard Bootstrap */
+
 .ebal-journey-heading {
     font-size: 2.8rem; 
     line-height: 1.2;
     letter-spacing: -1px; 
 }
 
-/* The Magic Gradient Text Fill */
+
 .text-gradient-ebal {
     background: linear-gradient(135deg, var(--primary-blue, #3676a3) 0%, var(--primary-cyan, #06BBCC) 100%);
     -webkit-background-clip: text;
@@ -503,7 +539,6 @@
     display: inline-block;
 }
 
-/* The Bold Cyan Accent Dot */
 .heading-accent-dot {
     color: var(--primary-cyan, #06BBCC);
     font-size: 3.5rem;
@@ -511,7 +546,7 @@
     vertical-align: baseline;
 }
 
-/* Mobile Responsiveness (Stops it from being too huge on phones) */
+
 @media (max-width: 991.98px) {
     .ebal-journey-heading {
         font-size: 2.2rem; 
@@ -527,7 +562,7 @@
    EBAL ACADEMISTRY JOURNEY HEADING
    ========================================= */
 
-/* General Container for Spacing and Family */
+
 .ebal-pathway-section {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
@@ -553,7 +588,7 @@
     border-bottom: 2px solid var(--primary-cyan, #06BBCC);
 }
 
-/* Masks the center part with your background color (#fbfcff is the soft blue) */
+
 .ebal-double-line-heading .left-line::before, 
 .ebal-double-line-heading .right-line::before {
     content: "";
@@ -566,7 +601,7 @@
 .ebal-double-line-heading .left-line::before { left: 0; }
 .ebal-double-line-heading .right-line::before { right: 0; }
 
-/* The small h6 text with your cyan color */
+
 .text-primary-cyan {
     color: var(--primary-cyan, #06BBCC) !important;
 }
@@ -578,12 +613,11 @@
     letter-spacing: -1.5px; 
 }
 
-/* Standard blue color for the first part */
+
 .text-dark-blue {
     color: #121c33; 
 }
 
-/* Puts the blue-to-cyan gradient directly on the text */
 .text-gradient-ebal {
     background: linear-gradient(135deg, var(--primary-blue, #3676a3) 0%, var(--primary-cyan, #06BBCC) 100%);
     -webkit-background-clip: text;
@@ -592,16 +626,15 @@
     display: inline-block;
 }
 
-/* Bold cyan accent dot */
 .heading-accent-dot {
     color: var(--primary-cyan, #06BBCC);
-    font-size: 2.5rem; /* Extra large for impact */
+    font-size: 2.5rem; 
     line-height: 0;
     vertical-align: baseline;
 }
 
 /* =========================================
-   RESPONSIVE LAYOUT (Mobile Adjustments)
+   RESPONSIVE LAYOUT
    ========================================= */
 
 @media (max-width: 991.98px) {
