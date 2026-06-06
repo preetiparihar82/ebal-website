@@ -383,6 +383,14 @@
     }
 }
 
+.ac-card-wrapper {
+    position: relative;
+    margin-bottom: 55px; 
+}
+.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
 /* =========================================
    EBAL ZIG-ZAG PATHWAY SECTION CSS
    ========================================= */
