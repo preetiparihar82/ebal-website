@@ -1,537 +1,731 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>eBAL Innotech</title>
-    <link rel="icon" type="image/png" sizes="60x60" href="./img/faviconlogo.jpeg">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="60x60"
+      href="./img/faviconlogo.jpeg"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/course.css" rel="stylesheet">
-<style>
-    /* =========================================
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/course.css" rel="stylesheet" />
+    <style>
+      /* =========================================
    EBAL GET A QUOTE FORM (Safely Scoped)
    ========================================= */
 
-.ebal-quote-section {
-    background-color: #f4f7fc; /* Soft background to highlight the main card */
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    overflow: hidden;
-}
+      .ebal-quote-section {
+        background-color: #f4f7fc; /* Soft background to highlight the main card */
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        overflow: hidden;
+      }
 
-/* Color Overrides */
-.ebal-quote-section .text-dark-blue { color: #121c33 !important; }
+      /* Color Overrides */
+      .ebal-quote-section .text-dark-blue {
+        color: #121c33 !important;
+      }
 
-/* --- MAIN CARD WRAPPER --- */
-.quote-main-card {
-    background-color: #ffffff;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(18, 28, 51, 0.08);
-}
+      /* --- MAIN CARD WRAPPER --- */
+      .quote-main-card {
+        background-color: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(18, 28, 51, 0.08);
+      }
 
-/* --- LEFT SIDE: INFO PANEL --- */
-.quote-info-side {
-    background: linear-gradient(145deg, var(--primary-blue, #3676a3) 0%, #1a4263 100%);
-    padding: 60px 50px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+      /* --- LEFT SIDE: INFO PANEL --- */
+      .quote-info-side {
+        background: linear-gradient(
+          145deg,
+          var(--primary-blue, #3676a3) 0%,
+          #1a4263 100%
+        );
+        padding: 60px 50px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-.quote-info-content {
-    position: relative;
-    z-index: 2;
-}
+      .quote-info-content {
+        position: relative;
+        z-index: 2;
+      }
 
-/* Background Abstract Shapes */
-.quote-shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 1;
-}
-.quote-shape.shape-1 { width: 300px; height: 300px; top: -100px; right: -100px; }
-.quote-shape.shape-2 { width: 200px; height: 200px; bottom: -50px; left: -50px; }
+      /* Background Abstract Shapes */
+      .quote-shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 1;
+      }
+      .quote-shape.shape-1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        right: -100px;
+      }
+      .quote-shape.shape-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -50px;
+        left: -50px;
+      }
 
-/* Contact Details List */
-.contact-detail-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-.contact-detail-item .cd-icon {
-    width: 45px;
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--primary-cyan, #06BBCC);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
+      /* Contact Details List */
+      .contact-detail-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+      .contact-detail-item .cd-icon {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--primary-cyan, #06bbcc);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
 
-/* --- RIGHT SIDE: FORM PANEL --- */
-.quote-form-side {
-    padding: 60px 50px;
-    background-color: #ffffff;
-}
+      /* --- RIGHT SIDE: FORM PANEL --- */
+      .quote-form-side {
+        padding: 60px 50px;
+        background-color: #ffffff;
+      }
 
-/* Interactive Input Groups */
-.quote-input-group {
-    position: relative;
-}
+      /* Interactive Input Groups */
+      .quote-input-group {
+        position: relative;
+      }
 
-/* Icon inside the input */
-.quote-input-group .input-icon {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    color: #9ca3af;
-    font-size: 1.1rem;
-    z-index: 4;
-    transition: color 0.3s ease;
-}
+      /* Icon inside the input */
+      .quote-input-group .input-icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: #9ca3af;
+        font-size: 1.1rem;
+        z-index: 4;
+        transition: color 0.3s ease;
+      }
 
-/* Input Fields Styling */
-.quote-input {
-    background-color: #f8faff !important;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 12px !important;
-    padding: 16px 20px 16px 50px !important; /* Extra left padding for the icon */
-    font-size: 0.95rem;
-    color: #121c33;
-    transition: all 0.3s ease !important;
-    box-shadow: none !important;
-}
+      /* Input Fields Styling */
+      .quote-input {
+        background-color: #f8faff !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 12px !important;
+        padding: 16px 20px 16px 50px !important; /* Extra left padding for the icon */
+        font-size: 0.95rem;
+        color: #121c33;
+        transition: all 0.3s ease !important;
+        box-shadow: none !important;
+      }
 
-.quote-input::placeholder {
-    color: #9ca3af;
-}
+      .quote-input::placeholder {
+        color: #9ca3af;
+      }
 
-/* --- FOCUS ANIMATIONS (The Magic) --- */
-.quote-input:focus {
-    border-color: var(--primary-cyan, #06BBCC) !important;
-    background-color: #ffffff !important;
-    box-shadow: 0 0 0 4px rgba(6, 187, 204, 0.15) !important; /* Glowing cyan ring */
-}
+      /* --- FOCUS ANIMATIONS (The Magic) --- */
+      .quote-input:focus {
+        border-color: var(--primary-cyan, #06bbcc) !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 0 0 4px rgba(6, 187, 204, 0.15) !important; /* Glowing cyan ring */
+      }
 
-/* Changes icon color when input is focused */
-.quote-input:focus + .input-icon,
-.quote-input-group:focus-within .input-icon {
-    color: var(--primary-cyan, #06BBCC);
-}
+      /* Changes icon color when input is focused */
+      .quote-input:focus + .input-icon,
+      .quote-input-group:focus-within .input-icon {
+        color: var(--primary-cyan, #06bbcc);
+      }
 
-/* Special fix for Select Dropdown arrow */
-select.quote-input {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
-    background-repeat: no-repeat !important;
-    background-position: right 1.2rem center !important;
-    background-size: 16px 12px !important;
-}
+      /* Special fix for Select Dropdown arrow */
+      select.quote-input {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 1.2rem center !important;
+        background-size: 16px 12px !important;
+      }
 
-/* Submit Button */
-.btn-quote-submit {
-    background-color: var(--primary-blue, #3676a3);
-    color: #ffffff;
-    border: none;
-    padding: 16px 30px;
-    border-radius: 12px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(54, 118, 163, 0.2);
-}
+      /* Submit Button */
+      .btn-quote-submit {
+        background-color: var(--primary-blue, #3676a3);
+        color: #ffffff;
+        border: none;
+        padding: 16px 30px;
+        border-radius: 12px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(54, 118, 163, 0.2);
+      }
 
-.btn-quote-submit:hover {
-    background-color: var(--primary-cyan, #06BBCC);
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(6, 187, 204, 0.3);
-}
-.mt-5 {
-    margin-top: 0rem !important;
-}
+      .btn-quote-submit:hover {
+        background-color: var(--primary-cyan, #06bbcc);
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 25px rgba(6, 187, 204, 0.3);
+      }
+      .mt-5 {
+        margin-top: 0rem !important;
+      }
 
-/* =========================================
+      /* =========================================
    RESPONSIVE ADJUSTMENTS
    ========================================= */
 
-@media (max-width: 1199px) {
-    .quote-info-side, .quote-form-side { padding: 50px 40px; }
-}
+      @media (max-width: 1199px) {
+        .quote-info-side,
+        .quote-form-side {
+          padding: 50px 40px;
+        }
+      }
 
-@media (max-width: 991.98px) {
-    /* Stacks the form properly on tablets */
-    .quote-info-side { padding: 50px 30px; }
-    .quote-form-side { padding: 50px 30px; }
-    .quote-shape.shape-1 { width: 200px; height: 200px; }
-}
+      @media (max-width: 991.98px) {
+        /* Stacks the form properly on tablets */
+        .quote-info-side {
+          padding: 50px 30px;
+        }
+        .quote-form-side {
+          padding: 50px 30px;
+        }
+        .quote-shape.shape-1 {
+          width: 200px;
+          height: 200px;
+        }
+      }
 
-@media (max-width: 767.98px) {
-    .ebal-quote-section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-    .quote-main-card { border-radius: 16px; }
-    .quote-info-side { padding: 40px 20px; }
-    .quote-form-side { padding: 40px 20px; }
-    
-    .quote-input { padding: 14px 15px 14px 45px !important; }
-    .quote-input-group .input-icon { left: 15px; }
-}
-.py-5 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-</style>
-</head>
+      @media (max-width: 767.98px) {
+        .ebal-quote-section {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem !important;
+        }
+        .quote-main-card {
+          border-radius: 16px;
+        }
+        .quote-info-side {
+          padding: 40px 20px;
+        }
+        .quote-form-side {
+          padding: 40px 20px;
+        }
 
-<body>
+        .quote-input {
+          padding: 14px 15px 14px 45px !important;
+        }
+        .quote-input-group .input-icon {
+          left: 15px;
+        }
+      }
+      .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-     <nav class="navbar navbar-expand-lg ebal-navbar fixed-top">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg ebal-navbar fixed-top">
+      <div class="container">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <img src="img/EBAL INNOTECH FINAL_LOGO.png" alt="EBAL Logo" style="height: 50px;">
+          <img
+            src="img/EBAL INNOTECH FINAL_LOGO.png"
+            alt="EBAL Logo"
+            style="height: 50px"
+          />
         </a>
 
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="solution.html" class="nav-link ">Solutions</a>
-                    <!-- <div class="dropdown-menu fade-down m-0">
+          <div class="navbar-nav mx-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="courses.html" class="nav-item nav-link">Courses</a>
+            <div class="nav-item dropdown">
+              <a href="solution.html" class="nav-link">Solutions</a>
+              <!-- <div class="dropdown-menu fade-down m-0">
                         <a href="training.html" class="dropdown-item">Industrial Training</a>
                         <a href="tech.html" class="dropdown-item">Advanced Tech</a>
                         <a href="mentorship.html" class="dropdown-item">Mentorship</a>
                     </div> -->
-                </div>
-                <a href="contactus.html" class="nav-item nav-link">Contact Us</a>
             </div>
+            <a href="contactus.html" class="nav-item nav-link">Contact Us</a>
+          </div>
 
-            <div class="mt-4 mt-lg-0 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end">
-                <a href="quote.html" class="btn btn-nav-action rounded-pill">
-                    Register <i class="fa fa-arrow-right ms-2"></i>
-                </a>
-            </div>
+          <div
+            class="mt-4 mt-lg-0 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end"
+          >
+            <a
+              href="https://experts.ebalinnotech.com/l/eecb7ab9f0"
+              class="btn btn-nav-action rounded-pill"
+            >
+              Register <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
     <!-- Navbar End -->
-
 
     <!-- Header Start -->
     <div class="ebal-inner-header">
-    <div class="tech-orb orb-primary"></div>
-    <div class="tech-orb orb-cyan"></div>
-    <div class="tech-orb orb-accent"></div>
-    
-    <div class="grid-overlay"></div>
+      <div class="tech-orb orb-primary"></div>
+      <div class="tech-orb orb-cyan"></div>
+      <div class="tech-orb orb-accent"></div>
 
-    <div class="container position-relative z-index-2">
+      <div class="grid-overlay"></div>
+
+      <div class="container position-relative z-index-2">
         <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-                <div class="mb-4" style="margin-top: 40px;">
-                    <span class="ebal-badge-clean">
-                        <i class="bi bi-info-circle-fill"></i> Let's Connect
-                    </span>
-                </div>
-                
-                <h1 class="display-3 fw-bold text-dark-blue animated slideInDown mb-3">Get a Quote</h1>
-                
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp">
-                        <li class="breadcrumb-item">
-                            <a class="text-primary-blue text-decoration-none fw-bold" href="index.html">Home</a>
-                        </li>
-                        <li class="breadcrumb-item text-black fw-bold" aria-current="page">Get a Quote</li>
-                    </ol>
-                </nav>
+          <div class="col-lg-10 text-center">
+            <div class="mb-4" style="margin-top: 40px">
+              <span class="ebal-badge-clean">
+                <i class="bi bi-info-circle-fill"></i> Let's Connect
+              </span>
             </div>
+
+            <h1
+              class="display-3 fw-bold text-dark-blue animated slideInDown mb-3"
+            >
+              Get a Quote
+            </h1>
+
+            <nav aria-label="breadcrumb">
+              <ol
+                class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp"
+              >
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-primary-blue text-decoration-none fw-bold"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  class="breadcrumb-item text-black fw-bold"
+                  aria-current="page"
+                >
+                  Get a Quote
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <!-- Header End -->
 
-
-  <section class="ebal-quote-section py-5">
-    <div class="container py-5">
-        
+    <section class="ebal-quote-section py-5">
+      <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-xl-10">
-                
-                <div class="quote-main-card shadow-lg wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row g-0">
-                        
-                        <div class="col-lg-5 quote-info-side">
-                            <div class="quote-info-content">
-                                <div class="ebal-badge-clean bg-white mb-3" style="color: var(--primary-blue, #3676a3);">
-                                    <i class="bi bi-chat-dots-fill"></i> Get In Touch
-                                </div>
-                                <h2 class="text-white fw-bold mb-4">Request a Free Career Consultation</h2>
-                                <p class="text-white-50 mb-5">
-                                    Take the first step towards a high-paying engineering career. Fill out the form, and our career experts will contact you within 24 hours.
-                                </p>
-                                
-                                <div class="contact-detail-item">
-                                    <div class="cd-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                                    <div class="cd-text">
-                                        <h6 class="text-white mb-1">Our Location</h6>
-                                        <p class="text-white-50 mb-0 small">123 Industrial Hub, Tech City, IN</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-detail-item">
-                                    <div class="cd-icon"><i class="bi bi-envelope-fill"></i></div>
-                                    <div class="cd-text">
-                                        <h6 class="text-white mb-1">Email Us</h6>
-                                        <p class="text-white-50 mb-0 small">manojukhande555@gmail.com</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-detail-item mb-0">
-                                    <div class="cd-icon"><i class="bi bi-telephone-fill"></i></div>
-                                    <div class="cd-text">
-                                        <h6 class="text-white mb-1">Call Us</h6>
-                                        <p class="text-white-50 mb-0 small">+91 8605003249</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="quote-shape shape-1"></div>
-                            <div class="quote-shape shape-2"></div>
-                        </div>
-
-                        <div class="col-lg-7 quote-form-side">
-                            <h3 class="fw-bold text-dark-blue mb-4">Send us a Message</h3>
-                            
-                            <form>
-                                <div class="row g-3">
-                                    
-                                    <div class="col-md-6">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-person input-icon"></i>
-                                            <input type="text" class="form-control quote-input" placeholder="Your Full Name" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-phone input-icon"></i>
-                                            <input type="tel" class="form-control quote-input" placeholder="Phone Number" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-envelope input-icon"></i>
-                                            <input type="email" class="form-control quote-input" placeholder="Email Address" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-journal-text input-icon"></i>
-                                            <select class="form-select quote-input" required>
-                                                <option value="" selected disabled>Highest Education</option>
-                                                <option value="Higher Secondary">Higher Secondary</option>
-                                                <option value="Undergraduation">Undergraduation</option>
-                                                <option value="Graduate">Graduate</option>
-                                                <option value="Master">Master</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-book input-icon"></i>
-                                            <select class="form-select quote-input" required>
-                                                <option value="" selected disabled>Domain of Interest</option>
-                                                <option value="AI">AI Technology</option>
-                                                <option value="AR/VR">AR/VR Technology</option>
-                                                <option value="ME">Mechanical</option>
-                                                <option value="EC">Electronics & Communication</option>
-                                                <option value="Entrepreneur Mechanical">Entrepreneur Mechanical</option>
-                                                <option value="Mechatronics & Manufacturing">Mechatronics & Manufacturing</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12">
-                                        <div class="quote-input-group">
-                                            <i class="bi bi-chat-text input-icon" style="top: 20px;"></i>
-                                            <textarea class="form-control quote-input" rows="4" placeholder="How can we help you achieve your career goals?" required style="padding-top: 16px;"></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12 mt-4">
-                                        <button class="btn-quote-submit w-100" type="submit">
-                                            Request Free Quote <i class="bi bi-arrow-right ms-2"></i>
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                            </form>
-                            
-                        </div>
-                        
+          <div class="col-xl-10">
+            <div
+              class="quote-main-card shadow-lg wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="row g-0">
+                <div class="col-lg-5 quote-info-side">
+                  <div class="quote-info-content">
+                    <div
+                      class="ebal-badge-clean bg-white mb-3"
+                      style="color: var(--primary-blue, #3676a3)"
+                    >
+                      <i class="bi bi-chat-dots-fill"></i> Get In Touch
                     </div>
+                    <h2 class="text-white fw-bold mb-4">
+                      Request a Free Career Consultation
+                    </h2>
+                    <p class="text-white-50 mb-5">
+                      Take the first step towards a high-paying engineering
+                      career. Fill out the form, and our career experts will
+                      contact you within 24 hours.
+                    </p>
+
+                    <div class="contact-detail-item">
+                      <div class="cd-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                      </div>
+                      <div class="cd-text">
+                        <h6 class="text-white mb-1">Our Location</h6>
+                        <p class="text-white-50 mb-0 small">
+                          123 Industrial Hub, Tech City, IN
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                      <div class="cd-icon">
+                        <i class="bi bi-envelope-fill"></i>
+                      </div>
+                      <div class="cd-text">
+                        <h6 class="text-white mb-1">Email Us</h6>
+                        <p class="text-white-50 mb-0 small">
+                          manojukhande555@gmail.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="contact-detail-item mb-0">
+                      <div class="cd-icon">
+                        <i class="bi bi-telephone-fill"></i>
+                      </div>
+                      <div class="cd-text">
+                        <h6 class="text-white mb-1">Call Us</h6>
+                        <p class="text-white-50 mb-0 small">+91 8605003249</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="quote-shape shape-1"></div>
+                  <div class="quote-shape shape-2"></div>
                 </div>
-                
+
+                <div class="col-lg-7 quote-form-side">
+                  <h3 class="fw-bold text-dark-blue mb-4">Send us a Message</h3>
+
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="quote-input-group">
+                          <i class="bi bi-person input-icon"></i>
+                          <input
+                            type="text"
+                            class="form-control quote-input"
+                            placeholder="Your Full Name"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="quote-input-group">
+                          <i class="bi bi-phone input-icon"></i>
+                          <input
+                            type="tel"
+                            class="form-control quote-input"
+                            placeholder="Phone Number"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="quote-input-group">
+                          <i class="bi bi-envelope input-icon"></i>
+                          <input
+                            type="email"
+                            class="form-control quote-input"
+                            placeholder="Email Address"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="quote-input-group">
+                          <i class="bi bi-journal-text input-icon"></i>
+                          <select class="form-select quote-input" required>
+                            <option value="" selected disabled>
+                              Highest Education
+                            </option>
+                            <option value="Higher Secondary">
+                              Higher Secondary
+                            </option>
+                            <option value="Undergraduation">
+                              Undergraduation
+                            </option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Master">Master</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="quote-input-group">
+                          <i class="bi bi-book input-icon"></i>
+                          <select class="form-select quote-input" required>
+                            <option value="" selected disabled>
+                              Domain of Interest
+                            </option>
+                            <option value="AI">AI Technology</option>
+                            <option value="AR/VR">AR/VR Technology</option>
+                            <option value="ME">Mechanical</option>
+                            <option value="EC">
+                              Electronics & Communication
+                            </option>
+                            <option value="Entrepreneur Mechanical">
+                              Entrepreneur Mechanical
+                            </option>
+                            <option value="Mechatronics & Manufacturing">
+                              Mechatronics & Manufacturing
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="quote-input-group">
+                          <i
+                            class="bi bi-chat-text input-icon"
+                            style="top: 20px"
+                          ></i>
+                          <textarea
+                            class="form-control quote-input"
+                            rows="4"
+                            placeholder="How can we help you achieve your career goals?"
+                            required
+                            style="padding-top: 16px"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mt-4">
+                        <button class="btn-quote-submit w-100" type="submit">
+                          Request Free Quote
+                          <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        
-    </div>
-</section>
+      </div>
+    </section>
     <!-- Footer Start -->
-   <div class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-4">
+    <div
+      class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-4">
         <div class="row g-4 justify-content-between">
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="d-inline-block mb-4">
+              <img
+                src="./img/EBAL INNOTECH FINAL_LOGO.png"
+                alt="EBAL Innotech Logo"
+                class="footer-brand-logo"
+              />
+            </a>
+            <p class="mb-4 text-light-muted lh-base">
+              Empowering Mechanical, Electronics, Mechatronics, and
+              Manufacturing engineering graduates to become Industry ready
+              professionals through practical training, advanced AR/VR
+              technology, and expert mentorship
+            </p>
 
-            <div class="col-lg-3 col-md-6">
-                <a href="#" class="d-inline-block mb-4">
-    <img src="./img/EBAL INNOTECH FINAL_LOGO.png" alt="EBAL Innotech Logo" class="footer-brand-logo">
-</a>
-                <p class="mb-4 text-light-muted lh-base">
-                    Empowering Mechanical, Electronics, Mechatronics, and Manufacturing engineering graduates to become Industry ready professionals through practical training, advanced AR/VR technology, and expert mentorship
+            <div class="footer-working-hours mb-4">
+              <h6 class="text-white mb-2 d-flex align-items-center">
+                <i class="far fa-clock text-primary-cyan me-2 fs-5"></i>
+                Business Hours
+              </h6>
+              <p class="mb-0 text-light-muted ms-4 ps-1 small">
+                Monday - Saturday
+              </p>
+              <p class="mb-0 fw-bold text-white ms-4 ps-1 small">
+                9:00 AM to 6:00 PM
+              </p>
+            </div>
+
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_TWITTER_LINK]"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_TWITTER_LINK]"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_FACEBOOK_LINK]"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_YOUTUBE_LINK]"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_LINKEDIN_LINK]"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 ps-lg-4">
+            <h5 class="text-white mb-4 footer-heading">Quick Links</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Privacy Policy</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">FAQs & Help</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4 footer-heading">Popular Courses</h5>
+            <a class="btn btn-link" href="">Industry foundation </a>
+            <a class="btn btn-link" href="">Mind training</a>
+            <a class="btn btn-link" href="">Entrepreneurship development </a>
+            <a class="btn btn-link" href="">Industry competent modules</a>
+            <a class="btn btn-link" href="">Innovation</a>
+            <a class="btn btn-link" href="">VAVE</a>
+            <a class="btn btn-link" href="">VR Technology</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4 footer-heading">Contact Info</h5>
+
+            <div class="mb-4">
+              <p class="mb-0 fw-bold text-white fs-6">
+                EBAL INNOTECH PVT. LTD.
+              </p>
+              <!-- <p class="small text-primary-cyan mb-0">Director, EBAL Innotech Pvt. Ltd.</p> -->
+            </div>
+
+            <div class="d-flex mb-3">
+              <i
+                class="fa fa-map-marker-alt mt-1 me-3 text-primary-cyan fs-5"
+              ></i>
+              <div>
+                <p class="mb-1 text-light-muted small">
+                  Office 2526, T-9, Bramhacorp Business Park, New Kalyani Nagar,
+                  Wadgaon Sheri, Pune - 411014
                 </p>
-                
-                <div class="footer-working-hours mb-4">
-                    <h6 class="text-white mb-2 d-flex align-items-center">
-                        <i class="far fa-clock text-primary-cyan me-2 fs-5"></i> Business Hours
-                    </h6>
-                    <p class="mb-0 text-light-muted ms-4 ps-1 small">Monday - Saturday</p>
-                    <p class="mb-0 fw-bold text-white ms-4 ps-1 small">9:00 AM to 6:00 PM</p>
-                </div>
-
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_TWITTER_LINK]"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_TWITTER_LINK]"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_FACEBOOK_LINK]"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_YOUTUBE_LINK]"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_LINKEDIN_LINK]"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/3JgLbVy4usqV2DMDA"
+                  target="_blank"
+                  class="text-primary-cyan small border-bottom border-info text-decoration-none pb-1"
+                  >Open in Google Maps</a
+                >
+              </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 ps-lg-4">
-                <h5 class="text-white mb-4 footer-heading">Quick Links</h5>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Privacy Policy</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">FAQs & Help</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4 footer-heading">Popular Courses</h5>
-                <a class="btn btn-link" href="">Industry foundation </a>
-                <a class="btn btn-link" href="">Mind training</a>
-                <a class="btn btn-link" href="">Entrepreneurship development </a>
-                <a class="btn btn-link" href="">Industry competent modules</a>
-                <a class="btn btn-link" href="">Innovation</a>
-                <a class="btn btn-link" href="">VAVE</a>
-                <a class="btn btn-link" href="">VR Technology</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4 footer-heading">Contact Info</h5>
-                
-                <div class="mb-4">
-                    <p class="mb-0 fw-bold text-white fs-6">EBAL INNOTECH PVT. LTD.</p>
-                    <!-- <p class="small text-primary-cyan mb-0">Director, EBAL Innotech Pvt. Ltd.</p> -->
-                </div>
-
-                <div class="d-flex mb-3">
-                    <i class="fa fa-map-marker-alt mt-1 me-3 text-primary-cyan fs-5"></i>
-                    <div>
-                        <p class="mb-1 text-light-muted small">Office 2526, T-9, Bramhacorp Business Park,
-New Kalyani Nagar, Wadgaon Sheri,
-Pune - 411014</p>
-                        <a href="https://maps.app.goo.gl/3JgLbVy4usqV2DMDA" target="_blank" class="text-primary-cyan small border-bottom border-info text-decoration-none pb-1">Open in Google Maps</a>
-                    </div>
-                </div>
-
-                <p class="mb-2 d-flex align-items-center small"><i class="fa fa-phone-alt me-3 text-primary-cyan"></i>
-                    +91 2069010545</p>
-                <p class="mb-2 d-flex align-items-center small">
-  <i class="fab fa-whatsapp me-3 text-success fs-5"></i>
-  <a href="https://wa.me/918600152494" 
-     target="_blank" 
-     class="text-decoration-none text-light">
-     +91 86001 52494
-  </a>
-</p>
-               <p class="mb-2 d-flex align-items-center small">
-  <i class="fa fa-envelope me-3 text-primary-cyan"></i>
-  <a href="mailto:info@eblinnotech.com" 
-     class="text-decoration-none text-light">
-     info@eblinnotech.com
-  </a>
-</p>
-            </div>
-
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fa fa-phone-alt me-3 text-primary-cyan"></i> +91
+              2069010545
+            </p>
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fab fa-whatsapp me-3 text-success fs-5"></i>
+              <a
+                href="https://wa.me/918600152494"
+                target="_blank"
+                class="text-decoration-none text-light"
+              >
+                +91 86001 52494
+              </a>
+            </p>
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fa fa-envelope me-3 text-primary-cyan"></i>
+              <a
+                href="mailto:info@eblinnotech.com"
+                class="text-decoration-none text-light"
+              >
+                info@eblinnotech.com
+              </a>
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="container">
+      <div class="container">
         <div class="copyright border-top border-secondary pt-3 pb-3">
-            <div class="row align-items-center">
-                <div class="col-12 text-center">
-                    &copy; <a class="text-white fw-bold text-decoration-none" href="#">EBAL INNOTECH PRIVATE LIMITED</a>. All Rights Reserved.
-                    <br><span class="small text-light-muted">Designed By <a class="text-primary-cyan text-decoration-none" href="https://www.startupsahay.com/" target="_blank">Startup Sahay</a></span>
-                </div>
+          <div class="row align-items-center">
+            <div class="col-12 text-center">
+              &copy;
+              <a class="text-white fw-bold text-decoration-none" href="#"
+                >EBAL INNOTECH PRIVATE LIMITED</a
+              >. All Rights Reserved. <br /><span class="small text-light-muted"
+                >Designed By
+                <a
+                  class="text-primary-cyan text-decoration-none"
+                  href="https://www.startupsahay.com/"
+                  target="_blank"
+                  >Startup Sahay</a
+                ></span
+              >
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -543,6 +737,5 @@ Pune - 411014</p>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
