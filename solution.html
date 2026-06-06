@@ -1,522 +1,795 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>eBAL Innotech</title>
-    <link rel="icon" type="image/png" sizes="60x60" href="./img/faviconlogo.jpeg">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="60x60"
+      href="./img/faviconlogo.jpeg"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/about.css" rel="stylesheet">
-    <link href="css/solution.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
+    <link href="css/solution.css" rel="stylesheet" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <nav class="navbar navbar-expand-lg ebal-navbar fixed-top">
-        <div class="container">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
-                <img src="img/EBAL INNOTECH FINAL_LOGO.png" alt="EBAL Logo" style="height: 50px;">
-            </a>
+      <div class="container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img
+            src="img/EBAL INNOTECH FINAL_LOGO.png"
+            alt="EBAL Logo"
+            style="height: 50px"
+          />
+        </a>
 
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="courses.html" class="nav-item nav-link">Courses</a>
-                    <div class="nav-item dropdown">
-                        <a href="solution.html" class="nav-link  active">Solutions</a>
-                        <!-- <div class="dropdown-menu fade-down m-0">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="courses.html" class="nav-item nav-link">Courses</a>
+            <div class="nav-item dropdown">
+              <a href="solution.html" class="nav-link active">Solutions</a>
+              <!-- <div class="dropdown-menu fade-down m-0">
                         <a href="training.html" class="dropdown-item">Industrial Training</a>
                         <a href="tech.html" class="dropdown-item">Advanced Tech</a>
                         <a href="mentorship.html" class="dropdown-item">Mentorship</a>
                     </div> -->
-                    </div>
-                    <a href="contactus.html" class="nav-item nav-link">Contact Us</a>
-                </div>
-
-                <div class="mt-4 mt-lg-0 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end">
-                    <a href="quote.html" class="btn btn-nav-action rounded-pill">
-                        Register <i class="fa fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
             </div>
+            <a href="contactus.html" class="nav-item nav-link">Contact Us</a>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-end"
+          >
+            <a
+              href="https://experts.ebalinnotech.com/l/eecb7ab9f0"
+              class="btn btn-nav-action rounded-pill"
+            >
+              Register <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Header Start -->
     <div class="ebal-inner-header">
-        <div class="tech-orb orb-primary"></div>
-        <div class="tech-orb orb-cyan"></div>
-        <div class="tech-orb orb-accent"></div>
+      <div class="tech-orb orb-primary"></div>
+      <div class="tech-orb orb-cyan"></div>
+      <div class="tech-orb orb-accent"></div>
 
-        <div class="grid-overlay"></div>
+      <div class="grid-overlay"></div>
 
-        <div class="container position-relative z-index-2">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <div class="mb-4" style="margin-top: 40px;">
-                        <span class="ebal-badge-clean">
-                            <i class="bi bi-info-circle-fill"></i> Find your Solution
-                        </span>
-                    </div>
-
-                    <h1 class="display-3 fw-bold text-dark-blue animated slideInDown mb-3">Solutions</h1>
-
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp">
-                            <li class="breadcrumb-item">
-                                <a class="text-primary-blue text-decoration-none fw-bold" href="index.html">Home</a>
-                            </li>
-                            <li class="breadcrumb-item text-black fw-bold" aria-current="page">Solutions</li>
-                        </ol>
-                    </nav>
-                </div>
+      <div class="container position-relative z-index-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <div class="mb-4" style="margin-top: 40px">
+              <span class="ebal-badge-clean">
+                <i class="bi bi-info-circle-fill"></i> Find your Solution
+              </span>
             </div>
+
+            <h1
+              class="display-3 fw-bold text-dark-blue animated slideInDown mb-3"
+            >
+              Solutions
+            </h1>
+
+            <nav aria-label="breadcrumb">
+              <ol
+                class="breadcrumb justify-content-center bg-transparent p-0 m-0 animated slideInUp"
+              >
+                <li class="breadcrumb-item">
+                  <a
+                    class="text-primary-blue text-decoration-none fw-bold"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li
+                  class="breadcrumb-item text-black fw-bold"
+                  aria-current="page"
+                >
+                  Solutions
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Header End -->
     <section class="ebal-3d-services py-5">
+      <div class="service-glow-blob top-left"></div>
+      <div class="service-glow-blob bottom-right"></div>
 
-        <div class="service-glow-blob top-left"></div>
-        <div class="service-glow-blob bottom-right"></div>
+      <div class="container position-relative z-index-2 py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+            <div
+              class="ebal-badge-clean bg-white mb-3 shadow-sm"
+              style="color: var(--primary-blue, #3676a3)"
+            >
+              <i class="bi bi-stars text-warning me-2"></i> EBAL Innotech
+              Offerings
+            </div>
+            <h2
+              class="display-5 fw-bold text-dark-blue mb-4"
+              style="line-height: 1.2"
+            >
+              Transforming Education with
+              <span class="text-primary-cyan">Smart Solutions</span>
+            </h2>
+            <p class="text-muted fs-6 mb-4 lh-lg">
+              We don't just offer courses; we provide a complete ecosystem. From
+              Activity / hands-on industrial hardware to immersive digital
+              environments, our solutions are designed to 100% assistance to
+              enhance employability skills.
+            </p>
+            <a
+              href="courses.html"
+              class="btn btn-primary-custom rounded-pill py-3 px-5 shadow-lg"
+            >
+              Explore All Courses <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
 
-        <div class="container position-relative z-index-2 py-5">
-            <div class="row align-items-center g-5">
+          <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="carousel-3d-wrapper">
+              <div class="card-3d pos-front" id="c3d-0">
+                <div class="card-3d-inner">
+                  <div class="card-3d-icon">
+                    <i class="bi bi-gear-wide-connected"></i>
+                  </div>
+                  <h3 class="card-3d-title">Industrial Training</h3>
+                  <p class="card-3d-text">
+                    Activity / Hands-on experience with real manufacturing
+                    hardware. Bridge the gap between academics and core roles.
+                    Gain practical exposure to industry-standard tools and
+                    real-world problem-solving techniques.
+                  </p>
+                  <span class="card-3d-badge">Popular</span>
+                </div>
+              </div>
 
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="ebal-badge-clean bg-white mb-3 shadow-sm" style="color: var(--primary-blue, #3676a3);">
-                        <i class="bi bi-stars text-warning me-2"></i> EBAL Innotech Offerings
-                    </div>
-                    <h2 class="display-5 fw-bold text-dark-blue mb-4" style="line-height: 1.2;">
-                        Transforming Education with <span class="text-primary-cyan">Smart Solutions</span>
-                    </h2>
-                    <p class="text-muted fs-6 mb-4 lh-lg">
-                        We don't just offer courses; we provide a complete ecosystem. From Activity / hands-on industrial hardware
-                        to immersive digital environments, our solutions are designed to 100% assistance to enhance employability skills.
+              <div class="card-3d pos-back" id="c3d-2">
+                <div class="card-3d-inner">
+                  <div class="card-3d-icon"><i class="bi bi-laptop"></i></div>
+                  <h3 class="card-3d-title">Online Classes</h3>
+                  <p class="card-3d-text">
+                    Flexible, high-quality digital learning modules accessible
+                    anywhere, anytime to accelerate your career. Learn at your
+                    own pace with expert guidance and interactive,
+                    industry-relevant course content.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-3d pos-right" id="c3d-1">
+                <div class="card-3d-inner">
+                  <div class="card-3d-icon"><i class="bi bi-cpu"></i></div>
+                  <h3 class="card-3d-title">Advanced Tech</h3>
+                  <p class="card-3d-text">
+                    Master the future with integrated AI solutions and highly
+                    immersive AR/VR Technology for engineering. Enhance
+                    innovation skills by working on cutting-edge technologies
+                    and real-world digital applications.
+                  </p>
+                  <span class="card-3d-badge">Trending</span>
+                </div>
+              </div>
+
+              <div class="card-3d pos-left" id="c3d-3">
+                <div class="card-3d-inner">
+                  <div class="card-3d-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <h3 class="card-3d-title">Expert Mentorship</h3>
+                  <p class="card-3d-text">
+                    Learn directly from seasoned professionals with 20+ years of
+                    active experience in the Automotive / Industrial
+                    manufacturing sector. Gain valuable industry insights,
+                    practical knowledge, and mentorship to build a successful
+                    career path.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="ebal-academistry-section"
+      class="ebal-academistry-section py-5"
+    >
+      <div class="container py-5">
+        <div class="row justify-content-center text-center mb-5 pb-3">
+          <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="ebal-double-line-heading justify-content-center mb-3">
+              <span class="line left-line"></span>
+              <h6
+                class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1"
+              >
+                Academistry
+              </h6>
+              <span class="line right-line"></span>
+            </div>
+            <h2 class="display-5 fw-bold text-dark-blue mb-3">
+              EBAL Solutions Ecosystem
+            </h2>
+            <p class="text-muted fs-6">
+              A complete 360° approach to transforming engineering graduates
+              into highly-paid industry professionals.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <!-- Relative Wrapper to hold both Card and overlapping Button safely -->
+            <div style="position: relative; margin-bottom: 20px">
+              <!-- THE CARD -->
+              <div
+                class="academistry-card"
+                tabindex="0"
+                onclick="
+                  window.location.href =
+                    'https://experts.ebalinnotech.com/l/b510208f14'
+                "
+                style="cursor: pointer"
+              >
+                <div class="ac-img-wrapper">
+                  <img src="./img/enggpathway.jpg" alt="Admissions Pathway" />
+                  <div class="ac-icon-badge">
+                    <i class="bi bi-signpost-split"></i>
+                  </div>
+                </div>
+
+                <div class="ac-content-base">
+                  <h4 class="ac-title">Engg. Admissions Pathway</h4>
+                  <p class="ac-short-desc">
+                    Expert guidance for selecting the right engineering branch
+                    as per student interest and market demand along with right
+                    engineering college.
+                  </p>
+                </div>
+
+                <!-- HOVER OVERLAY -->
+                <div class="ac-reveal-overlay">
+                  <div class="reveal-content">
+                    <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                    <p class="small text-white-50 mb-3">
+                      We analyze student potential and market trends to map out
+                      the perfect academic journey, ensuring the foundational
+                      years are spent at institutions that align with industry
+                      demands.
                     </p>
-                    <a href="courses.html" class="btn btn-primary-custom rounded-pill py-3 px-5 shadow-lg">
-                        Explore All Courses <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
+                    <h6
+                      class="text-primary-cyan fw-bold text-uppercase mb-2"
+                      style="font-size: 0.8rem; font-weight: 600"
+                    >
+                      Key Benefits :
+                    </h6>
+                    <ul class="ac-benefits-list">
+                      <li>
+                        Data driven engineering branch and college selection
+                      </li>
+                      <li>Career trajectory mapping</li>
+                      <li>Stress-free admission process</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+              <!-- END OF CARD -->
 
-                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="carousel-3d-wrapper">
-
-                        <div class="card-3d pos-front" id="c3d-0">
-                            <div class="card-3d-inner">
-                                <div class="card-3d-icon"><i class="bi bi-gear-wide-connected"></i></div>
-                                <h3 class="card-3d-title">Industrial Training</h3>
-                                <p class="card-3d-text">
-                                    Activity / Hands-on experience with real manufacturing hardware. Bridge the gap between
-                                    academics and core roles.
-                                    Gain practical exposure to industry-standard tools and real-world problem-solving
-                                    techniques.
-                                </p>
-                                <span class="card-3d-badge">Popular</span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-3d pos-back" id="c3d-2">
-                            <div class="card-3d-inner">
-                                <div class="card-3d-icon"><i class="bi bi-laptop"></i></div>
-                                <h3 class="card-3d-title">Online Classes</h3>
-                                <p class="card-3d-text">
-                                    Flexible, high-quality digital learning modules accessible anywhere, anytime to
-                                    accelerate your career.
-                                    Learn at your own pace with expert guidance and interactive, industry-relevant
-                                    course content.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card-3d pos-right" id="c3d-1">
-                            <div class="card-3d-inner">
-                                <div class="card-3d-icon"><i class="bi bi-cpu"></i></div>
-                                <h3 class="card-3d-title">Advanced Tech</h3>
-                                <p class="card-3d-text">
-                                    Master the future with integrated AI solutions and highly immersive AR/VR
-                                    Technology for engineering.
-                                    Enhance innovation skills by working on cutting-edge technologies and real-world
-                                    digital applications.
-                                </p>
-                                <span class="card-3d-badge">Trending</span>
-                            </div>
-                        </div>
-
-                        <div class="card-3d pos-left" id="c3d-3">
-                            <div class="card-3d-inner">
-                                <div class="card-3d-icon"><i class="bi bi-people-fill"></i></div>
-                                <h3 class="card-3d-title">Expert Mentorship</h3>
-                                <p class="card-3d-text">
-                                    Learn directly from seasoned professionals with 20+ years of active experience in
-                                    the Automotive / Industrial manufacturing sector.
-                                    Gain valuable industry insights, practical knowledge, and mentorship to build a
-                                    successful career path.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+              <!-- OVERLAPPING BUY NOW BUTTON -->
+              <button
+                class="btn text-white shadow"
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translate(-50%, 50%);
+                  background-color: #17a2b8;
+                  border: none;
+                  border-radius: 50px;
+                  padding: 8px 24px;
+                  font-weight: 600;
+                  font-size: 0.9rem;
+                  z-index: 10;
+                  white-space: nowrap;
+                  transition: background-color 0.3s ease;
+                "
+                onclick="
+                  event.stopPropagation();
+                  window.location.href =
+                    'https://experts.ebalinnotech.com/l/b510208f14';
+                "
+                onmouseover="this.style.backgroundColor = '#138496'"
+                onmouseout="this.style.backgroundColor = '#17a2b8'"
+              >
+                Buy Now
+              </button>
             </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Foundation Course"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-tools"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Industry Foundation Course</h4>
+                <p class="ac-short-desc">
+                  Build robust & strong foundation to become good engineer.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    A rigorous boot camp that focused on mindset development,
+                    skill and competencies exploration to become good engineer.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Growth mindset</li>
+                    <li>Industry ready skillsets</li>
+                    <li>Strong engineering core</li>
+                    <li>Practical learning approach</li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Mind Training"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-puzzle"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Mind Training</h4>
+                <p class="ac-short-desc">
+                  Mind training to boot focus, to know inner potential, problem
+                  solving and professional resilience.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    Industry Success isn’t just about hard skills. We train
+                    students for the four important pillars of life i.e. Health,
+                    wealth, happiness and peace of mind. This develops growth
+                    mindset of peoples which enhances organizational
+                    productivity drastically.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Enhanced focus</li>
+                    <li>Inner potential realization</li>
+                    <li>High pressure stress management</li>
+                    <li>Interview and presentation confidence</li>
+                    <li>Customer facing skills</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Experts Mentoring"
+                />
+                <div class="ac-icon-badge">
+                  <i class="bi bi-chat-square-dots"></i>
+                </div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Industry Experts Mentoring</h4>
+                <p class="ac-short-desc">
+                  1-on-1 guidance from industry professionals with decades of
+                  experience in top OEMs & Tier1s.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    Get direct access to experienced industry leaders who will
+                    provide their experiential knowledge, feedback, portfolio
+                    reviews, & insider knowledge on how to navigate the
+                    corporate ladder.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Experiential learning</li>
+                    <li>Real world corporate insights</li>
+                    <li>Direct industry networking</li>
+                    <li>Personalized career trajectory</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Competent Modules"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-puzzle"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Industry Competent Modules</h4>
+                <p class="ac-short-desc">
+                  Specialized, hyper-focused training modules aligned exactly
+                  with 2026 hiring standards.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    We break down complex industrial processes into digestible
+                    role-based modules to become compatible with various
+                    manufacturing industry requirements.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Focused skill acquisition</li>
+                    <li>Micro-certifications for resumes</li>
+                    <li>Activity based learning</li>
+                    <li>Industry readiness</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Innovation"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-lightbulb"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Innovation</h4>
+                <p class="ac-short-desc">
+                  Cultivate a mindset for creative problem solving, VAVE & new
+                  product developments.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    We push students beyond textbooks to design, redesign,
+                    simulate, test and iterate their own mechanical and
+                    mechatronic solutions to achieve great product and process
+                    innovations.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Out of the box thinking</li>
+                    <li>New product developments</li>
+                    <li>End to end project management</li>
+                    <li>Patent and technical publications potential</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="AI Technology"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-cpu"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">AI Technology</h4>
+                <p class="ac-short-desc">
+                  Learn to leverage Artificial Intelligence for manufacturing,
+                  design, and automation.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    AI is revolutionizing industry 4.0. We teach students how to
+                    implement AI tool to accelerate their product design and
+                    development process, Develop smart and intelligent products.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Future proof tech skills</li>
+                    <li>Data driven decision making</li>
+                    <li>Access to high paying AI roles</li>
+                    <li>Accelerated product development process</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="AR/VR Technology"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-layers"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">VR Technology</h4>
+                <p class="ac-short-desc">
+                  Immersive training using Virtual reality for complex
+                  machinery, products and processes for better visualization.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    Experience safe, realistic hands-on training with heavy and
+                    hazardous industrial equipment in immersive VR environments.
+                    Transform SOPs into interactive VR simulations that improve
+                    operator skills, safety awareness, training efficiency, and
+                    process standardization.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Immersive environment</li>
+                    <li>Zero risk safety simulation</li>
+                    <li>Exposure to cutting edge technology</li>
+                    <li>Interactive and engaging environment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img src="./img/entrepreneurship.png" alt="Entrepreneurship" />
+                <div class="ac-icon-badge"><i class="bi bi-globe"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Entrepreneurship Development</h4>
+                <p class="ac-short-desc">
+                  Immersive training using Augmented and Virtual reality for
+                  complex machinery, products and processes for better
+                  visualization.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    For those who want to build rather than just work. We guide
+                    students through product ideation, market research, funding
+                    pitches, and launching industrial startups.
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>Entrepreneurship skillset and mindset development</li>
+                    <li>Roadmap for ideation to launch startup</li>
+                    <li>Employment generation</li>
+                    <li>Executive leadership skills development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="academistry-card" tabindex="0">
+              <div class="ac-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Consulting Projects"
+                />
+                <div class="ac-icon-badge"><i class="bi bi-diagram-3"></i></div>
+              </div>
+              <div class="ac-content-base">
+                <h4 class="ac-title">Industry Consulting Projects</h4>
+                <p class="ac-short-desc">
+                  Work on live challenges and bottlenecks faced by actual
+                  manufacturing companies.
+                </p>
+              </div>
+              <div class="ac-reveal-overlay">
+                <div class="reveal-content">
+                  <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
+                  <p class="small text-white-50 mb-3">
+                    We deliver solutions for real-time industrial challenges
+                    through our team of experienced industry professionals,
+                    while also providing trained manpower with opportunities to
+                    work on live projects under expert guidance
+                  </p>
+                  <h6
+                    class="text-primary-cyan fw-bold text-uppercase mb-2"
+                    style="font-size: 0.8rem; font-weight: 600"
+                  >
+                    Key Benefits :
+                  </h6>
+                  <ul class="ac-benefits-list">
+                    <li>
+                      Industry solutions to enhance QCD (Quality, cost and
+                      delivery)
+                    </li>
+                    <li>Massive portfolio building</li>
+                    <li>Provable real-world impact</li>
+                    <li>Skilled workforce</li>
+                    <li>High chance of pre-placement offers</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="ebal-academistry-section" class="ebal-academistry-section py-5" >
-        <div class="container py-5">
-
-            <div class="row justify-content-center text-center mb-5 pb-3">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="ebal-double-line-heading justify-content-center mb-3">
-                        <span class="line left-line"></span>
-                        <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">Academistry</h6>
-                        <span class="line right-line"></span>
-                    </div>
-                    <h2 class="display-5 fw-bold text-dark-blue mb-3">EBAL Solutions Ecosystem</h2>
-                    <p class="text-muted fs-6">A complete 360° approach to transforming engineering graduates into
-                        highly-paid industry professionals.</p>
-                </div>
-            </div>
-
-            <div class="row g-4 justify-content-center">
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="./img/enggpathway.jpg" alt="Admissions Pathway">
-                            <div class="ac-icon-badge"><i class="bi bi-signpost-split"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Engg. Admissions Pathway</h4>
-                            <p class="ac-short-desc">Expert guidance for selecting the right engineering branch as per student interest and market demand along with right engineering college.  </p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">We analyze student potential and market trends to
-                                    map out the perfect academic journey, ensuring the foundational years are spent at
-                                    institutions that align with industry demands.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Data driven engineering branch and college selection</li>
-                                    <li>Career trajectory mapping</li>
-                                    <li>Stress-free admission process</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Foundation Course">
-                            <div class="ac-icon-badge"><i class="bi bi-tools"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Industry Foundation Course</h4>
-                            <p class="ac-short-desc">Build robust & strong foundation to become  good engineer.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">A rigorous boot camp that focused on mindset development, skill and competencies exploration to become good engineer. </p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Growth mindset</li>
-                                    <li>Industry ready skillsets</li>
-                                    <li> Strong engineering core</li>
-                                    <li>Practical learning approach</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Mind Training">
-                            <div class="ac-icon-badge"><i class="bi bi-puzzle"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Mind Training</h4>
-                            <p class="ac-short-desc">Mind training to boot focus, to know inner potential, problem solving and professional resilience.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">Industry Success isn’t just about hard skills. We train students for the four important pillars of life i.e. Health, wealth, happiness and peace of mind. This develops growth mindset of peoples which enhances organizational productivity drastically.  </p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Enhanced focus</li>
-                                    <li>Inner potential realization</li>
-                                    <li>High pressure stress management</li>
-                                    <li>Interview and presentation confidence</li>
-                                    <li>Customer facing skills</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Experts Mentoring">
-                            <div class="ac-icon-badge"><i class="bi bi-chat-square-dots"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Industry Experts Mentoring</h4>
-                            <p class="ac-short-desc">1-on-1 guidance from industry professionals with decades of experience in top OEMs & Tier1s.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">Get direct access to experienced industry leaders who will provide their experiential knowledge, feedback, portfolio reviews, & insider knowledge on how to navigate the corporate ladder.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Experiential learning</li>
-                                    <li>Real world corporate insights</li>
-                                    <li>Direct industry networking</li>
-                                    <li>Personalized career trajectory</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Competent Modules">
-                            <div class="ac-icon-badge"><i class="bi bi-puzzle"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Industry Competent Modules</h4>
-                            <p class="ac-short-desc">Specialized, hyper-focused training modules aligned exactly with
-                                2026 hiring standards.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">We break down complex industrial processes into digestible role-based modules to become compatible with various manufacturing industry requirements.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Focused skill acquisition</li>
-                                    <li>Micro-certifications for resumes</li>
-                                    <li>Activity based learning</li>
-                                    <li>Industry readiness</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Innovation">
-                            <div class="ac-icon-badge"><i class="bi bi-lightbulb"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Innovation</h4>
-                            <p class="ac-short-desc">Cultivate a mindset for creative problem solving, VAVE & new product developments.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">We push students beyond textbooks to design, redesign, simulate, test and iterate their own mechanical and mechatronic solutions to achieve great product and process innovations.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Out of the box thinking</li>
-                                    <li>New product developments</li>
-                                    <li>End to end project management</li>
-                                    <li>Patent and technical publications potential</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="AI Technology">
-                            <div class="ac-icon-badge"><i class="bi bi-cpu"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">AI Technology</h4>
-                            <p class="ac-short-desc">Learn to leverage Artificial Intelligence for manufacturing,
-                                design, and automation.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">AI is revolutionizing industry 4.0. We teach students how to implement AI tool to accelerate their product design and development process, Develop smart and intelligent products. </p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Future proof tech skills</li>
-                                    <li>Data driven decision making</li>
-                                    <li>Access to high paying AI roles</li>
-                                    <li>Accelerated product development process</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="AR/VR Technology">
-                            <div class="ac-icon-badge"><i class="bi bi-layers"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">VR Technology</h4>
-                            <p class="ac-short-desc">Immersive training using Virtual reality for complex machinery, products and processes for better visualization.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">Experience safe, realistic hands-on training with heavy and hazardous industrial equipment in immersive VR environments. Transform SOPs into interactive VR simulations that improve operator skills, safety awareness, training efficiency, and process standardization.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Immersive environment</li>
-                                    <li>Zero risk safety simulation</li>
-                                    <li>Exposure to cutting edge technology</li>
-                                    <li>Interactive and engaging environment</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="./img/entrepreneurship.png" alt="Entrepreneurship">
-                            <div class="ac-icon-badge"><i class="bi bi-globe"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Entrepreneurship Development</h4>
-                            <p class="ac-short-desc">Immersive training using Augmented and Virtual reality for complex machinery, products and processes for better visualization.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">For those who want to build rather than just work.
-                                    We guide students through product ideation, market research, funding pitches, and
-                                    launching industrial startups.</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Entrepreneurship skillset and mindset development</li>
-                                    <li>Roadmap for ideation to launch startup</li>
-                                    <li>Employment generation</li>
-                                    <li>Executive leadership skills development</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="academistry-card" tabindex="0">
-                        <div class="ac-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                                alt="Consulting Projects">
-                            <div class="ac-icon-badge"><i class="bi bi-diagram-3"></i></div>
-                        </div>
-                        <div class="ac-content-base">
-                            <h4 class="ac-title">Industry Consulting Projects</h4>
-                            <p class="ac-short-desc">Work on live challenges and bottlenecks faced by actual
-                                manufacturing companies.</p>
-                        </div>
-                        <div class="ac-reveal-overlay">
-                            <div class="reveal-content">
-                                <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-                                <p class="small text-white-50 mb-3">We deliver solutions for real-time industrial challenges through our team of experienced industry professionals, while also providing trained manpower with opportunities to work on live projects under expert guidance</p>
-                                <h6 class="text-primary-cyan fw-bold text-uppercase mb-2"
-                                    style="font-size: 0.8rem; font-weight: 600;">Key Benefits :</h6>
-                                <ul class="ac-benefits-list">
-                                    <li>Industry solutions to enhance QCD (Quality, cost and delivery) </li>
-                                    <li>Massive portfolio building</li>
-                                    <li>Provable real-world impact</li>
-                                    <li>Skilled workforce</li>
-                                    <li>High chance of pre-placement offers</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-<!-- 
+    <!-- 
     <section class="ebal-partners-section py-5">
     <div class="container py-5">
         
@@ -589,297 +862,466 @@
 </section> -->
 
     <section class="ebal-features-zigzag py-5 position-relative">
-
-
-        <div class="zigzag-pathway-line d-none d-lg-block">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M50,0 C80,20 80,40 50,50 C20,60 20,80 50,100" stroke="var(--primary-cyan, #06BBCC)"
-                    stroke-width="0.5" stroke-dasharray="2 2" fill="none" opacity="0.4" />
-            </svg>
+      <div class="zigzag-pathway-line d-none d-lg-block">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C80,20 80,40 50,50 C20,60 20,80 50,100"
+            stroke="var(--primary-cyan, #06BBCC)"
+            stroke-width="0.5"
+            stroke-dasharray="2 2"
+            fill="none"
+            opacity="0.4"
+          />
+        </svg>
+      </div>
+      <div
+        class="text-center mb-5 pb-4 wow fadeInUp"
+        data-wow-delay="0.1s"
+        style="margin-top: 10px"
+      >
+        <div class="ebal-double-line-heading justify-content-center mb-3">
+          <span class="line left-line"></span>
+          <h6
+            class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1"
+          >
+            The Academistry Journey
+          </h6>
+          <span class="line right-line"></span>
         </div>
-        <div class="text-center mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 10px;">
-            <div class="ebal-double-line-heading justify-content-center mb-3">
-                <span class="line left-line"></span>
-                <h6 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1">The Academistry Journey
-                </h6>
-                <span class="line right-line"></span>
-            </div>
 
-            <h2 class="ebal-journey-heading fw-bold text-dark-blue">
-                Learn. Accelerate. <span class="text-gradient-ebal">Execute</span><span
-                    class="heading-accent-dot">.</span>
+        <h2 class="ebal-journey-heading fw-bold text-dark-blue">
+          Learn. Accelerate. <span class="text-gradient-ebal">Execute</span
+          ><span class="heading-accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="container ebal-max-1250 py-5 position-relative z-1">
+        <div class="row align-items-center mb-5 pb-lg-5">
+          <div
+            class="col-lg-6 pe-lg-5 mb-5 mb-lg-0 wow fadeInLeft"
+            data-wow-delay="0.1s"
+          >
+            <h2 class="display-6 fw-bold text-dark-blue mb-4">
+              Accelerate your to
+              <span class="text-primary-cyan">industry</span> readiness
             </h2>
-        </div>
-
-
-        <div class="container ebal-max-1250 py-5 position-relative z-1">
-
-            <div class="row align-items-center mb-5 pb-lg-5">
-                <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0 wow fadeInLeft" data-wow-delay="0.1s">
-                    <h2 class="display-6 fw-bold text-dark-blue mb-4">Accelerate your to <span
-                            class="text-primary-cyan">industry</span> readiness</h2>
-                    <p class="text-muted fs-6 lh-lg mb-0">
-                        Bridge the gap between academic learnings and the factory floor. EBAL provides activity and experience-based trainings on mechanical, electronics, mechatronics , VR simulations and curated learning paths tailored specifically for next generation manufacturing experts.
-                    </p>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="feature-img-box position-relative">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Engineering Training" class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked">
-                        <!-- <a href="#" class="floating-play-btn shadow-lg">
+            <p class="text-muted fs-6 lh-lg mb-0">
+              Bridge the gap between academic learnings and the factory floor.
+              EBAL provides activity and experience-based trainings on
+              mechanical, electronics, mechatronics , VR simulations and curated
+              learning paths tailored specifically for next generation
+              manufacturing experts.
+            </p>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="feature-img-box position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Engineering Training"
+                class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked"
+              />
+              <!-- <a href="#" class="floating-play-btn shadow-lg">
                         <i class="fa fa-play text-primary-cyan"></i>
                     </a> -->
-                    </div>
-                </div>
             </div>
-
-            <div class="row align-items-center mb-5 pb-lg-5 flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="feature-img-box position-relative mt-5 mt-lg-0">
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Student Learning" class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked">
-
-                        <div class="floating-ui-card card-top-right shadow-lg">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="bi bi-headset-vr text-primary-cyan me-2"></i>
-                                <span class="small fw-bold text-muted">Simulation</span>
-                            </div>
-                            <h3 class="fw-bold text-dark-blue mb-1" style="font-size:medium;">Advanced AR/VR Lab</h3>
-                            <div class="d-flex gap-2 mt-2">
-                                <span class="badge bg-light text-dark border">Immersive</span>
-                                <span class="badge bg-light text-dark border">Zero-Risk</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 ps-lg-5 mb-5 mb-lg-0 wow fadeInRight" data-wow-delay="0.1s">
-                    <h2 class="display-6 fw-bold text-dark-blue mb-4">Master complex concepts with <span
-                            class="text-primary-blue">immersive </span> tech</h2>
-
-                    <div class="accordion ebal-clean-accordion mb-4" id="featureAccordion1">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true">
-                                    100% practical and experience-based learning modules                              </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#featureAccordion1">
-                                <div class="accordion-body text-muted">
-                                    Learn by doing real projects. Discover modules perfectly suited to your career goals.
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false">
-                                    Safe AR/VR Simulations
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#featureAccordion1">
-                                <div class="accordion-body text-muted">
-                                    Access virtual labs to practice on heavy, expensive industrial machinery in a
-                                    hyper-realistic, zero-risk environment.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false">
-                                    Rapid Prototyping
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#featureAccordion1">
-                                <div class="accordion-body text-muted">
-                                    Design, test, and iterate your own mechanical solutions in a live R&D environment.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="solution.html"
-                        class="btn btn-primary-custom rounded-pill px-5 py-3 fw-bold text-white shadow-sm border-0">EXPLORE
-                        MODULES</a>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0 wow fadeInLeft" data-wow-delay="0.1s">
-                    <h2 class="display-6 fw-bold text-dark-blue mb-4">Connect directly with <span
-                            class="text-primary-cyan">industry veterans </span></h2>
-
-                    <div class="accordion ebal-clean-accordion mb-4" id="featureAccordion2">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true">
-                                    1-on-1 Expert Mentorship
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse show"
-                                data-bs-parent="#featureAccordion2">
-                                <div class="accordion-body text-muted">
-                                    Get guided by professional with decades of experience at Top OEMs, Tier1s etc. Review portfolios and navigate specific roadblocks during live sessions.
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false">
-                                    Live Consulting Projects
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse"
-                                data-bs-parent="#featureAccordion2">
-                                <div class="accordion-body text-muted">
-                                    Solve active industrial bottlenecks for real manufacturing companies to build an
-                                    undeniable portfolio and gain a competitive hiring edge.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="contactus.html"
-                        class="btn btn-primary-custom rounded-pill px-5 py-3 fw-bold text-white shadow-sm border-0">REQUEST
-                        A DEMO</a>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="feature-img-box position-relative mt-4 mt-lg-0">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Mentorship" class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked">
-
-                        <div class="floating-ui-card card-top-left shadow-lg">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="rounded-circle bg-success me-3"
-                                    style="width: 10px; height: 10px; box-shadow: 0 0 8px #198754;"></div>
-                                <span class="small fw-bold text-dark">Live Mentoring Session</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div class="rounded-circle border border-primary me-3"
-                                    style="width: 10px; height: 10px;"></div>
-                                <span class="small text-muted">Reviewing Practical Models</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <div
+          class="row align-items-center mb-5 pb-lg-5 flex-column-reverse flex-lg-row"
+        >
+          <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="feature-img-box position-relative mt-5 mt-lg-0">
+              <img
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Student Learning"
+                class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked"
+              />
+
+              <div class="floating-ui-card card-top-right shadow-lg">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-headset-vr text-primary-cyan me-2"></i>
+                  <span class="small fw-bold text-muted">Simulation</span>
+                </div>
+                <h3
+                  class="fw-bold text-dark-blue mb-1"
+                  style="font-size: medium"
+                >
+                  Advanced AR/VR Lab
+                </h3>
+                <div class="d-flex gap-2 mt-2">
+                  <span class="badge bg-light text-dark border">Immersive</span>
+                  <span class="badge bg-light text-dark border">Zero-Risk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 ps-lg-5 mb-5 mb-lg-0 wow fadeInRight"
+            data-wow-delay="0.1s"
+          >
+            <h2 class="display-6 fw-bold text-dark-blue mb-4">
+              Master complex concepts with
+              <span class="text-primary-blue">immersive </span> tech
+            </h2>
+
+            <div
+              class="accordion ebal-clean-accordion mb-4"
+              id="featureAccordion1"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                  >
+                    100% practical and experience-based learning modules
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#featureAccordion1"
+                >
+                  <div class="accordion-body text-muted">
+                    Learn by doing real projects. Discover modules perfectly
+                    suited to your career goals.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                  >
+                    Safe AR/VR Simulations
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#featureAccordion1"
+                >
+                  <div class="accordion-body text-muted">
+                    Access virtual labs to practice on heavy, expensive
+                    industrial machinery in a hyper-realistic, zero-risk
+                    environment.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                  >
+                    Rapid Prototyping
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#featureAccordion1"
+                >
+                  <div class="accordion-body text-muted">
+                    Design, test, and iterate your own mechanical solutions in a
+                    live R&D environment.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="solution.html"
+              class="btn btn-primary-custom rounded-pill px-5 py-3 fw-bold text-white shadow-sm border-0"
+              >EXPLORE MODULES</a
+            >
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div
+            class="col-lg-6 pe-lg-5 mb-5 mb-lg-0 wow fadeInLeft"
+            data-wow-delay="0.1s"
+          >
+            <h2 class="display-6 fw-bold text-dark-blue mb-4">
+              Connect directly with
+              <span class="text-primary-cyan">industry veterans </span>
+            </h2>
+
+            <div
+              class="accordion ebal-clean-accordion mb-4"
+              id="featureAccordion2"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="true"
+                  >
+                    1-on-1 Expert Mentorship
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#featureAccordion2"
+                >
+                  <div class="accordion-body text-muted">
+                    Get guided by professional with decades of experience at Top
+                    OEMs, Tier1s etc. Review portfolios and navigate specific
+                    roadblocks during live sessions.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                  >
+                    Live Consulting Projects
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#featureAccordion2"
+                >
+                  <div class="accordion-body text-muted">
+                    Solve active industrial bottlenecks for real manufacturing
+                    companies to build an undeniable portfolio and gain a
+                    competitive hiring edge.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="contactus.html"
+              class="btn btn-primary-custom rounded-pill px-5 py-3 fw-bold text-white shadow-sm border-0"
+              >REQUEST A DEMO</a
+            >
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="feature-img-box position-relative mt-4 mt-lg-0">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Mentorship"
+                class="img-fluid rounded-4 shadow-lg w-100 feature-img-locked"
+              />
+
+              <div class="floating-ui-card card-top-left shadow-lg">
+                <div class="d-flex align-items-center mb-3">
+                  <div
+                    class="rounded-circle bg-success me-3"
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      box-shadow: 0 0 8px #198754;
+                    "
+                  ></div>
+                  <span class="small fw-bold text-dark"
+                    >Live Mentoring Session</span
+                  >
+                </div>
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle border border-primary me-3"
+                    style="width: 10px; height: 10px"
+                  ></div>
+                  <span class="small text-muted"
+                    >Reviewing Practical Models</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Footer Start -->
-   <div class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-4">
+    <div
+      class="container-fluid ebal-footer text-light pt-4 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-4">
         <div class="row g-4 justify-content-between">
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="d-inline-block mb-4">
+              <img
+                src="./img/EBAL INNOTECH FINAL_LOGO.png"
+                alt="EBAL Innotech Logo"
+                class="footer-brand-logo"
+              />
+            </a>
+            <p class="mb-4 text-light-muted lh-base">
+              Empowering Mechanical, Electronics, Mechatronics, and
+              Manufacturing engineering graduates to become Industry ready
+              professionals through practical training, advanced AR/VR
+              technology, and expert mentorship
+            </p>
 
-            <div class="col-lg-3 col-md-6">
-                <a href="#" class="d-inline-block mb-4">
-    <img src="./img/EBAL INNOTECH FINAL_LOGO.png" alt="EBAL Innotech Logo" class="footer-brand-logo">
-</a>
-                <p class="mb-4 text-light-muted lh-base">
-                    Empowering Mechanical, Electronics, Mechatronics, and Manufacturing engineering graduates to become Industry ready professionals through practical training, advanced AR/VR technology, and expert mentorship
+            <div class="footer-working-hours mb-4">
+              <h6 class="text-white mb-2 d-flex align-items-center">
+                <i class="far fa-clock text-primary-cyan me-2 fs-5"></i>
+                Business Hours
+              </h6>
+              <p class="mb-0 text-light-muted ms-4 ps-1 small">
+                Monday - Saturday
+              </p>
+              <p class="mb-0 fw-bold text-white ms-4 ps-1 small">
+                9:00 AM to 6:00 PM
+              </p>
+            </div>
+
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_TWITTER_LINK]"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_TWITTER_LINK]"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_FACEBOOK_LINK]"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_YOUTUBE_LINK]"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="[YOUR_LINKEDIN_LINK]"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 ps-lg-4">
+            <h5 class="text-white mb-4 footer-heading">Quick Links</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Privacy Policy</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">FAQs & Help</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4 footer-heading">Popular Courses</h5>
+            <a class="btn btn-link" href="">Industry foundation </a>
+            <a class="btn btn-link" href="">Mind training</a>
+            <a class="btn btn-link" href="">Entrepreneurship development </a>
+            <a class="btn btn-link" href="">Industry competent modules</a>
+            <a class="btn btn-link" href="">Innovation</a>
+            <a class="btn btn-link" href="">VAVE</a>
+            <a class="btn btn-link" href="">VR Technology</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4 footer-heading">Contact Info</h5>
+
+            <div class="mb-4">
+              <p class="mb-0 fw-bold text-white fs-6">
+                EBAL INNOTECH PVT. LTD.
+              </p>
+              <!-- <p class="small text-primary-cyan mb-0">Director, EBAL Innotech Pvt. Ltd.</p> -->
+            </div>
+
+            <div class="d-flex mb-3">
+              <i
+                class="fa fa-map-marker-alt mt-1 me-3 text-primary-cyan fs-5"
+              ></i>
+              <div>
+                <p class="mb-1 text-light-muted small">
+                  Office 2526, T-9, Bramhacorp Business Park, New Kalyani Nagar,
+                  Wadgaon Sheri, Pune - 411014
                 </p>
-                
-                <div class="footer-working-hours mb-4">
-                    <h6 class="text-white mb-2 d-flex align-items-center">
-                        <i class="far fa-clock text-primary-cyan me-2 fs-5"></i> Business Hours
-                    </h6>
-                    <p class="mb-0 text-light-muted ms-4 ps-1 small">Monday - Saturday</p>
-                    <p class="mb-0 fw-bold text-white ms-4 ps-1 small">9:00 AM to 6:00 PM</p>
-                </div>
-
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_TWITTER_LINK]"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_TWITTER_LINK]"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_FACEBOOK_LINK]"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_YOUTUBE_LINK]"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="[YOUR_LINKEDIN_LINK]"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/3JgLbVy4usqV2DMDA"
+                  target="_blank"
+                  class="text-primary-cyan small border-bottom border-info text-decoration-none pb-1"
+                  >Open in Google Maps</a
+                >
+              </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 ps-lg-4">
-                <h5 class="text-white mb-4 footer-heading">Quick Links</h5>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Privacy Policy</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">FAQs & Help</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4 footer-heading">Popular Courses</h5>
-                <a class="btn btn-link" href="">Industry foundation </a>
-                <a class="btn btn-link" href="">Mind training</a>
-                <a class="btn btn-link" href="">Entrepreneurship development </a>
-                <a class="btn btn-link" href="">Industry competent modules</a>
-                <a class="btn btn-link" href="">Innovation</a>
-                <a class="btn btn-link" href="">VAVE</a>
-                <a class="btn btn-link" href="">VR Technology</a>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4 footer-heading">Contact Info</h5>
-                
-                <div class="mb-4">
-                    <p class="mb-0 fw-bold text-white fs-6">EBAL INNOTECH PVT. LTD.</p>
-                    <!-- <p class="small text-primary-cyan mb-0">Director, EBAL Innotech Pvt. Ltd.</p> -->
-                </div>
-
-                <div class="d-flex mb-3">
-                    <i class="fa fa-map-marker-alt mt-1 me-3 text-primary-cyan fs-5"></i>
-                    <div>
-                        <p class="mb-1 text-light-muted small">Office 2526, T-9, Bramhacorp Business Park,
-New Kalyani Nagar, Wadgaon Sheri,
-Pune - 411014</p>
-                        <a href="https://maps.app.goo.gl/3JgLbVy4usqV2DMDA" target="_blank" class="text-primary-cyan small border-bottom border-info text-decoration-none pb-1">Open in Google Maps</a>
-                    </div>
-                </div>
-
-                <p class="mb-2 d-flex align-items-center small"><i class="fa fa-phone-alt me-3 text-primary-cyan"></i>
-                    +91 2069010545</p>
-                <p class="mb-2 d-flex align-items-center small">
-  <i class="fab fa-whatsapp me-3 text-success fs-5"></i>
-  <a href="https://wa.me/918600152494" 
-     target="_blank" 
-     class="text-decoration-none text-light">
-     +91 86001 52494
-  </a>
-</p>
-               <p class="mb-2 d-flex align-items-center small">
-  <i class="fa fa-envelope me-3 text-primary-cyan"></i>
-  <a href="mailto:info@eblinnotech.com" 
-     class="text-decoration-none text-light">
-     info@eblinnotech.com
-  </a>
-</p>
-            </div>
-
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fa fa-phone-alt me-3 text-primary-cyan"></i> +91
+              2069010545
+            </p>
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fab fa-whatsapp me-3 text-success fs-5"></i>
+              <a
+                href="https://wa.me/918600152494"
+                target="_blank"
+                class="text-decoration-none text-light"
+              >
+                +91 86001 52494
+              </a>
+            </p>
+            <p class="mb-2 d-flex align-items-center small">
+              <i class="fa fa-envelope me-3 text-primary-cyan"></i>
+              <a
+                href="mailto:info@eblinnotech.com"
+                class="text-decoration-none text-light"
+              >
+                info@eblinnotech.com
+              </a>
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="container">
+      <div class="container">
         <div class="copyright border-top border-secondary pt-3 pb-3">
-            <div class="row align-items-center">
-                <div class="col-12 text-center">
-                    &copy; <a class="text-white fw-bold text-decoration-none" href="#">EBAL INNOTECH PRIVATE LIMITED</a>. All Rights Reserved.
-                    <br><span class="small text-light-muted">Designed By <a class="text-primary-cyan text-decoration-none" href="https://www.startupsahay.com/" target="_blank">Startup Sahay</a></span>
-                </div>
+          <div class="row align-items-center">
+            <div class="col-12 text-center">
+              &copy;
+              <a class="text-white fw-bold text-decoration-none" href="#"
+                >EBAL INNOTECH PRIVATE LIMITED</a
+              >. All Rights Reserved. <br /><span class="small text-light-muted"
+                >Designed By
+                <a
+                  class="text-primary-cyan text-decoration-none"
+                  href="https://www.startupsahay.com/"
+                  target="_blank"
+                  >Startup Sahay</a
+                ></span
+              >
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -892,48 +1334,51 @@ Pune - 411014</p>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        // Grab all the cards
+        const cards = Array.from(document.querySelectorAll(".card-3d"));
 
-            // Grab all the cards
-            const cards = Array.from(document.querySelectorAll('.card-3d'));
+        // The classes that determine the 3D position
+        let positions = ["pos-front", "pos-right", "pos-back", "pos-left"];
 
-            // The classes that determine the 3D position
-            let positions = ['pos-front', 'pos-right', 'pos-back', 'pos-left'];
+        let rotateInterval;
 
-            let rotateInterval;
+        // Function to physically rotate the classes
+        function rotateCards() {
+          // Take the last position and move it to the front of the array
+          positions.unshift(positions.pop());
 
-            // Function to physically rotate the classes
-            function rotateCards() {
-                // Take the last position and move it to the front of the array
-                positions.unshift(positions.pop());
+          // Apply the new positions to the cards
+          cards.forEach((card, index) => {
+            // Remove all position classes first
+            card.classList.remove(
+              "pos-front",
+              "pos-right",
+              "pos-back",
+              "pos-left",
+            );
+            // Add the new assigned position
+            card.classList.add(positions[index]);
+          });
+        }
 
-                // Apply the new positions to the cards
-                cards.forEach((card, index) => {
-                    // Remove all position classes first
-                    card.classList.remove('pos-front', 'pos-right', 'pos-back', 'pos-left');
-                    // Add the new assigned position
-                    card.classList.add(positions[index]);
-                });
-            }
+        // Start Auto-Rotation (Every 3.5 Seconds)
+        function startRotation() {
+          rotateInterval = setInterval(rotateCards, 3000);
+        }
 
-            // Start Auto-Rotation (Every 3.5 Seconds)
-            function startRotation() {
-                rotateInterval = setInterval(rotateCards, 3000);
-            }
-
-            // Allow user to click a card to manually rotate
-            cards.forEach((card) => {
-                card.addEventListener('click', function () {
-                    clearInterval(rotateInterval); // Stop auto-timer
-                    rotateCards(); // Rotate instantly
-                    startRotation(); // Restart timer
-                });
-            });
-
-            // Start the engine
-            startRotation();
+        // Allow user to click a card to manually rotate
+        cards.forEach((card) => {
+          card.addEventListener("click", function () {
+            clearInterval(rotateInterval); // Stop auto-timer
+            rotateCards(); // Rotate instantly
+            startRotation(); // Restart timer
+          });
         });
-    </script>
-</body>
 
+        // Start the engine
+        startRotation();
+      });
+    </script>
+  </body>
 </html>
