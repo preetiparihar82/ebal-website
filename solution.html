@@ -1,38 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>EBAL Innotech</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="60x60"
-      href="./img/faviconlogo.jpeg"
-    />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <!-- 1. Primary SEO Title (Optimized for Solutions/Courses Page) -->
+    <title>Solutions & Courses | EBAL Innotech | AI, AR/VR & Industrial Training</title>
+    
+    <!-- 2. Meta Description (Focuses on getting job-ready and placements) -->
+    <meta name="description" content="Explore EBAL Innotech's industry-certified solutions and courses. Get job-ready in 3-8 months with hands-on experiential learning, AI, and AR/VR training." />
+    
+    <!-- 3. Meta Keywords -->
+    <meta name="keywords" content="engineering courses Pune, EBAL Innotech solutions, industrial training modules, AI technology courses, AR/VR engineering, entrepreneurship development, mind training for engineers" />
+    
+    <!-- 4. Viewport & Author -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="EBAL Innotech Pvt. Ltd." />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- 5. Canonical Tag (Update with your real domain for the solutions page) -->
+    <link rel="canonical" href="https://www.ebalinnotech.com/solution" />
+
+    <!-- 6. Open Graph Tags (For WhatsApp, LinkedIn, Facebook previews) -->
+    <meta property="og:title" content="Engineering Solutions & Courses | EBAL Innotech" />
+    <meta property="og:description" content="Get job-ready in 3-8 months. Explore our 100% practical, industry-certified courses in AI, VR, and Manufacturing." />
+    <meta property="og:image" content="https://www.ebalinnotech.com/img/EBAL%20INNOTECH%20FINAL_LOGO.png" />
+    <meta property="og:url" content="https://www.ebalinnotech.com/solution" />
+    <meta property="og:type" content="website" />
+
+    <!-- 7. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Engineering Solutions & Courses | EBAL Innotech" />
+    <meta name="twitter:description" content="Get job-ready in 3-8 months with 100% practical, industry-certified courses." />
+    <meta name="twitter:image" content="https://www.ebalinnotech.com/img/EBAL%20INNOTECH%20FINAL_LOGO.png" />
 
     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="60x60" href="./img/faviconlogo.jpeg" />
     <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -46,7 +57,112 @@
     <link href="css/about.css" rel="stylesheet" />
     <link href="css/solution.css" rel="stylesheet" />
     <link href="css/course.css" rel="stylesheet" />
-  </head>
+
+    <!-- 8. Structured Data / JSON-LD (Lists your top courses for Google Search Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Industry Foundation Course"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Technology Training"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VR Technology Modules"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Entrepreneurship Development"
+        }
+      ]
+    }
+    </script>
+    <style>
+  /* 1. Allows natural responsive expansion on mobile devices */
+  #ebalResponsiveSlider .carousel-inner,
+  #ebalResponsiveSlider .carousel-item {
+      height: auto !important; 
+      min-height: 100%;
+      transition: transform 0.6s ease-in-out;
+  }
+
+  /* 2. Slider Dots Styling and Position */
+  .ebal-dots {
+      bottom: -15px !important;
+  }
+  .ebal-dots button {
+      width: 12px !important;
+      height: 12px !important;
+      border-radius: 50% !important;
+      background-color: #cbd5e1 !important;
+      border: none !important;
+      margin: 0 6px !important;
+      transition: all 0.3s ease !important;
+  }
+  .ebal-dots button.active {
+      background-color: #17c0c4 !important;
+      transform: scale(1.2);
+  }
+
+  /* 3. Slider Arrows Styling (Base / Desktop) */
+  .ebal-arrow {
+      width: 45px;
+      height: 45px;
+      background-color: #1d2c4d; 
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.8;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .ebal-arrow i {
+      color: white;
+      font-size: 1.2rem;
+  }
+  .ebal-arrow:hover {
+      background-color: #17c0c4;
+      opacity: 1;
+  }
+
+  /* 4. Arrow Positioning for Desktop vs Mobile */
+  
+  /* Desktop: Push arrows perfectly to the outside edges and vertically center them */
+  @media (min-width: 992px) {
+      .carousel-control-prev.ebal-arrow { left: -60px; }
+      .carousel-control-next.ebal-arrow { right: -60px; }
+      #ebalResponsiveSlider { margin: 0 60px; } /* Ensures room for outside arrows */
+  }
+  
+  /* Mobile: Move arrows up to hover over the top image, away from the text */
+  @media (max-width: 991px) {
+      .carousel-control-prev.ebal-arrow { left: 10px; }
+      .carousel-control-next.ebal-arrow { right: 10px; }
+      .ebal-arrow {
+          top: 130px !important; /* Forces the arrows up over the image */
+          transform: none !important; /* Stops the arrows from centering on the whole tall card */
+          width: 35px; /* Slightly smaller for mobile screens */
+          height: 35px;
+      }
+      .ebal-arrow i {
+          font-size: 1rem;
+      }
+  }
+</style>
+</head>
 
   <body>
     <!-- Spinner Start -->
@@ -69,7 +185,7 @@
         <a href="index" class="navbar-brand d-flex align-items-center">
           <img
             src="img/EBAL INNOTECH FINAL_LOGO.png"
-            alt="EBAL Logo"
+            alt="EBAL Logo" 
             style="height: 50px"
           />
         </a>
@@ -274,7 +390,7 @@
               <h6
                 class="text-primary-cyan px-3 mb-0 text-uppercase fw-bold letter-spacing-1"
               >
-                Courses
+                ACADEMICS
               </h6>
               <span class="line right-line"></span>
             </div>
@@ -500,75 +616,7 @@
   </div>
 </div>
 
-<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-  <div class="ac-card-wrapper">
-    <div class="academistry-card" tabindex="0">
-      <div class="ac-img-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-          alt="Experts Mentoring"
-        />
-        <div class="ac-icon-badge">
-          <i class="bi bi-chat-square-dots"></i>
-        </div>
-      </div>
-      <div class="ac-content-base">
-        <h4 class="ac-title">Industry Experts Mentoring</h4>
-        <p class="ac-short-desc">
-          1-on-1 guidance from industry professionals with decades of
-          experience in top OEMs & Tier1s.
-        </p>
-      </div>
-      <div class="ac-reveal-overlay">
-        <div class="reveal-content">
-          <h5 class="text-white fw-bold mb-2">Detailed Overview</h5>
-          <p class="small text-white-50 mb-3">
-            Get direct access to experienced industry leaders who will
-            provide their experiential knowledge, feedback, portfolio
-            reviews, & insider knowledge on how to navigate the
-            corporate ladder.
-          </p>
-          <h6
-            class="text-primary-cyan fw-bold text-uppercase mb-2"
-            style="font-size: 0.8rem; font-weight: 600"
-          >
-            Key Benefits :
-          </h6>
-          <ul class="ac-benefits-list">
-            <li>Experiential learning</li>
-            <li>Real world corporate insights</li>
-            <li>Direct industry networking</li>
-            <li>Personalized career trajectory</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <!-- <button
-      class="btn text-white shadow"
-      style="
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        background-color: #17a2b8;
-        border: none;
-        border-radius: 50px;
-        padding: 10px 24px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        z-index: 10;
-        white-space: nowrap;
-        transition: background-color 0.3s ease;
-      "
-      onclick="window.location.href = '#';"
-      onmouseover="this.style.backgroundColor = '#138496'"
-      onmouseout="this.style.backgroundColor = '#17a2b8'"
-    >
-      Buy Now
-    </button> -->
-  </div>
-</div>
+
 
 <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
   <div class="ac-card-wrapper">
@@ -1060,13 +1108,13 @@
               INDIA'S MOST TRUSTED JOB-LEADING PLATFORM
             </div>
 
-            <h1 class="display-5 fw-bold text-dark-blue mb-3">
+            <h2 class="display-5 fw-bold text-dark-blue mb-3">
               Get Job-Ready in
-              <span class="text-primary-cyan">3-8 Months</span> with Industry
-              Certified Programs
-            </h1>
+              <span class="text-primary-cyan">3-6 Months</span> with Industry
+              Experts Training  Programs
+            </h2>
 
-            <p class="text-muted fs-6 mb-4">
+            <!-- <p class="text-muted fs-6 mb-4">
               For B.Tech & Diploma Freshers | ME, IT , NON -IT & Embedded
               Domains
             </p>
@@ -1074,22 +1122,22 @@
             <div class="ebal-v2-placement-badge mb-4">
               <i class="bi bi-patch-check-fill badge-icon"></i>
               <span class="badge-main-text">100% Placement Support</span>
-              <!-- <span class="badge-sub-text">(Guarantee + Assistance)</span> -->
-            </div>
+            
+            </div> -->
 
-            <div class="certified-strip mb-4">
+            <!-- <div class="certified-strip mb-4">
               <span class="fw-bold text-dark-blue me-3">Certified by:</span>
               <div class="certified-logos">
                 <span class="badge bg-light text-dark border">IIT Partner</span>
                 <span class="badge bg-light text-dark border">Skill India</span>
                 <span class="badge bg-light text-dark border">ASDC</span>
               </div>
-            </div>
+            </div> -->
 
             <ul class="hero-feature-list mb-4">
               <li>
-                <i class="bi bi-broadcast text-primary-blue"></i> Live Classes +
-                2 years access & Recorded Classes
+                <i class="bi bi-broadcast text-primary-blue"></i> Online as well as offline training class by Industry experts
+
               </li>
               <li>
                 <i class="bi bi-gear-wide-connected text-primary-blue"></i> Real
@@ -1129,11 +1177,11 @@
 
               <div class="floating-ui-card ui-card-2 shadow">
                 <div class="d-flex align-items-center">
-                  <h3 class="mb-0 text-primary-blue fw-bold me-2">90%</h3>
+                  <!-- <h3 class="mb-0 text-primary-blue fw-bold me-2">90%</h3> -->
                   <span
                     class="text-start lh-sm text-dark"
                     style="font-size: 0.7rem"
-                    >Placement<br />Success</span
+                    >Placement Guidance</span
                   >
                 </div>
               </div>
@@ -1172,89 +1220,147 @@
 <div id="services-ebal" class="container-xxl py-5">
   <div class="container">
     
-    <!-- Title Section -->
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 30px">
-      <h6 class="section-title bg-white text-center px-3" style="color: #17c0c4 !important; font-weight: bold;">ACADEMISTRY</h6>
-      <h1 class="mb-5" style="color: #1d2c4d;">EBAL Services</h1>
+      <h6 class="section-title bg-white text-center px-3" style="color: #17c0c4 !important; font-weight: bold;">INDUSTRY</h6>
+      <h1 class="mb-4" style="color: #1d2c4d;">Industry Consulting Services</h1>
+       <p class="text-muted fs-6 mb-5" style="max-width: 800px; text-align: center; margin: 0 auto ;">
+              EBAL leverages real-time manufacturing industry projects to develop practical, value-driven solutions that enhance productivity, foster innovation, and create measurable business impact.
+       </p>
     </div>
     
-    <!-- THE UNIFIED SINGLE BOX -->
-    <div class="card border-0 rounded-4 overflow-hidden wow fadeInUp" data-wow-delay="0.3s" style="max-width: 1050px; margin: 0 auto;">
-      <div class="row g-0 align-items-stretch">
-        
-        <!-- ================= LEFT SIDE ================= -->
-        <div class="col-lg-5 col-md-6 d-flex flex-column bg-white">
+    <div id="ebalResponsiveSlider" class="carousel slide wow fadeInUp position-relative" data-wow-delay="0.3s" data-bs-ride="carousel" data-bs-interval="4000">
+      
+      <div class="carousel-indicators ebal-dots">
+        <button type="button" data-bs-target="#ebalResponsiveSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#ebalResponsiveSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+
+      <div class="carousel-inner pb-5"> <div class="carousel-item active">
           
-          <!-- Image -->
-          <img class="img-fluid w-100" src="img/course-3.jpg" alt="Industry Consulting Projects" style="object-fit: cover; max-height: 350px;" />
-          
-          <!-- Card Body -->
-          <div class="p-4 flex-grow-1 text-start">
-            <!-- Stars -->
-            <div class="mb-3">
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <i class="fas fa-star text-warning"></i>
-              <span class="text-muted ms-1 small">(123)</span>
+          <div class="card border-0 rounded-4 overflow-hidden h-100" style="max-width: 1050px; margin: 0 auto;">
+            <div class="row g-0 align-items-stretch">
+              <div class="col-lg-5 col-md-6 d-flex flex-column bg-white">
+                <img class="img-fluid w-100" src="img/course-3.jpg" alt="Industry Consulting Projects" style="object-fit: cover; max-height: 350px;" />
+                <div class="p-4 flex-grow-1 text-start">
+                  <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <span class="text-muted ms-1 small">(123)</span>
+                  </div>
+                  <h5 class="fw-bold mb-3" style="color: #1d2c4d;">Industry Consulting Projects</h5>
+                  <p class="text-muted small mb-0" style="line-height: 1.6;">
+                    Work on live challenges and bottlenecks faced by actual manufacturing companies.
+                  </p>
+                </div>
+                <div class="d-flex border-top border-bottom bg-white mt-auto" style="background-color: #fcfdfe;">
+                  <small class="flex-fill text-center border-end py-3 text-muted">
+                      <i class="fas fa-user-tie ac-text-cyan me-2"></i>John Doe
+                  </small>
+                  <small class="flex-fill text-center border-end py-3 text-muted">
+                      <i class="fas fa-clock ac-text-cyan me-2"></i>1.49 Hrs
+                  </small>
+                  <small class="flex-fill text-center py-3 text-muted">
+                      <i class="fas fa-user ac-text-cyan me-2"></i>30 Students
+                  </small>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6 ac-gradient-panel p-4 p-lg-5 d-flex flex-column justify-content-center text-start">
+                <h3 class="fw-bold text-white mb-3">Detailed Overview</h3>
+                <p class="mb-5" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7;">
+                  We deliver solutions for real-time industrial challenges through our team of experienced industry professionals, while also providing trained manpower with opportunities to work on live projects under expert guidance.
+                </p>
+                <h6 class="fw-bold text-uppercase mb-3" style="color: #17c0c4; font-size: 0.9rem; letter-spacing: 0.5px;">
+                  KEY BENEFITS :
+                </h6>
+                <ul class="ac-custom-arrow-list mb-4">
+                  <li>Industry solutions to enhance QCD (Quality, cost and delivery)</li>
+                  <li>Massive portfolio building</li>
+                  <li>Provable real-world impact</li>
+                  <li>Skilled workforce</li>
+                  <li>High chance of pre-placement offers</li>
+                </ul>
+                <div class="mt-auto pt-3 text-left">
+                    <button onclick="handleBuyNowClick()" class="btn ac-bg-cyan rounded-pill px-5 py-2 fs-6 fw-bold shadow-sm">
+                        Buy Now
+                    </button>
+                </div>
+              </div>
             </div>
-
-            <!-- Title & Short Desc -->
-            <h5 class="fw-bold mb-3" style="color: #1d2c4d;">Industry Consulting Projects</h5>
-            <p class="text-muted small mb-0" style="line-height: 1.6;">
-              Work on live challenges and bottlenecks faced by actual manufacturing companies.
-            </p>
           </div>
+          </div>
+
+        <div class="carousel-item">
           
-          <!-- Footer Row (John Doe, Time, Students) -->
-          <div class="d-flex border-top border-bottom bg-white mt-auto" style="background-color: #fcfdfe;">
-            <small class="flex-fill text-center border-end py-3 text-muted">
-                <i class="fas fa-user-tie ac-text-cyan me-2"></i>John Doe
-            </small>
-            <small class="flex-fill text-center border-end py-3 text-muted">
-                <i class="fas fa-clock ac-text-cyan me-2"></i>1.49 Hrs
-            </small>
-            <small class="flex-fill text-center py-3 text-muted">
-                <i class="fas fa-user ac-text-cyan me-2"></i>30 Students
-            </small>
+          <div class="card border-0 rounded-4 overflow-hidden h-100" style="max-width: 1050px; margin: 0 auto;">
+            <div class="row g-0 align-items-stretch">
+              <div class="col-lg-5 col-md-6 d-flex flex-column bg-white">
+                <img class="img-fluid w-100" src="img/Industry_Experts-Mentoring1.jpg" alt="Experts Mentoring" style="object-fit: cover; max-height: 350px;" />
+                <div class="p-4 flex-grow-1 text-start">
+                  <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <span class="text-muted ms-1 small">(103)</span>
+                  </div>
+                  <h5 class="fw-bold mb-3" style="color: #1d2c4d;">Industry Experts Mentoring</h5>
+                  <p class="text-muted small mb-0" style="line-height: 1.6;">
+                    1-on-1 guidance from industry professionals with decades of experience in top OEMs & Tier 1s.
+                  </p>
+                </div>
+                <div class="d-flex border-top border-bottom bg-white mt-auto" style="background-color: #fcfdfe;">
+                  <small class="flex-fill text-center border-end py-3 text-muted">
+                      <i class="fas fa-user-tie ac-text-cyan me-2"></i>Berlin Martley
+                  </small>
+                  <small class="flex-fill text-center border-end py-3 text-muted">
+                      <i class="fas fa-clock ac-text-cyan me-2"></i>1.29 Hrs
+                  </small>
+                  <small class="flex-fill text-center py-3 text-muted">
+                      <i class="fas fa-user ac-text-cyan me-2"></i>30 Students
+                  </small>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6 ac-gradient-panel p-4 p-lg-5 d-flex flex-column justify-content-center text-start">
+                <h3 class="fw-bold text-white mb-3">Detailed Overview</h3>
+                <p class="mb-5" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7;">
+                   Get direct access to experienced industry leaders who will provide their experiential knowledge, feedback, portfolio reviews, & insider knowledge on how to navigate the corporate ladder.
+                </p>
+                <h6 class="fw-bold text-uppercase mb-3" style="color: #17c0c4; font-size: 0.9rem; letter-spacing: 0.5px;">
+                  KEY BENEFITS :
+                </h6>
+                <ul class="ac-custom-arrow-list mb-4">
+                   <li>Experiential learning</li>
+                  <li>Real world corporate insights</li>
+                  <li>Direct industry networking</li>
+                  <li>Personalized career trajectory</li>
+                </ul>
+                <div class="mt-auto pt-3 text-left">
+                    <button onclick="handleBuyNowClick()" class="btn ac-bg-cyan rounded-pill px-5 py-2 fs-6 fw-bold shadow-sm">
+                        Buy Now
+                    </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- ================= RIGHT SIDE (Gradient Panel) ================= -->
-        <div class="col-lg-7 col-md-6 ac-gradient-panel p-4 p-lg-5 d-flex flex-column justify-content-center text-start">
-            
-          <!-- Overview Section -->
-          <h3 class="fw-bold text-white mb-3">Detailed Overview</h3>
-          <p class="mb-5" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7;">
-            We deliver solutions for real-time industrial challenges through our team of experienced industry professionals, while also providing trained manpower with opportunities to work on live projects under expert guidance.
-          </p>
-          
-          <!-- Benefits Section -->
-          <h6 class="fw-bold text-uppercase mb-3" style="color: #17c0c4; font-size: 0.9rem; letter-spacing: 0.5px;">
-            KEY BENEFITS :
-          </h6>
-          <ul class="ac-custom-arrow-list mb-4">
-            <li>Industry solutions to enhance QCD (Quality, cost and delivery)</li>
-            <li>Massive portfolio building</li>
-            <li>Provable real-world impact</li>
-            <li>Skilled workforce</li>
-            <li>High chance of pre-placement offers</li>
-          </ul>
-
-          <!-- BUY NOW BUTTON (Moved to Right Side) -->
-          <div class="mt-auto pt-3 text-left">
-              <button onclick="handleBuyNowClick()" class="btn ac-bg-cyan rounded-pill px-5 py-2 fs-6 fw-bold shadow-sm">
-                  Buy Now
-              </button>
           </div>
-
-        </div>
 
       </div>
+
+      <button class="carousel-control-prev ebal-arrow" type="button" data-bs-target="#ebalResponsiveSlider" data-bs-slide="prev">
+        <i class="fas fa-chevron-left"></i>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next ebal-arrow" type="button" data-bs-target="#ebalResponsiveSlider" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i>
+        <span class="visually-hidden">Next</span>
+      </button>
+
     </div>
-    
-  </div>
+    </div>
 </div>
 
 <!-- ==========================================
