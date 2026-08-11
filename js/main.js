@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const block1 = document.getElementById('heroBlock1');
     const block2 = document.getElementById('heroBlock2');
     
-    // This code swaps the blocks every 6 seconds (6000 milliseconds)
+    // This code swaps the blocks every 11 seconds (11000 milliseconds)
     setInterval(() => {
         if (block1.classList.contains('active')) {
             block1.classList.remove('active');
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             block2.classList.remove('active');
             block1.classList.add('active');
         }
-    }, 6000); 
+    }, 11000); 
 });
 
 
