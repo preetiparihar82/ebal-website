@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             block2.classList.remove('active');
             block1.classList.add('active');
         }
-    }, 15000); 
+    }, 14000); 
 });
 
 
