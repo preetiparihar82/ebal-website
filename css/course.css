@@ -637,7 +637,19 @@
     .ebal-hero-v2 { text-align: center; }
     .hero-highlight-box { justify-content: center; }
     .certified-strip { justify-content: center; }
-    .hero-feature-list li { justify-content: center; }
+    .hero-feature-list {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-feature-list li {
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+    }
     .btn-hero-cta { margin: 0 auto; }
     .d-flex.flex-column.align-items-start { align-items: center !important; }
     
