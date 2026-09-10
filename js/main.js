@@ -83,27 +83,58 @@
     });
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
+    // Industry Testimonials Carousel Initialization (Auto + Manual)
+    $(".testimonial-carousel-industry").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        margin: 24,
-        dots: true,
+        autoplayTimeout: 4500,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        margin: 20,
+        dots: false,
         loop: true,
-        nav : false,
+        nav: false,
         responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
+            0: { items: 1 },
+            992: { items: 2 }
         }
     });
+
+    // Academic Testimonials Carousel Initialization (Auto + Manual)
+    $(".testimonial-carousel-academic").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5500,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        margin: 20,
+        dots: false,
+        loop: true,
+        nav: false,
+        responsive: {
+            0: { items: 1 },
+            992: { items: 2 }
+        }
+    });
+
+
+    // Custom Industry Slider Controls
+    $(document).on('click', '.ind-arrow-prev', function() {
+        $(".testimonial-carousel-industry").trigger('prev.owl.carousel');
+    });
+    $(document).on('click', '.ind-arrow-next', function() {
+        $(".testimonial-carousel-industry").trigger('next.owl.carousel');
+    });
+
+    // Custom Academic Slider Controls
+    $(document).on('click', '.acad-arrow-prev', function() {
+        $(".testimonial-carousel-academic").trigger('prev.owl.carousel');
+    });
+    $(document).on('click', '.acad-arrow-next', function() {
+        $(".testimonial-carousel-academic").trigger('next.owl.carousel');
+    });
+
+
     
 })(jQuery);
 
