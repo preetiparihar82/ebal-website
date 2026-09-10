@@ -407,6 +407,11 @@
 }
 
 
+.ebal-features-zigzag {
+    position: relative;
+    overflow: hidden;
+}
+
 .zigzag-pathway-line {
     position: absolute;
     top: 5%;
